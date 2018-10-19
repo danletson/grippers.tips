@@ -1,0 +1,26 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        validate: required
+      slug:
+        display: Slug
+        type: text
+        validate: required
+      content:
+        spellcheck: true
+        allow_source: true
+        autoLink: false
+        target_blank: false
+        link_validation: false
+        force_plain_text: true
+        clean_pasted_html: false
+        restrict_assets: false
+        type: bard
+        display: Content
+taxonomies: true
+title: Page
+create_title: Page

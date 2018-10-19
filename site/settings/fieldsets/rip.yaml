@@ -1,0 +1,183 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        width: 50
+        validate: required
+        localizable: true
+      slug:
+        display: Slug
+        type: text
+        width: 50
+        validate: required
+      artist:
+        type: text
+        width: 50
+        display: 'Release Artist'
+        validate: required
+      release_title:
+        type: text
+        width: 50
+        display: 'Release Title'
+        validate: required
+      clip_type:
+        options:
+          video_url: 'Video URL'
+          audio_stream: 'Audio Stream'
+          audio_file: 'Audio File'
+        inline: true
+        type: radio
+        instructions: 'The type of clip'
+        display: 'Clip Type'
+        validate: required
+      clip_video_url:
+        type: video
+        width: 33
+        display: 'Video Url'
+        show_when:
+          clip_type: video_url
+      clip_audio_file:
+        container: main
+        folder: audio
+        restrict: true
+        max_files: 1
+        mode: list
+        type: assets
+        display: 'Audio File'
+        width: 33
+        allowed:
+          - mp3
+          - wav
+        show_when:
+          clip_type: audio_file
+      clip_audio_stream:
+        type: text
+        width: 33
+        display: 'Clip Audio Stream'
+        show_when:
+          clip_type: audio_stream
+      intro_content:
+        restrict_assets: false
+        type: redactor
+        display: 'Intro Content'
+        validate: required
+      content:
+        spellcheck: true
+        allow_source: true
+        autoLink: false
+        target_blank: false
+        link_validation: false
+        force_plain_text: true
+        clean_pasted_html: false
+        restrict_assets: false
+        type: bard
+        display: Content
+        validate: required
+      images:
+        container: main
+        folder: /
+        restrict: false
+        mode: grid
+        type: assets
+        display: Images
+        validate: required
+      discogs_id:
+        type: text
+        display: 'Discogs ID'
+        validate: required
+      rip_link:
+        type: text
+        display: 'Link to rip'
+        validate: required|url
+  meta:
+    display: Meta
+    fields:
+      date:
+        display: Date
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 1900'
+        validate: required
+      meta_description:
+        type: text
+        display: 'Meta Description'
+        validate: required
+      meta_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: grid
+        type: assets
+        display: 'Meta Image'
+      genre:
+        label: '{{ title }}'
+        taxonomy: genre
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Genre
+      style:
+        label: '{{ title }}'
+        taxonomy: style
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Style
+      tags:
+        label: '{{ title }}'
+        taxonomy: tags
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Tags
+      label:
+        label: '{{ title }}'
+        taxonomy: label
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Label
+      year:
+        label: '{{ title }}'
+        taxonomy: year
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Year
+      region:
+        label: '{{ title }}'
+        taxonomy: region
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Region
+      region:
+        label: '{{ title }}'
+        taxonomy: region
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Region
+      price:
+        label: '{{ title }}'
+        taxonomy: price
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Price
+      star:
+        label: '{{ title }}'
+        taxonomy: star
+        mode: tags
+        type: taxonomy
+        width: 25
+        display: Star
+taxonomies: true
+title: Rip
+create_title: 'New Rip'

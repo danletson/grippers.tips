@@ -1,0 +1,16 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        validate: required
+      content:
+        restrict_assets: false
+        type: redactor
+        display: Content
+        validate: required
+taxonomies: false
+title: 'Taxonomy Term'
+create_title: 'Taxonomy Term'

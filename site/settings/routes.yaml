@@ -1,0 +1,12 @@
+collections:
+  tips: '/tip/{slug}'
+  rips: '/rip/{slug}'
+taxonomies:
+  label: '/label/{slug}'
+  price: '/price/{slug}'
+  tag: '/tag/{slug}'
+  genre: '/genre/{slug}'
+  style: '/style/{slug}'
+  region: '/region/{slug}'
+  star: '/starred/{slug}'
+routes: {  }
