@@ -1,0 +1,42 @@
+e60862b1-fcda-420e-ae8d-a31116962a7c:
+  title: Admin
+  slug: admin
+  permissions:
+    - super
+54a1cf76-1df1-4658-8153-5846e7091462:
+  title: Contributer
+  slug: contributor
+  permissions:
+    - 'cp:access'
+    - 'content:view_drafts_on_frontend'
+    - resolve_duplicates
+    - 'collections:rips:view'
+    - 'collections:rips:edit'
+    - 'collections:rips:create'
+    - 'collections:tips:view'
+    - 'collections:tips:edit'
+    - 'collections:tips:create'
+    - 'taxonomies:genre:view'
+    - 'taxonomies:genre:edit'
+    - 'taxonomies:genre:create'
+    - 'taxonomies:label:view'
+    - 'taxonomies:label:edit'
+    - 'taxonomies:label:create'
+    - 'taxonomies:price:view'
+    - 'taxonomies:price:edit'
+    - 'taxonomies:price:create'
+    - 'taxonomies:region:view'
+    - 'taxonomies:region:edit'
+    - 'taxonomies:region:create'
+    - 'taxonomies:star:view'
+    - 'taxonomies:star:edit'
+    - 'taxonomies:star:create'
+    - 'taxonomies:style:view'
+    - 'taxonomies:style:edit'
+    - 'taxonomies:style:create'
+    - 'taxonomies:tags:view'
+    - 'taxonomies:tags:edit'
+    - 'taxonomies:tags:create'
+    - 'assets:main:view'
+    - 'assets:main:edit'
+    - 'assets:main:create'

@@ -1,0 +1,7 @@
+<ul>
+   {{ nav from="/" max_depth="1" }}
+      <li>
+         <a href="{{ url }}"{{ if is_current || is_parent }} class="on"{{ /if }}>{{ title }}</a>
+      </li>
+   {{ /nav }}
+</ul>

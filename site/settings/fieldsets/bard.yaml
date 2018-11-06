@@ -1,0 +1,60 @@
+fields:
+  content_pieces:
+    type: bard
+    spellcheck: true
+    allow_source: true
+    autoLink: false
+    target_blank: false
+    link_validation: false
+    force_plain_text: true
+    clean_pasted_html: false
+    restrict_assets: false
+    type: bard
+    display: Content
+    validate: required
+    sets:
+      image_block:
+        display: Image Block
+        fields:
+          image:
+            container: main
+            restrict: false
+            mode: grid
+            type: assets
+            display: Image
+          max_width:
+            type: integer
+            display: Max Width
+            width: 50
+          align:
+            type: select
+            default: left
+            width: 50
+            options:
+              left: Left
+              center: Center
+              right: Right
+          caption:
+            type: redactor
+            display: Caption
+      video_block:
+        display: Video Block
+        fields:
+          video:
+            type: video
+            display: Video Url
+          max_width:
+            type: integer
+            display: Max Width
+            width: 50
+          align:
+            type: select
+            default: left
+            width: 50
+            options:
+              left: Left
+              center: Center
+              right: Right
+          caption:
+            type: redactor
+            display: Caption

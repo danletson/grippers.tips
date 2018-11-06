@@ -1,5 +1,12 @@
 var elixir = require('laravel-elixir');
-var theme = 'grippers';
+var tailwindcss = require('tailwindcss');
+var postcss = require('laravel-elixir-postcss');
+var mix = require('laravel-mix');
+var theme = 'turnitin';
+var purify = require('gulp-purifycss');
+var autoprefix = require('gulp-autoprefixer');
+var gulp = require('gulp');
+
 
 elixir.config.assetsPath = './';
 elixir.config.publicPath = './';
@@ -16,7 +23,24 @@ elixir.config.publicPath = './';
  */
 
 elixir(function(mix) {
-    mix.sass(theme + '.scss', 'css/' + theme + '.css');
+    mix.postcss('grippers.css', {
+      srcPath: 'postcss',
+      options: {
+        parser: require('postcss-scss')
+      },
+      output: 'css',
+      plugins: [
+        require('postcss-import'),
+        require('postcss-nesting'),
+        tailwindcss('tailwind.js'),
+        require('tailwindcss')
+      ]
+    });
+});
 
-    // mix.version('css/' + theme + '.css');
+gulp.task('purify', function(){
+  return gulp.src('css/grippers.css')
+    .pipe(purify(['templates/**/*.html','layouts/**/*.html','partials/**/*.html'],{rejected:true,minify:true}))
+    .pipe(autoprefix())
+    .pipe(gulp.dest('css/dist'));
 });

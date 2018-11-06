@@ -23,6 +23,15 @@ sections:
         width: 50
         display: 'Release Title'
         validate: required
+      catalog_number:
+        type: text
+        width: 50
+        display: Catalog Number
+      release_date:
+        type: date
+        width: 50
+        allow_time: false
+        validate: required
       clip_type:
         options:
           video_url: 'Video URL'
@@ -64,25 +73,16 @@ sections:
         type: redactor
         display: 'Intro Content'
         validate: required
-      content:
-        spellcheck: true
-        allow_source: true
-        autoLink: false
-        target_blank: false
-        link_validation: false
-        force_plain_text: true
-        clean_pasted_html: false
-        restrict_assets: false
-        type: bard
-        display: Content
-        validate: required
-      images:
+      content_pieces:
+        type: partial
+        fieldset: bard
+      artwork:
         container: main
-        folder: /
-        restrict: false
+        folder: /artwork
+        restrict: true
         mode: grid
         type: assets
-        display: Images
+        display: Artwork
         validate: required
       discogs_id:
         type: text
@@ -92,6 +92,38 @@ sections:
         type: text
         display: 'Link to rip'
         validate: required|url
+      author:
+        type: replicator
+        display: Author(s)
+        sets:
+          external_author:
+            display: External Author
+            fields:
+              name:
+                type: text
+                display: Name
+              headshot:
+                type: assets
+                container: main
+                display: Headshot
+                folder: /headshots
+                restrict: true
+                mode: grid
+                type: assets
+                max_files: 1
+              bio:
+                type: redactor
+                display: Bio
+              link:
+                type: text
+                display: Link
+                validate: url
+          user_author:
+            display: User Author
+            fields:
+              user_profile:
+                type: users
+                display: User
   meta:
     display: Meta
     fields:
@@ -143,13 +175,6 @@ sections:
         type: taxonomy
         width: 25
         display: Label
-      year:
-        label: '{{ title }}'
-        taxonomy: year
-        mode: tags
-        type: taxonomy
-        width: 25
-        display: Year
       region:
         label: '{{ title }}'
         taxonomy: region
