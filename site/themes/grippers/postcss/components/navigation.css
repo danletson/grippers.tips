@@ -1,0 +1,4 @@
+nav ul{
+  list-style: none;
+  @apply .flex .justify-around .items-center;
+}

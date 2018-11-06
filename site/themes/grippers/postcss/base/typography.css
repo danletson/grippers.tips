@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Mono';
+  src: url('../fonts/courier-prime-code.regular.woff') format('woff'),
+       url('../fonts/courier-prime-code.regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'MonoItalic';
+  src: url('../fonts/courier-prime-code.italic.woff') format('woff'),
+       url('../fonts/courier-prime-code.italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Serif';
+  src: url('../fonts/souvenir-medium.woff') format('woff'),
+       url('../fonts/souvenir-medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SerifItalic';
+  src: url('../fonts/souvenir-medium-italic.woff') format('woff'),
+       url('../fonts/souvenir-medium-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SerifBold';
+  src: url('../fonts/souvenir-demi.woff') format('woff'),
+       url('../fonts/souvenir-demi.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Display';
+  src: url('../fonts/okay-d.woff') format('woff'),
+       url('../fonts/okay-d.woff2') format('woff2');
+}
+html{
+  @apply .text-sm;
+}
+body{
+  font-family: 'Serif', serif;
+}
+h2{
+  @apply .text-2xl .tracking-wide;
+  & a{
+    @apply .text-black;
+  }
+}
+.cta{
+  @apply .mr-2 .px-2 .py-1;
+  &.primary{
+    color: white;
+    @apply .bg-grippers-primary;
+  }
+}
+@screen md{
+  html{
+    @apply .text-base;
+  }
+}
+@screen lg{
+  html{
+    @apply .text-lg;
+  }
+}

@@ -1,5 +1,45 @@
-<div class="container">
-    <h1>{{ title }}</h1>
-    <hr/>
-    {{ content }}
-</div>
+{{ partial:header }}
+<main class="mx-2">
+    <div class="container max-w-md mx-auto">
+      {{ collection from="rips|tips" date:is_past="true" }}
+        <div class="card mb-24">
+          <div class="card-head mb-4 border-b pb-4">
+            <h2 class="mb-2"><a href="{{ url }}">{{ title }}</a></h2>
+            <div class="meta font-mono">
+              <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >{{ date format='M jS Y' }}</time>
+              {{ author }}
+                {{ if first }}by{{ /if }}
+                {{ if type == 'user_author' }}
+                  {{ relate:user_profile }}
+                    {{ name }}
+                  {{ /relate:user_profile }}
+                {{ elseif type == 'external_author' }}
+                  {{ name }}
+                {{ /if }}
+              {{ /author }}
+            </div>
+          </div>
+          <div class="card-body flex">
+            <div class="intro mr-4">
+              {{ intro_content }}
+            </div>
+            <div class="stats font-mono">
+              <ul>
+                <li class="border-b pb-2 mb-3">Genre: {{ genre }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /genre }}</li>
+                <li class="border-b pb-2 mb-3">Region: {{ region }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /region }}</li>
+                <li class="border-b pb-2 mb-3">Label: {{ label }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /label }}</li>
+                <li class="border-b pb-2 mb-3">Price: {{ price }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /price }}</li>
+              </ul>
+              <div class="ctas flex">
+                <a class="cta primary" href="{{ rip_link }}">Download rip</a>
+                <a class="cta primary" href="https://www.discogs.com/sell/release/{{ discogs_id }}">Buy on Discogs</a>
+                <a class="cta reverse" href="/flag?entry={{ slug }}">Flag this</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ /collection }}
+  </div>
+    {{# {{ partial:player }} #}}
+</main>
+{{ partial:footer }}

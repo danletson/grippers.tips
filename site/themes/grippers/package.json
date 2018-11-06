@@ -1,12 +1,27 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "laravel-elixir": "^6.0.0-15",
+    "ajv": "^5.3.0",
+    "ajv-keywords": "^2.1.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-postcss": "^7.0.0",
+    "laravel-elixir": "^6.0.0-18",
+    "laravel-elixir-postcss": "^0.5.0",
+    "laravel-mix": "^1.6.1",
+    "node-sass": "^4.9.3",
+    "postcss-import": "^11.0.0",
+    "postcss-nesting": "^4.2.1",
+    "postcss-sass": "^0.2.0",
+    "purify-css": "^1.2.5",
+    "purifycss": "^1.2.6",
     "tailwindcss": "^0.6.6"
   },
   "dependencies": {
-    "cli": "^1.0.1",
-    "gulp-cli": "^2.0.1"
+    "gulp-purifycss": "^0.2.0",
+    "include-media": "^1.4.9",
+    "postcss": "^6.0.14",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-scss": "^1.0.2"
   }
 }
