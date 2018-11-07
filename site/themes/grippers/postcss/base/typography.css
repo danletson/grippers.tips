@@ -40,11 +40,17 @@ h2{
     @apply .text-black;
   }
 }
+p{
+  line-height: 1.4;
+}
 .cta{
-  @apply .mr-2 .px-2 .py-1;
+  @apply .mr-2 .mb-2 .pb-1 .pt-2 .px-2;
   &.primary{
     color: white;
     @apply .bg-grippers-primary;
+  }
+  &.reverse{
+    @apply .text-grippers-primary .border-grippers-primary .border;
   }
 }
 @screen md{

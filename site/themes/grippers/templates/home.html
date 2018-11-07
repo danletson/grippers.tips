@@ -3,6 +3,7 @@
     <div class="container max-w-md mx-auto">
       {{ collection from="rips|tips" date:is_past="true" }}
         <div class="card mb-24">
+          <div class="card-image">{{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}{{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}</div>
           <div class="card-head mb-4 border-b pb-4">
             <h2 class="mb-2"><a href="{{ url }}">{{ title }}</a></h2>
             <div class="meta font-mono">
@@ -20,7 +21,7 @@
             </div>
           </div>
           <div class="card-body flex">
-            <div class="intro mr-4">
+            <div class="intro mr-4 mb-4">
               {{ intro_content }}
             </div>
             <div class="stats font-mono">
@@ -30,16 +31,14 @@
                 <li class="border-b pb-2 mb-3">Label: {{ label }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /label }}</li>
                 <li class="border-b pb-2 mb-3">Price: {{ price }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /price }}</li>
               </ul>
-              <div class="ctas flex">
-                <a class="cta primary" href="{{ rip_link }}">Download rip</a>
-                <a class="cta primary" href="https://www.discogs.com/sell/release/{{ discogs_id }}">Buy on Discogs</a>
-                <a class="cta reverse" href="/flag?entry={{ slug }}">Flag this</a>
+              <div class="ctas">
+                <a class="cta inline-block mb-2 primary" href="{{ rip_link }}" target="blank">Download rip</a><a class="cta inline-block mb-2 primary" href="https://www.discogs.com/sell/release/{{ discogs_id }}" target="blank">Buy on Discogs</a><a class="cta inline-block mb-2 reverse" href="/flag?entry={{ slug }}" target="blank">Flag this</a>
               </div>
             </div>
           </div>
         </div>
       {{ /collection }}
   </div>
-    {{# {{ partial:player }} #}}
+  {{ partial:player }}
 </main>
 {{ partial:footer }}
