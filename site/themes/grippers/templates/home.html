@@ -4,20 +4,29 @@
       {{ collection from="rips|tips" date:is_past="true" }}
         <div class="card mb-24">
           <div class="card-image">{{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}{{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}</div>
-          <div class="card-head mb-4 border-b pb-4">
-            <h2 class="mb-2"><a href="{{ url }}">{{ title }}</a></h2>
-            <div class="meta font-mono">
-              <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >{{ date format='M jS Y' }}</time>
-              {{ author }}
-                {{ if first }}by{{ /if }}
-                {{ if type == 'user_author' }}
-                  {{ relate:user_profile }}
+          <div class="card-head mb-4 border-b pb-4 flex">
+            <div>
+              <h2 class="mb-2"><a href="{{ url }}">{{ title }}</a></h2>
+              <div class="meta font-mono">
+                <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >{{ date format='M jS Y' }}</time>
+                {{ author }}
+                  {{ if first }}by{{ /if }}
+                  {{ if type == 'user_author' }}
+                    {{ relate:user_profile }}
+                      {{ name }}
+                    {{ /relate:user_profile }}
+                  {{ elseif type == 'external_author' }}
                     {{ name }}
-                  {{ /relate:user_profile }}
-                {{ elseif type == 'external_author' }}
-                  {{ name }}
-                {{ /if }}
-              {{ /author }}
+                  {{ /if }}
+                {{ /author }}
+              </div>
+            </div>
+            <div>
+              {{ if clip_type == "video_url" }}
+                <a class="clip" data-format="video" data-clip="{{ clip_video_url }}" data-title="{{ title }}">Play Clip</a>
+              {{ elseif clip_type == "audio_file" }}
+                <a class="clip" data-format="audio" data-clip="{{ clip_audio_file }}" data-title="{{ title }}">Play Clip</a>
+              {{ /if }}
             </div>
           </div>
           <div class="card-body flex">

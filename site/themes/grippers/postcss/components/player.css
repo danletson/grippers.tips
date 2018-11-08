@@ -1,0 +1,117 @@
+.collapsed .player{
+  opacity: 0;
+}
+.open .player{
+  opacity: 1;
+}
+.player{
+  @apply .bg-white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem 0 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  transition: opacity .3s linear;
+  @apply .font-mono-italic;
+  & .track-title{
+    flex-basis: 100%;
+    & span{
+      font-size: 1.25rem;
+    }
+  }
+  & .plyr{
+    flex-basis: 100%;
+    & .plyr__controls{
+      padding-left: 0;
+      border: none;
+      & button.tab-focus:focus{
+        background: white;
+        color: $blue;
+      }
+      & button:hover{
+        background: white;
+        color: $blue;
+      }
+      & .plyr__progress{
+        margin-right: 1.5rem;
+      }
+      & .plyr__progress--played, & .plyr__progress--buffer{
+        height: 3px;
+        margin-top: -2px;
+      }
+      & .plyr__progress--played{
+        color: $blue;
+      }
+      & .plyr__time{
+        display: none;
+        vertical-align: baseline;
+        color: black;
+        & .plyr__time--current{
+          width: 3rem;
+          display: inline-block;
+        }
+      }
+      & .plyr__time+.plyr__time:before{
+          content: "";
+          display: inline-block;
+          width: 2rem;
+          height: 1px;
+          background: black;
+          transform: rotate(120deg);
+          transform-origin: 50% 50%;
+          position:relative;
+          top: -.5rem;
+      }
+      & [data-plyr="play"]{
+        padding-left: 0;
+      }
+      & [data-plyr="pause"]{
+        padding-left: 0;
+      }
+    }
+  }
+  & .download-link{
+    display: none;
+  }
+  & time{
+    @include text--condensed(21px);
+    &.elapsed:after{
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      height: 1px;
+      background: black;
+      transform: rotate(120deg);
+      transform-origin: 50% 50%;
+      position:relative;
+      top: -.5rem;
+    }
+  }
+}
+
+@screen md{
+  .player{
+    flex-wrap: nowrap;
+    padding: 0 2rem;
+    & .track-title{
+      flex-basis: 40%;
+    }
+    & .plyr{
+      flex-basis: 50%;
+      .plyr__controls{
+        .plyr__time{
+          display: block;
+        }
+      }
+    }
+    & .download-link{
+      display:block;
+      flex-basis: 10%;
+      text-align:right;
+    }
+  }
+
+
+}

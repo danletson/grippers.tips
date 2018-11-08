@@ -1,5 +1,7 @@
 @import "base/preflight.css";
 /*@import "base/reset.css";*/
+
+@import "vendor/plyr.css";
 @import "base/globals.css";
 @import "base/typography.css";
 @import "base/grid.css";
@@ -7,13 +9,14 @@
 @import "components/navigation.css";
 @import "components/footer.css";
 @import "components/card.css";
+@import "components/player.css";
 @import "layouts/home.css";
 @import "layouts/page.css";
 @import "layouts/rip.css";
 @import "layouts/tip.css";
 @import "layouts/search.css";
-
 @import "base/utilities.css";
+
 
 svg#sprites{
   display:none;

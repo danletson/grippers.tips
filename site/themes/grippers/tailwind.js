@@ -47,7 +47,8 @@ let colors = {
 
   'grippers-primary': '#F05022',
   'transparent': 'transparent',
-  'black': '#22292f'
+  'black': '#22292f',
+  'white': '#fff',
 }
 
 module.exports = {
