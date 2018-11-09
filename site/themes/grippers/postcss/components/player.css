@@ -1,10 +1,42 @@
-.collapsed .player{
-  opacity: 0;
+.player-container{
+  display: block;
+  width: 100vw;
+  margin: 0 auto;
+  @apply .border-grippers-primary .border-t;
+  &.collapsed{
+    display: none;
+  }
 }
-.open .player{
-  opacity: 1;
+
+
+.plyr{
+  width: 100%;
+  min-height: 4rem;
+  @apply .font-mono;
 }
-.player{
+
+.plyr__video-wrapper{
+  display: none;
+}
+.plyr--video .plyr__controls{
+  background: white;
+  @apply .p-0;
+}
+.plyr input[type=range]{
+  height: 2px;
+  color: blue;
+}
+.plyr progress{
+  display: inline-block;
+  vertical-align: middle;
+  color: blue;
+  background: blue;
+  width: 100%;
+  height: 2px;
+  top: -8px;
+  position: relative;
+}
+.player-container{
   @apply .bg-white;
   display: flex;
   flex-direction: row;
@@ -14,7 +46,7 @@
   justify-content: space-between;
   width: 100vw;
   transition: opacity .3s linear;
-  @apply .font-mono-italic;
+  @apply .font-mono;
   & .track-title{
     flex-basis: 100%;
     & span{
@@ -26,43 +58,33 @@
     & .plyr__controls{
       padding-left: 0;
       border: none;
-      & button.tab-focus:focus{
-        background: white;
-        color: $blue;
+      & button{
+        @apply .text-grippers-primary;
       }
       & button:hover{
         background: white;
-        color: $blue;
+        @apply .text-grippers-primary;
       }
       & .plyr__progress{
         margin-right: 1.5rem;
       }
+
       & .plyr__progress--played, & .plyr__progress--buffer{
         height: 3px;
         margin-top: -2px;
       }
       & .plyr__progress--played{
-        color: $blue;
+        @apply .text-grippers-primary;
       }
       & .plyr__time{
         display: none;
         vertical-align: baseline;
         color: black;
+        @apply .text-lg;
         & .plyr__time--current{
           width: 3rem;
           display: inline-block;
         }
-      }
-      & .plyr__time+.plyr__time:before{
-          content: "";
-          display: inline-block;
-          width: 2rem;
-          height: 1px;
-          background: black;
-          transform: rotate(120deg);
-          transform-origin: 50% 50%;
-          position:relative;
-          top: -.5rem;
       }
       & [data-plyr="play"]{
         padding-left: 0;
@@ -76,7 +98,6 @@
     display: none;
   }
   & time{
-    @include text--condensed(21px);
     &.elapsed:after{
       content: "";
       display: inline-block;
@@ -91,8 +112,12 @@
   }
 }
 
+.plyr--audio .plyr__play-large, .plyr--playing .plyr__controls [data-plyr=play], .plyr__controls [data-plyr=pause]{
+  display: block;
+}
+
 @screen md{
-  .player{
+  .player-container{
     flex-wrap: nowrap;
     padding: 0 2rem;
     & .track-title{
@@ -100,18 +125,11 @@
     }
     & .plyr{
       flex-basis: 50%;
-      .plyr__controls{
-        .plyr__time{
+      & .plyr__controls{
+        & .plyr__time{
           display: block;
         }
       }
     }
-    & .download-link{
-      display:block;
-      flex-basis: 10%;
-      text-align:right;
-    }
   }
-
-
 }
