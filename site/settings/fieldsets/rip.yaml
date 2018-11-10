@@ -26,48 +26,15 @@ sections:
       catalog_number:
         type: text
         width: 50
-        display: Catalog Number
+        display: 'Catalog Number'
       release_date:
         type: date
         width: 50
         allow_time: false
         validate: required
-      clip_type:
-        options:
-          video_url: 'Video URL'
-          audio_stream: 'Audio Stream'
-          audio_file: 'Audio File'
-        inline: true
-        type: radio
-        instructions: 'The type of clip'
-        display: 'Clip Type'
-        validate: required
-      clip_video_url:
-        type: video
-        width: 33
-        display: 'Video Url'
-        show_when:
-          clip_type: video_url
-      clip_audio_file:
-        container: main
-        folder: audio
-        restrict: true
-        max_files: 1
-        mode: list
-        type: assets
-        display: 'Audio File'
-        width: 33
-        allowed:
-          - mp3
-          - wav
-        show_when:
-          clip_type: audio_file
-      clip_audio_stream:
-        type: text
-        width: 33
-        display: 'Clip Audio Stream'
-        show_when:
-          clip_type: audio_stream
+      clip:
+        type: partial
+        fieldset: clip
       intro_content:
         restrict_assets: false
         type: redactor
@@ -97,7 +64,7 @@ sections:
         display: Author(s)
         sets:
           external_author:
-            display: External Author
+            display: 'External Author'
             fields:
               name:
                 type: text
@@ -109,7 +76,6 @@ sections:
                 folder: /headshots
                 restrict: true
                 mode: grid
-                type: assets
                 max_files: 1
               bio:
                 type: redactor
@@ -119,7 +85,7 @@ sections:
                 display: Link
                 validate: url
           user_author:
-            display: User Author
+            display: 'User Author'
             fields:
               user_profile:
                 type: users
@@ -175,13 +141,6 @@ sections:
         type: taxonomy
         width: 25
         display: Label
-      region:
-        label: '{{ title }}'
-        taxonomy: region
-        mode: tags
-        type: taxonomy
-        width: 25
-        display: Region
       region:
         label: '{{ title }}'
         taxonomy: region

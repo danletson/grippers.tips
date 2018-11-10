@@ -1,0 +1,70 @@
+hide: true
+fields:
+  clip_type:
+    options:
+      youtube: Youtube
+      mp3: 'MP3 File'
+      bandcamp: Bandcamp
+      beatport: Beatport
+      juno: Juno
+      soundcloud: Soundcloud
+    inline: true
+    type: radio
+    instructions: 'The type of clip'
+    display: 'Clip Type'
+    validate: required
+  clip_youtube_url:
+    type: video
+    width: 50
+    display: 'Youtube Url'
+    show_when:
+      clip_type: youtube
+  clip_mp3_file:
+    container: main
+    folder: audio
+    restrict: true
+    max_files: 1
+    mode: list
+    type: assets
+    display: 'Audio File'
+    width: 50
+    allowed:
+      - mp3
+    show_when:
+      clip_type: mp3
+  clip_bandcamp_track_id:
+    type: text
+    width: 50
+    display: 'Bandcamp Track ID'
+    show_when:
+      clip_type: bandcamp
+  clip_soundcloud_track_id:
+    type: text
+    width: 50
+    display: 'Soundcloud Track ID'
+    show_when:
+      clip_type: soundcloud
+  clip_beatport_track_id:
+    type: text
+    width: 50
+    display: 'Beatport Track ID'
+    show_when:
+      clip_type: beatport
+  clip_juno_track_id:
+    type: text
+    width: 50
+    display: 'Juno Track ID'
+    show_when:
+      clip_type: juno
+  clip_title:
+    type: text
+    width: 50
+    display: 'Clip Title'
+    show_when:
+      clip_type:
+        - juno
+        - beatport
+        - youtube
+        - mp3
+        - bandcamp
+        - soundcloud
