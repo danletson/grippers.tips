@@ -12,9 +12,18 @@
 .plyr{
   width: 100%;
   min-height: 4rem;
+  display: flex;
   @apply .font-mono;
 }
-
+.plyr__controls{
+  width: 100%;
+}
+.plyr--video{
+  background:white;
+}
+.plyr--video .plyr__time{
+  text-shadow: none;
+}
 .plyr__video-wrapper{
   display: none;
 }
@@ -22,11 +31,20 @@
   background: white;
   @apply .p-0;
 }
-.plyr input[type=range]{
+.plyr--video .plyr__progress__buffer{
+  box-shadow: none;
+}
+.plyr--video .plyr__control svg{
+  filter: none;
+}
+.plyr__progress__buffer{
+  background: #ccc;
+}
+/* .plyr input[type=range]{
   height: 2px;
   color: blue;
-}
-.plyr progress{
+} */
+/* .plyr progress{
   display: inline-block;
   vertical-align: middle;
   color: blue;
@@ -35,7 +53,7 @@
   height: 2px;
   top: -8px;
   position: relative;
-}
+} */
 .player-container{
   @apply .bg-white;
   display: flex;
@@ -58,6 +76,7 @@
     & .plyr__controls{
       padding-left: 0;
       border: none;
+      position:relative;
       & button{
         @apply .text-grippers-primary;
       }
@@ -69,17 +88,18 @@
         margin-right: 1.5rem;
       }
 
-      & .plyr__progress--played, & .plyr__progress--buffer{
+      /* & .plyr__progress--played, & .plyr__progress--buffer{
         height: 3px;
         margin-top: -2px;
       }
       & .plyr__progress--played{
         @apply .text-grippers-primary;
-      }
+      } */
       & .plyr__time{
         display: none;
         vertical-align: baseline;
         color: black;
+        @apply .font-mono;
         @apply .text-lg;
         & .plyr__time--current{
           width: 3rem;
