@@ -702,6 +702,10 @@ p {
   }
 }
 
+body {
+  padding-bottom: 180px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -726,18 +730,41 @@ nav ul {
   flex-basis: 100%;
 }
 
+.card-image .card-image-eyebrow {
+  font-family: MonoItalic, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  color: #fff;
+  font-size: .875rem;
+  background-color: #f05022;
+  padding: .25rem;
+  border-color: #f05022;
+  border-width: .125rem;
+  border-bottom: none;
+}
+
+.card-image .clip-banner {
+  background-color: #f05022;
+  padding: .5rem;
+}
+
+.card-image .clip-banner a {
+  font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+}
+
 .card-image {
   width: 100%;
   margin-bottom: 2rem;
   padding: .25rem;
   margin-left: auto;
   margin-right: auto;
-  border-style: dashed;
-  border-color: #f05022;
-  border-width: .125rem;
 }
 
 .card-image img {
+  padding: .25rem;
+  border-color: #f05022;
+  border-width: .125rem;
   display: block;
   width: 100%;
   line-height: 0;
@@ -778,18 +805,69 @@ nav ul {
   display: block;
   width: 100vw;
   margin: 0 auto;
+  height: 160px;
   border-color: #f05022;
   border-top-width: 1px;
+}
+
+.player-container .player-and-title-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.player-container .player-and-title-wrapper .track-title {
+  text-align: center;
+  margin-bottom: .5rem;
 }
 
 .player-container.collapsed {
   display: none;
 }
 
+.player-container[data-theme="default"] {
+  background: white;
+}
+
+.player-container[data-theme="juno"] {
+  background: #f3f3f3;
+}
+
+.player-container[data-theme="beatport"] {
+  background: #262626;
+}
+
+.embed-iframe-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.embed-iframe-wrapper iframe {
+  margin: auto;
+  border: 0;
+}
+
+.embed-iframe-wrapper iframe[data-provider="bandcamp"] {
+  height: 120px;
+  max-width: 700px;
+}
+
+.embed-iframe-wrapper iframe[data-provider="soundcloud"] {
+  height: 116px;
+  max-width: 700px;
+}
+
+.embed-iframe-wrapper iframe[data-provider="juno"] {
+  height: 120px;
+  max-width: 700px;
+}
+
+.player,
 .plyr {
   width: 100%;
-  min-height: 4rem;
-  display: flex;
+  height: 32px;
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
@@ -799,6 +877,10 @@ nav ul {
 
 .plyr--video {
   background: white;
+}
+
+.plyr--audio {
+  bottom: 10px;
 }
 
 .plyr--video .plyr__time {
@@ -844,27 +926,13 @@ nav ul {
 
 .player-container {
   background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 1rem 1.5rem 0 1.5rem;
-  align-items: center;
-  justify-content: space-between;
   width: 100vw;
   transition: opacity .3s linear;
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
-.player-container .track-title {
-  flex-basis: 100%;
-}
-
 .player-container .track-title span {
   font-size: 1.25rem;
-}
-
-.player-container .plyr {
-  flex-basis: 100%;
 }
 
 .player-container .plyr .plyr__controls {
@@ -946,11 +1014,6 @@ nav ul {
   }
 
   .player-container .track-title {
-    flex-basis: 40%;
-  }
-
-  .player-container .plyr {
-    flex-basis: 50%;
   }
 
   .player-container .plyr .plyr__controls .plyr__time {

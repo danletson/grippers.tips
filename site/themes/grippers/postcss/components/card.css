@@ -11,11 +11,24 @@
   }
 }
 .card-image{
+  & .card-image-eyebrow{
+    @apply .font-mono-italic .text-white .text-sm .bg-grippers-primary .p-1;
+    border-color: #F05022;
+    border-width: .125rem;
+    border-bottom: none;
+  }
+  & .clip-banner{
+    @apply .bg-grippers-primary .p-2;
+    & a{
+      @apply .font-mono .text-white .block;
+      cursor: pointer;
+    }
+  }
   @apply .w-full .mb-8 .p-1 .mx-auto;
-  border-style: dashed;
-  border-color: #F05022;
-  border-width: .125rem;
   & img{
+    @apply .p-1;
+    border-color: #F05022;
+    border-width: .125rem;
     @apply .block;
     width: 100%;
     line-height: 0;

@@ -2,17 +2,58 @@
   display: block;
   width: 100vw;
   margin: 0 auto;
+  height: 160px;
   @apply .border-grippers-primary .border-t;
+
+  & .player-and-title-wrapper{
+    position:relative;
+    top: 50%;
+    transform: translateY(-50%);
+    & .track-title{
+      @apply .text-center .mb-2;
+    }
+  }
   &.collapsed{
     display: none;
   }
+  &[data-theme="default"]{
+    background: white;
+  }
+  &[data-theme="juno"]{
+    background: #f3f3f3;
+  }
+  &[data-theme="beatport"]{
+    background: #262626;
+  }
 }
 
+.embed-iframe-wrapper{
+  position:relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  & iframe{
+    @apply .m-auto;
+    border: 0;
+    &[data-provider="bandcamp"]{
+      height: 120px;
+      max-width: 700px;
+    }
+    &[data-provider="soundcloud"]{
+      height: 116px;
+      max-width: 700px;
+    }
+    &[data-provider="juno"]{
+      height: 120px;
+      max-width: 700px;
+    }
+  }
 
-.plyr{
+}
+
+.player, .plyr{
   width: 100%;
-  min-height: 4rem;
-  display: flex;
+  height: 32px;
   @apply .font-mono;
 }
 .plyr__controls{
@@ -20,6 +61,9 @@
 }
 .plyr--video{
   background:white;
+}
+.plyr--audio{
+  bottom: 10px;
 }
 .plyr--video .plyr__time{
   text-shadow: none;
@@ -56,23 +100,15 @@
 } */
 .player-container{
   @apply .bg-white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 1rem 1.5rem 0 1.5rem;
-  align-items: center;
-  justify-content: space-between;
   width: 100vw;
   transition: opacity .3s linear;
   @apply .font-mono;
   & .track-title{
-    flex-basis: 100%;
     & span{
       font-size: 1.25rem;
     }
   }
   & .plyr{
-    flex-basis: 100%;
     & .plyr__controls{
       padding-left: 0;
       border: none;
@@ -141,10 +177,8 @@
     flex-wrap: nowrap;
     padding: 0 2rem;
     & .track-title{
-      flex-basis: 40%;
     }
     & .plyr{
-      flex-basis: 50%;
       & .plyr__controls{
         & .plyr__time{
           display: block;

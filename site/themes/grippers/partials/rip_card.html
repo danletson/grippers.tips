@@ -1,0 +1,62 @@
+<div class="card card--rip mb-24">
+  <div class="card-image">
+    <div class="card-image-eyebrow">Rip</div>
+    {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}{{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}
+    <div class="clip-banner">
+      {{ if clip_type == "youtube" }}
+        <a class="clip" data-format="youtube" data-clip="{{ clip_youtube_url }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "mp3" }}
+        <a class="clip" data-format="mp3" data-clip="{{ clip_mp3_file }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "bandcamp" }}
+        <a class="clip" data-format="bandcamp" data-clip="{{ clip_bandcamp_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "soundcloud" }}
+        <a class="clip" data-format="soundcloud" data-clip="{{ clip_soundcloud_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "beatport" }}
+        <a class="clip" data-format="beatport" data-clip="{{ clip_beatport_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "juno" }}
+        <a class="clip" data-format="juno" data-clip="{{ clip_juno_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ /if }}
+    </div>
+  </div>
+  <div class="card-head mb-4 border-b pb-4 flex">
+    <div>
+      <h2 class="mb-2"><a href="{{ url }}">{{ title }}</a></h2>
+      <div class="meta font-mono">
+        <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >{{ date format='M jS Y' }}</time>
+        {{ author }}
+          {{ if first }}by{{ /if }}
+          {{ if type == 'user_author' }}
+            {{ relate:user_profile }}
+              {{ name }}
+            {{ /relate:user_profile }}
+          {{ elseif type == 'external_author' }}
+            {{ name }}
+          {{ /if }}
+        {{ /author }}
+      </div>
+    </div>
+    <div>
+      {{ if clip_type == "video_url" }}
+        <a class="clip" data-format="video" data-clip="{{ clip_video_url }}" data-title="{{ title }}">Play Clip</a>
+      {{ elseif clip_type == "audio_file" }}
+        <a class="clip" data-format="audio" data-clip="{{ clip_audio_file }}" data-title="{{ title }}">Play Clip</a>
+      {{ /if }}
+    </div>
+  </div>
+  <div class="card-body flex">
+    <div class="intro mr-4 mb-4">
+      {{ intro_content }}
+    </div>
+    <div class="stats font-mono">
+      <ul>
+        <li class="border-b pb-2 mb-3">Genre: {{ genre }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /genre }}</li>
+        <li class="border-b pb-2 mb-3">Region: {{ region }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /region }}</li>
+        <li class="border-b pb-2 mb-3">Label: {{ label }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /label }}</li>
+        <li class="border-b pb-2 mb-3">Price: {{ price }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /price }}</li>
+      </ul>
+      <div class="ctas">
+        <a class="cta inline-block mb-2 primary" href="{{ rip_link }}" target="blank">Download rip</a><a class="cta inline-block mb-2 primary" href="https://www.discogs.com/sell/release/{{ discogs_id }}" target="blank">Buy on Discogs</a><a class="cta inline-block mb-2 reverse" href="/flag?entry={{ slug }}" target="blank">Flag this</a>
+      </div>
+    </div>
+  </div>
+</div>

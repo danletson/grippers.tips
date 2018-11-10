@@ -1,5 +1,9 @@
 hide: true
 fields:
+  clip_toggle:
+    type: toggle
+    display: Include clip?
+    default: true
   clip_type:
     options:
       youtube: Youtube
@@ -13,12 +17,15 @@ fields:
     instructions: 'The type of clip'
     display: 'Clip Type'
     validate: required
+    show_when:
+      clip_toggle: true
   clip_youtube_url:
     type: video
     width: 50
     display: 'Youtube Url'
     show_when:
       clip_type: youtube
+      clip_toggle: true
   clip_mp3_file:
     container: main
     folder: audio
@@ -32,35 +39,41 @@ fields:
       - mp3
     show_when:
       clip_type: mp3
+      clip_toggle: true
   clip_bandcamp_track_id:
     type: text
     width: 50
-    display: 'Bandcamp Track ID'
+    display: 'Bandcamp Album ID'
     show_when:
       clip_type: bandcamp
+      clip_toggle: true
   clip_soundcloud_track_id:
     type: text
     width: 50
     display: 'Soundcloud Track ID'
     show_when:
       clip_type: soundcloud
+      clip_toggle: true
   clip_beatport_track_id:
     type: text
     width: 50
     display: 'Beatport Track ID'
     show_when:
       clip_type: beatport
+      clip_toggle: true
   clip_juno_track_id:
     type: text
     width: 50
     display: 'Juno Track ID'
     show_when:
       clip_type: juno
+      clip_toggle: true
   clip_title:
     type: text
     width: 50
     display: 'Clip Title'
     show_when:
+      clip_toggle: true
       clip_type:
         - juno
         - beatport

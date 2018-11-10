@@ -32,6 +32,10 @@ sections:
         width: 50
         allow_time: false
         validate: required
+      log_line:
+        type: text
+        display: 'Log Line'
+        validate: required|max:50
       clip:
         type: partial
         fieldset: clip

@@ -61,17 +61,17 @@ $(document).ready(function(){
         let type;
         let provider;
         let video_id;
-        $('.track-title span').html(title);
+        let iframeContents;
 
-        if (format == 'video'){
+        if (format == 'youtube'){
+          $('.player-container .player-and-title-wrapper').show();
+          $('.player-container .embed-iframe-wrapper').hide();
+          $('.embed-iframe-wrapper iframe').attr('src', '');
+          $('.player-container').attr('data-theme', 'default');
           type = 'video';
           provider = 'youtube';
-          clipURL = clipURL+'&origin=http://localhost:8888&autoplay=true'
-        } else {
-          type = 'audio';
-        }
-
-        if (format == 'video'){
+          clipURL = clipURL+'&origin=http://localhost:8888&autoplay=true';
+          $('.track-title span').html(title);
           player.source = {
             type:       type,
             title:      title,
@@ -80,7 +80,45 @@ $(document).ready(function(){
               provider: provider,
             }]
           };
-        } else {
+        } else if (format == 'bandcamp') {
+          player.pause();
+          iframeContents = `https://bandcamp.com/EmbeddedPlayer/album=${clipURL}/size=large/artwork=small/bgcol=ffffff/linkcol=F05022/transparent=true/`
+          $('.player-container .player-and-title-wrapper').hide();
+          $('.player-container .embed-iframe-wrapper').show();
+          $('.player-container').attr('data-theme', 'bandcamp');
+          $('.embed-iframe-wrapper iframe').attr('src', iframeContents).attr('data-provider', 'bandcamp');
+          $('.track-title span').empty();
+        } else if (format == 'soundcloud') {
+          player.pause();
+          iframeContents = `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${clipURL}&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`
+          $('.player-container .player-and-title-wrapper').hide();
+          $('.player-container .embed-iframe-wrapper').show();
+          $('.player-container').attr('data-theme', 'soundcloud');
+          $('.embed-iframe-wrapper iframe').attr('src', iframeContents).attr('data-provider', 'soundcloud');
+          $('.track-title span').empty();
+        } else if (format == 'beatport') {
+          player.pause();
+          iframeContents = `https://embed.beatport.com/?id=${clipURL}&type=track`;
+          $('.player-container .player-and-title-wrapper').hide();
+          $('.player-container .embed-iframe-wrapper').show();
+          $('.player-container').attr('data-theme', 'beatport');
+          $('.embed-iframe-wrapper iframe').attr('src', iframeContents).attr('data-provider', 'beatport');
+          $('.track-title span').empty();
+        } else if (format == 'juno') {
+          player.pause();
+          iframeContents = `https://www.junodownload.com/player-embed/${clipURL}.m3u/?pl=false&pn=false&jd=true`;
+          $('.player-container .player-and-title-wrapper').hide();
+          $('.player-container .embed-iframe-wrapper').show();
+          $('.player-container').attr('data-theme', 'juno');
+          $('.embed-iframe-wrapper iframe').attr('src', iframeContents).attr('data-provider', 'juno');
+          $('.track-title span').empty();
+        } else if (format == 'mp3'){
+          $('.player-container .player-and-title-wrapper').show();
+          $('.player-container .embed-iframe-wrapper').hide();
+          $('.player-container').attr('data-theme', 'default');
+          $('.embed-iframe-wrapper iframe').attr('src', '');
+          type = 'audio';
+          $('.track-title span').html(title);
           player.source = {
             type:       type,
             title:      title,
@@ -90,7 +128,6 @@ $(document).ready(function(){
             }]
           };
         }
-
 
         player.on('canplay', function(){
           player.play();
