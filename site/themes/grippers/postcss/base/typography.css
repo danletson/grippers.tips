@@ -34,6 +34,14 @@ html{
 body{
   font-family: 'Serif', serif;
 }
+h1.page-title{
+  text-align:center;
+  @apply .mb-8;
+  font-size: 4rem;
+}
+h1{
+
+}
 h2{
   @apply .text-2xl .tracking-wide;
   & a{
@@ -43,8 +51,13 @@ h2{
 p{
   line-height: 1.4;
 }
+hr{
+  border-bottom: 1px solid;
+  @apply .pt-8 .mb-8 .mt-0;
+}
 .cta{
-  @apply .mr-2 .mb-2 .pb-1 .pt-2 .px-2;
+  @apply .mr-2 .mb-2 .pb-1 .pt-2 .px-2 .font-mono;
+  cursor: pointer;
   &.primary{
     color: white;
     @apply .bg-grippers-primary;

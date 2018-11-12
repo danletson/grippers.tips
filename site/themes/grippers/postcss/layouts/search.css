@@ -1,0 +1,38 @@
+.search-term{
+  @apply .text-center .mb-4 .font-mono;
+}
+.search-card{
+  @apply .w-full .flex .mb-8;
+  flex-wrap: wrap;
+  & .card-image{
+    @apply .m-0 .mb-4 .w-full;
+    flex-basis: 1;
+  }
+  & .card-head{
+    flex-basis: 2;
+    border: none;
+    & .meta{
+      @apply .border-b .pb-4 .mb-4;
+    }
+  }
+}
+@screen md{
+  .search-card{
+    flex-wrap: nowrap;
+    height: 12rem;
+    position: relative;
+    & .card-image{
+      max-width: 12rem;
+      @apply .mr-4;
+    }
+    & .card-head{
+      height: 12rem;
+      & >div{
+        height: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

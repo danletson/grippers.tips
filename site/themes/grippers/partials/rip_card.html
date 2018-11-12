@@ -35,13 +35,6 @@
         {{ /author }}
       </div>
     </div>
-    <div>
-      {{ if clip_type == "video_url" }}
-        <a class="clip" data-format="video" data-clip="{{ clip_video_url }}" data-title="{{ title }}">Play Clip</a>
-      {{ elseif clip_type == "audio_file" }}
-        <a class="clip" data-format="audio" data-clip="{{ clip_audio_file }}" data-title="{{ title }}">Play Clip</a>
-      {{ /if }}
-    </div>
   </div>
   <div class="card-body flex">
     <div class="intro mr-4 mb-4">

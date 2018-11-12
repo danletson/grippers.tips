@@ -10,3 +10,6 @@ taxonomies:
   region: '/region/{slug}'
   star: '/starred/{slug}'
 routes: {  }
+  /search:
+    template: search
+    title: Search Results

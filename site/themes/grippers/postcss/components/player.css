@@ -58,6 +58,7 @@
 }
 .plyr__controls{
   width: 100%;
+  @apply .pl-4;
 }
 .plyr--video{
   background:white;
@@ -143,10 +144,10 @@
         }
       }
       & [data-plyr="play"]{
-        padding-left: 0;
+        /* padding-left: 0; */
       }
       & [data-plyr="pause"]{
-        padding-left: 0;
+        /* padding-left: 0; */
       }
     }
   }

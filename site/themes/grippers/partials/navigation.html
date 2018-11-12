@@ -1,9 +1,12 @@
-<nav class="max-w-md mx-auto my-8">
+<nav class="max-w-md mx-auto">
   <ul class="text-xl font-mono-italic">
      {{ nav from="/" max_depth="1" exclude_from_nav:isnt="true" include_home="false" }}
         <li>
            <a href="{{ url }}"{{ if is_current }} class="on"{{ /if }}>{{ title }}</a>
         </li>
      {{ /nav }}
+    <li class="search-box">
+      <form action="/search" method="GET"><input type="search" name="q" /><button class="cta primary">Search</button></form>
+    </li>
   </ul>
 </nav>
