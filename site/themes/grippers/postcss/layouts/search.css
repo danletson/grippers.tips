@@ -1,11 +1,16 @@
+.search-results li{
+  @apply .p-4 .mb-4 .border .border-grippers-primary;
+  background: white;
+}
+
 .search-term{
   @apply .text-center .mb-4 .font-mono;
 }
 .search-card{
-  @apply .w-full .flex .mb-8;
+  @apply .w-full .flex;
   flex-wrap: wrap;
   & .card-image{
-    @apply .m-0 .mb-4 .w-full;
+    @apply .m-0 .w-full;
     flex-basis: 1;
   }
   & .card-head{

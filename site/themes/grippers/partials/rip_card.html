@@ -1,27 +1,12 @@
 <div class="card card--rip mb-24" data-collection="Rip">
-  {{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}
-  <div class="card-image">
-    {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
-    <div class="clip-banner">
-      {{ if clip_type == "youtube" }}
-        <a class="clip" data-format="youtube" data-clip="{{ clip_youtube_url }}" data-title="{{ clip_title }}">Play Clip</a>
-      {{ elseif clip_type == "mp3" }}
-        <a class="clip" data-format="mp3" data-clip="{{ clip_mp3_file }}" data-title="{{ clip_title }}">Play Clip</a>
-      {{ elseif clip_type == "bandcamp" }}
-        <a class="clip" data-format="bandcamp" data-clip="{{ clip_bandcamp_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-      {{ elseif clip_type == "soundcloud" }}
-        <a class="clip" data-format="soundcloud" data-clip="{{ clip_soundcloud_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-      {{ elseif clip_type == "beatport" }}
-        <a class="clip" data-format="beatport" data-clip="{{ clip_beatport_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-      {{ elseif clip_type == "juno" }}
-        <a class="clip" data-format="juno" data-clip="{{ clip_juno_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-      {{ /if }}
+  <div class="card-head">
+    {{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}
+    <div class="card-image">
+      {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
     </div>
-  </div>
-  <div class="card-head mb-4 border-b pb-4 flex">
     <div>
       <h2 class="mb-2"><a href="{{ url }}">{{ title }}</a></h2>
-      <div class="meta font-mono">
+      <div class="meta font-mono mb-4">
         <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >{{ date format='M jS Y' }}</time>
         {{ author }}
           {{ if first }}by{{ /if }}
@@ -34,6 +19,19 @@
           {{ /if }}
         {{ /author }}
       </div>
+      {{ if clip_type == "youtube" }}
+        <a class="clip cta primary" data-format="youtube" data-clip="{{ clip_youtube_url }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "mp3" }}
+        <a class="clip cta primary" data-format="mp3" data-clip="{{ clip_mp3_file }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "bandcamp" }}
+        <a class="clip cta primary" data-format="bandcamp" data-clip="{{ clip_bandcamp_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "soundcloud" }}
+        <a class="clip cta primary" data-format="soundcloud" data-clip="{{ clip_soundcloud_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "beatport" }}
+        <a class="clip cta primary" data-format="beatport" data-clip="{{ clip_beatport_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ elseif clip_type == "juno" }}
+        <a class="clip cta primary" data-format="juno" data-clip="{{ clip_juno_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
+      {{ /if }}
     </div>
   </div>
   <div class="card-body flex">
