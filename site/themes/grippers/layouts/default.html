@@ -16,6 +16,13 @@
 
 
 <body>
+    {{ partial:svg_patterns }}
+    <div class="background-container" style="width:200vw;height:200vh;position:fixed;z-index:-1;left:-50vw;top:-50vh;">
+      <svg width="100%" height="100%">
+        <rect id="layerOne" x="0" y="0" width="100%" height="100%" stroke="none" fill="url(#scribbles)"></rect>
+        <rect id="layerTwo" x="0" y="0" width="100%" height="100%" stroke="none" fill="url(#dashes)"></rect>
+      </svg>
+    </div>
     {{ template_content }}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdn.plyr.io/3.4.6/plyr.js"></script>

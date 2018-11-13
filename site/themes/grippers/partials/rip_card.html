@@ -1,7 +1,7 @@
-<div class="card card--rip mb-24">
+<div class="card card--rip mb-24" data-collection="Rip">
+  {{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}
   <div class="card-image">
-    <div class="card-image-eyebrow">Rip</div>
-    {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}{{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}
+    {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
     <div class="clip-banner">
       {{ if clip_type == "youtube" }}
         <a class="clip" data-format="youtube" data-clip="{{ clip_youtube_url }}" data-title="{{ clip_title }}">Play Clip</a>

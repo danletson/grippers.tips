@@ -1,6 +1,6 @@
 theme: grippers
 smartypants: false
-allow_php: false
+allow_php: true
 markdown_hard_wrap: false
 default_layout: default
 default_page_template: default

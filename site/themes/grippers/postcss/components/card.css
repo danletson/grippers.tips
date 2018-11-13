@@ -1,5 +1,13 @@
 .card{
-  position: relative;
+  background: white;
+  @apply .relative .p-4 .border-grippers-primary .border;
+}
+.card:before{
+  top: 0;
+  left: 0;
+  content: attr(data-collection);
+  width: 100%;
+  @apply .block .absolute .font-mono-italic .text-white .text-sm .bg-grippers-primary .p-1;
 }
 .card-body{
   @apply .flex .flex-wrap;
@@ -11,12 +19,7 @@
   }
 }
 .card-image{
-  & .card-image-eyebrow{
-    @apply .font-mono-italic .text-white .text-sm .bg-grippers-primary .p-1;
-    border-color: #F05022;
-    border-width: .125rem;
-    border-bottom: none;
-  }
+
   & .clip-banner{
     @apply .bg-grippers-primary .p-2;
     & a{
@@ -49,7 +52,7 @@
   text-align:center;
   position:absolute;
   top: 2rem;
-  right: 2rem;
+  right: -4rem;
   background-size: 100%;
   & .star-text{
     position: absolute;

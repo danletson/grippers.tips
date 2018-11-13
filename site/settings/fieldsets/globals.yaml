@@ -1,0 +1,7 @@
+title: Globals
+hide: true
+fields:
+  theme_colors:
+    type: list
+    display: Theme Colors
+    validate: required

@@ -609,6 +609,11 @@ table {
 
 /* @import "vendor/plyr.css"; */
 
+/* main{
+  position:relative;
+  z-index: 5;
+} */
+
 a {
   color: #f05022;
   text-decoration: none;
@@ -659,7 +664,7 @@ body {
 
 h1.page-title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 4rem;
 }
 
@@ -795,7 +800,25 @@ nav ul li {
 }
 
 .card {
+  background: white;
   position: relative;
+  padding: 1rem;
+  border-color: #f05022;
+  border-width: 1px;
+}
+
+.card:before {
+  top: 0;
+  left: 0;
+  content: attr(data-collection);
+  width: 100%;
+  display: block;
+  position: absolute;
+  font-family: MonoItalic, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  color: #fff;
+  font-size: .875rem;
+  background-color: #f05022;
+  padding: .25rem;
 }
 
 .card-body {
@@ -809,17 +832,6 @@ nav ul li {
 
 .card-body .stats {
   flex-basis: 100%;
-}
-
-.card-image .card-image-eyebrow {
-  font-family: MonoItalic, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  color: #fff;
-  font-size: .875rem;
-  background-color: #f05022;
-  padding: .25rem;
-  border-color: #f05022;
-  border-width: .125rem;
-  border-bottom: none;
 }
 
 .card-image .clip-banner {
@@ -868,7 +880,7 @@ nav ul li {
   text-align: center;
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: -4rem;
   background-size: 100%;
 }
 
