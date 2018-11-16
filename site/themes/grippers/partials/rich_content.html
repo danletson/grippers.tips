@@ -1,0 +1,26 @@
+{{ content_pieces }}
+  <div class="content-block--{{type}}">
+    {{ if type == "text" }}
+      {{ text }}
+    {{ elseif type == "image_block" }}
+      <figure class="align-{{align}}">
+        <div data-item-count="{{ image|count }}">
+          {{ image }}
+            <picture>
+              <source srcset="{{ value }}" media="(min-width: 800px)">
+              <img src="{{ value }}">
+            </picture>
+          {{ /image }}
+        </div>
+        <figcaption>{{ caption | strip_tags }}</figcaption>
+      </figure>
+    {{ elseif type == "video_block" }}
+      <figure class="align-{{align}}">
+        <div class="embed-container">
+          <iframe width="560" height="315" src="{{ video }}" frameborder="0" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        </div>
+        <figcaption>{{ caption | strip_tags }}</figcaption>
+      </figure>
+    {{ /if }}
+  </div>
+{{ /content_pieces }}

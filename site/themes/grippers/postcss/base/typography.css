@@ -33,6 +33,7 @@ html{
 }
 body{
   font-family: 'Serif', serif;
+  @apply .text-black;
 }
 h1.page-title{
   text-align:center;
@@ -43,27 +44,32 @@ h1{
 
 }
 h2{
-  @apply .text-2xl .tracking-wide;
+  @apply .text-2xl .tracking-extra-wide;
   & a{
     @apply .text-black;
   }
 }
 p{
   line-height: 1.4;
+  @apply .tracking-wide;
 }
 hr{
   border-bottom: 1px solid;
   @apply .pt-8 .mb-8 .mt-0;
 }
 .cta{
-  @apply .mr-2 .mb-2 .pb-1 .pt-2 .px-2 .font-mono;
+  @apply .mr-2 .mb-2 .pb-1 .pt-2 .px-2 .font-mono .inline-block;
   cursor: pointer;
   &.primary{
+    color: white;
+    @apply .bg-grippers-secondary;
+  }
+  &.secondary{
     color: white;
     @apply .bg-grippers-primary;
   }
   &.reverse{
-    @apply .text-grippers-primary .border-grippers-primary .border;
+    @apply .text-grippers-secondary .border-grippers-secondary .border;
   }
 }
 @screen md{

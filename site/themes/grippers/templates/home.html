@@ -1,6 +1,6 @@
 {{ partial:header }}
 <main class="mx-2">
-    <div class="container max-w-md mx-auto">
+    <div class="container">
       {{ collection from="rips|tips" date:is_past="true" }}
         {{ if collection == "rips" }}
           {{ partial:rip_card }}

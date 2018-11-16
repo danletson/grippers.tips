@@ -2,6 +2,9 @@
   position:relative;
   z-index: 5;
 } */
+body{
+  background: white;
+}
 a{
   @apply .text-grippers-primary;
   text-decoration: none;

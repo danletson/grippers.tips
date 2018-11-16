@@ -1,9 +1,12 @@
 nav ul{
   list-style: none;
-  @apply .flex .justify-around .items-baseline;
+  @apply .flex .justify-around .items-baseline .mt-4;
   flex-wrap: wrap;
   & li{
     flex-basis: 1;
+    & a{
+      @apply .text-black;
+    }
   }
 }
 
@@ -11,16 +14,15 @@ nav ul{
 .search-box{
   @apply .w-full .mt-4 .w-full .relative .text-sm .text-left;
   & form{
-    @apply .flex .border .border-grippers-primary .relative;
+    @apply .flex .border .relative;
     & input[type="search"]{
+      background: none;
       padding: .35rem;
       flex-basis: 100%;
     }
-    & button.cta{
-      @apply .inline-block .m-0 .mr-0 .absolute;
-      vertical-align: middle;
-      top: 0;
-      right: 0;
+    & button{
+      @apply .relative .mx-2;
+      top: .1rem;
     }
   }
 }
@@ -30,16 +32,15 @@ nav ul{
   }
   .search-box{
     @apply .w-auto;
-    width: 16rem;
     & form{
       display: block;
       width: 100%;
       & input[type="search"]{
         @apply .inline-block;
-        width: 11.75rem;
+        width: 11rem;
       }
-      & button.cta{
-        @apply .inline-block .m-0 .text-sm;
+      & button{
+        @apply .inline-block .text-sm;
       }
     }
   }

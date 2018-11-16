@@ -45,9 +45,11 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
 
-  'grippers-primary': '#F05022',
+  'grippers-primary': '#00B596',
+  'grippers-secondary': '#EF5123',
+  'grippers-dark': '#04303A',
   'transparent': 'transparent',
-  'black': '#22292f',
+  'black': '#04303A',
   'white': '#fff',
 }
 
@@ -284,7 +286,8 @@ module.exports = {
   tracking: {
     'tight': '-0.05em',
     'normal': '0',
-    'wide': '0.04em',
+    'wide': '0.02em',
+    'extra-wide': '0.04em',
   },
 
 

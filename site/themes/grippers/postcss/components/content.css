@@ -1,0 +1,35 @@
+[class*="content-block"]{
+  @apply .mb-8;
+}
+[data-item-count]{
+  @apply .flex .flex-wrap;
+  & picture{
+    @apply .mr-0;
+  }
+  & picture:last-child{
+    @apply .mr-0;
+  }
+}
+figure{
+  & picture{
+    @apply .mb-3;
+  }
+  & .embed-container{
+    @apply .mb-2 .relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+}
+figcaption{
+  @apply .font-mono .text-sm;
+}
+@screen md{
+  [data-item-count]{
+    @apply .flex-no-wrap;
+    & picture{
+      @apply .mr-2;
+    }
+  }
+}

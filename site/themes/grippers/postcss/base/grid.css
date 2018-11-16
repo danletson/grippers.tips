@@ -1,3 +1,11 @@
 body{
   padding-bottom: 180px;
 }
+.container{
+  @apply .w-full;
+}
+@screen md{
+  .container{
+    @apply .max-w-md .mx-auto .mb-8;
+  }
+}
