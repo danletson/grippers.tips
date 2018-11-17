@@ -45,8 +45,9 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
 
-  'grippers-primary': '#00B596',
+  'grippers-primary': '#22B573',
   'grippers-secondary': '#EF5123',
+  'grippers-light': '#E4F9EE',
   'grippers-dark': '#04303A',
   'transparent': 'transparent',
   'black': '#04303A',

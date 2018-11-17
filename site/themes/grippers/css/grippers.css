@@ -615,11 +615,11 @@ table {
 } */
 
 body {
-  background: white;
+  background-color: #04303a;
 }
 
 a {
-  color: #00b596;
+  color: #22b573;
   text-decoration: none;
 }
 
@@ -664,7 +664,7 @@ html {
 
 body {
   font-family: 'Serif', serif;
-  color: #04303a;
+  color: #fff;
 }
 
 h1.page-title {
@@ -682,7 +682,7 @@ h2 {
 }
 
 h2 a {
-  color: #04303a;
+  color: #e4f9ee;
 }
 
 p {
@@ -716,7 +716,7 @@ hr {
 
 .cta.secondary {
   color: white;
-  background-color: #00b596;
+  background-color: #22b573;
 }
 
 .cta.reverse {
@@ -768,7 +768,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #04303a;
+  color: #e4f9ee;
 }
 
 .search-box {
@@ -870,11 +870,8 @@ figcaption {
 }
 
 .card {
-  background: white;
   position: relative;
   padding: 1rem;
-  border-color: #04303a;
-  border-width: 1px;
   padding-top: 2.5rem;
 }
 
@@ -894,10 +891,9 @@ figcaption {
   display: block;
   position: absolute;
   font-family: MonoItalic, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  color: #00b596;
+  color: #22b573;
   text-align: center;
   font-size: .875rem;
-  background-color: #04303a;
   padding: .25rem;
 }
 
@@ -942,10 +938,10 @@ figcaption {
   position: absolute;
   width: 100%;
   font-family: Display, serif;
-  color: #ef5123;
+  color: #22b573;
+  font-size: 1.5rem;
   transform: translateY(-50%);
   top: 54%;
-  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -979,7 +975,7 @@ figcaption {
   width: 100vw;
   margin: 0 auto;
   height: 160px;
-  border-color: #00b596;
+  border-color: #22b573;
   border-top-width: 1px;
 }
 
@@ -1116,12 +1112,12 @@ figcaption {
 }
 
 .player-container .plyr .plyr__controls button {
-  color: #00b596;
+  color: #22b573;
 }
 
 .player-container .plyr .plyr__controls button:hover {
   background: white;
-  color: #00b596;
+  color: #22b573;
 }
 
 .player-container .plyr .plyr__controls .plyr__progress {
@@ -1199,7 +1195,7 @@ figcaption {
   padding: 1rem;
   margin-bottom: 1rem;
   border-width: 1px;
-  border-color: #00b596;
+  border-color: #22b573;
   background: white;
 }
 
@@ -1278,11 +1274,15 @@ figcaption {
 }
 
 .bg-grippers-primary {
-  background-color: #00b596;
+  background-color: #22b573;
 }
 
 .bg-grippers-secondary {
   background-color: #ef5123;
+}
+
+.bg-grippers-light {
+  background-color: #e4f9ee;
 }
 
 .bg-grippers-dark {
@@ -1302,11 +1302,15 @@ figcaption {
 }
 
 .hover\:bg-grippers-primary:hover {
-  background-color: #00b596;
+  background-color: #22b573;
 }
 
 .hover\:bg-grippers-secondary:hover {
   background-color: #ef5123;
+}
+
+.hover\:bg-grippers-light:hover {
+  background-color: #e4f9ee;
 }
 
 .hover\:bg-grippers-dark:hover {
@@ -1326,11 +1330,15 @@ figcaption {
 }
 
 .focus\:bg-grippers-primary:focus {
-  background-color: #00b596;
+  background-color: #22b573;
 }
 
 .focus\:bg-grippers-secondary:focus {
   background-color: #ef5123;
+}
+
+.focus\:bg-grippers-light:focus {
+  background-color: #e4f9ee;
 }
 
 .focus\:bg-grippers-dark:focus {
@@ -1422,11 +1430,15 @@ figcaption {
 }
 
 .border-grippers-primary {
-  border-color: #00b596;
+  border-color: #22b573;
 }
 
 .border-grippers-secondary {
   border-color: #ef5123;
+}
+
+.border-grippers-light {
+  border-color: #e4f9ee;
 }
 
 .border-grippers-dark {
@@ -1446,11 +1458,15 @@ figcaption {
 }
 
 .hover\:border-grippers-primary:hover {
-  border-color: #00b596;
+  border-color: #22b573;
 }
 
 .hover\:border-grippers-secondary:hover {
   border-color: #ef5123;
+}
+
+.hover\:border-grippers-light:hover {
+  border-color: #e4f9ee;
 }
 
 .hover\:border-grippers-dark:hover {
@@ -1470,11 +1486,15 @@ figcaption {
 }
 
 .focus\:border-grippers-primary:focus {
-  border-color: #00b596;
+  border-color: #22b573;
 }
 
 .focus\:border-grippers-secondary:focus {
   border-color: #ef5123;
+}
+
+.focus\:border-grippers-light:focus {
+  border-color: #e4f9ee;
 }
 
 .focus\:border-grippers-dark:focus {
@@ -3972,11 +3992,15 @@ figcaption {
 }
 
 .text-grippers-primary {
-  color: #00b596;
+  color: #22b573;
 }
 
 .text-grippers-secondary {
   color: #ef5123;
+}
+
+.text-grippers-light {
+  color: #e4f9ee;
 }
 
 .text-grippers-dark {
@@ -3996,11 +4020,15 @@ figcaption {
 }
 
 .hover\:text-grippers-primary:hover {
-  color: #00b596;
+  color: #22b573;
 }
 
 .hover\:text-grippers-secondary:hover {
   color: #ef5123;
+}
+
+.hover\:text-grippers-light:hover {
+  color: #e4f9ee;
 }
 
 .hover\:text-grippers-dark:hover {
@@ -4020,11 +4048,15 @@ figcaption {
 }
 
 .focus\:text-grippers-primary:focus {
-  color: #00b596;
+  color: #22b573;
 }
 
 .focus\:text-grippers-secondary:focus {
   color: #ef5123;
+}
+
+.focus\:text-grippers-light:focus {
+  color: #e4f9ee;
 }
 
 .focus\:text-grippers-dark:focus {
@@ -4482,11 +4514,15 @@ svg {
   }
 
   .sm\:bg-grippers-primary {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .sm\:bg-grippers-secondary {
     background-color: #ef5123;
+  }
+
+  .sm\:bg-grippers-light {
+    background-color: #e4f9ee;
   }
 
   .sm\:bg-grippers-dark {
@@ -4506,11 +4542,15 @@ svg {
   }
 
   .sm\:hover\:bg-grippers-primary:hover {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .sm\:hover\:bg-grippers-secondary:hover {
     background-color: #ef5123;
+  }
+
+  .sm\:hover\:bg-grippers-light:hover {
+    background-color: #e4f9ee;
   }
 
   .sm\:hover\:bg-grippers-dark:hover {
@@ -4530,11 +4570,15 @@ svg {
   }
 
   .sm\:focus\:bg-grippers-primary:focus {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .sm\:focus\:bg-grippers-secondary:focus {
     background-color: #ef5123;
+  }
+
+  .sm\:focus\:bg-grippers-light:focus {
+    background-color: #e4f9ee;
   }
 
   .sm\:focus\:bg-grippers-dark:focus {
@@ -4618,11 +4662,15 @@ svg {
   }
 
   .sm\:border-grippers-primary {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .sm\:border-grippers-secondary {
     border-color: #ef5123;
+  }
+
+  .sm\:border-grippers-light {
+    border-color: #e4f9ee;
   }
 
   .sm\:border-grippers-dark {
@@ -4642,11 +4690,15 @@ svg {
   }
 
   .sm\:hover\:border-grippers-primary:hover {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .sm\:hover\:border-grippers-secondary:hover {
     border-color: #ef5123;
+  }
+
+  .sm\:hover\:border-grippers-light:hover {
+    border-color: #e4f9ee;
   }
 
   .sm\:hover\:border-grippers-dark:hover {
@@ -4666,11 +4718,15 @@ svg {
   }
 
   .sm\:focus\:border-grippers-primary:focus {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .sm\:focus\:border-grippers-secondary:focus {
     border-color: #ef5123;
+  }
+
+  .sm\:focus\:border-grippers-light:focus {
+    border-color: #e4f9ee;
   }
 
   .sm\:focus\:border-grippers-dark:focus {
@@ -7152,11 +7208,15 @@ svg {
   }
 
   .sm\:text-grippers-primary {
-    color: #00b596;
+    color: #22b573;
   }
 
   .sm\:text-grippers-secondary {
     color: #ef5123;
+  }
+
+  .sm\:text-grippers-light {
+    color: #e4f9ee;
   }
 
   .sm\:text-grippers-dark {
@@ -7176,11 +7236,15 @@ svg {
   }
 
   .sm\:hover\:text-grippers-primary:hover {
-    color: #00b596;
+    color: #22b573;
   }
 
   .sm\:hover\:text-grippers-secondary:hover {
     color: #ef5123;
+  }
+
+  .sm\:hover\:text-grippers-light:hover {
+    color: #e4f9ee;
   }
 
   .sm\:hover\:text-grippers-dark:hover {
@@ -7200,11 +7264,15 @@ svg {
   }
 
   .sm\:focus\:text-grippers-primary:focus {
-    color: #00b596;
+    color: #22b573;
   }
 
   .sm\:focus\:text-grippers-secondary:focus {
     color: #ef5123;
+  }
+
+  .sm\:focus\:text-grippers-light:focus {
+    color: #e4f9ee;
   }
 
   .sm\:focus\:text-grippers-dark:focus {
@@ -7655,11 +7723,15 @@ svg {
   }
 
   .md\:bg-grippers-primary {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .md\:bg-grippers-secondary {
     background-color: #ef5123;
+  }
+
+  .md\:bg-grippers-light {
+    background-color: #e4f9ee;
   }
 
   .md\:bg-grippers-dark {
@@ -7679,11 +7751,15 @@ svg {
   }
 
   .md\:hover\:bg-grippers-primary:hover {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .md\:hover\:bg-grippers-secondary:hover {
     background-color: #ef5123;
+  }
+
+  .md\:hover\:bg-grippers-light:hover {
+    background-color: #e4f9ee;
   }
 
   .md\:hover\:bg-grippers-dark:hover {
@@ -7703,11 +7779,15 @@ svg {
   }
 
   .md\:focus\:bg-grippers-primary:focus {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .md\:focus\:bg-grippers-secondary:focus {
     background-color: #ef5123;
+  }
+
+  .md\:focus\:bg-grippers-light:focus {
+    background-color: #e4f9ee;
   }
 
   .md\:focus\:bg-grippers-dark:focus {
@@ -7791,11 +7871,15 @@ svg {
   }
 
   .md\:border-grippers-primary {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .md\:border-grippers-secondary {
     border-color: #ef5123;
+  }
+
+  .md\:border-grippers-light {
+    border-color: #e4f9ee;
   }
 
   .md\:border-grippers-dark {
@@ -7815,11 +7899,15 @@ svg {
   }
 
   .md\:hover\:border-grippers-primary:hover {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .md\:hover\:border-grippers-secondary:hover {
     border-color: #ef5123;
+  }
+
+  .md\:hover\:border-grippers-light:hover {
+    border-color: #e4f9ee;
   }
 
   .md\:hover\:border-grippers-dark:hover {
@@ -7839,11 +7927,15 @@ svg {
   }
 
   .md\:focus\:border-grippers-primary:focus {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .md\:focus\:border-grippers-secondary:focus {
     border-color: #ef5123;
+  }
+
+  .md\:focus\:border-grippers-light:focus {
+    border-color: #e4f9ee;
   }
 
   .md\:focus\:border-grippers-dark:focus {
@@ -10325,11 +10417,15 @@ svg {
   }
 
   .md\:text-grippers-primary {
-    color: #00b596;
+    color: #22b573;
   }
 
   .md\:text-grippers-secondary {
     color: #ef5123;
+  }
+
+  .md\:text-grippers-light {
+    color: #e4f9ee;
   }
 
   .md\:text-grippers-dark {
@@ -10349,11 +10445,15 @@ svg {
   }
 
   .md\:hover\:text-grippers-primary:hover {
-    color: #00b596;
+    color: #22b573;
   }
 
   .md\:hover\:text-grippers-secondary:hover {
     color: #ef5123;
+  }
+
+  .md\:hover\:text-grippers-light:hover {
+    color: #e4f9ee;
   }
 
   .md\:hover\:text-grippers-dark:hover {
@@ -10373,11 +10473,15 @@ svg {
   }
 
   .md\:focus\:text-grippers-primary:focus {
-    color: #00b596;
+    color: #22b573;
   }
 
   .md\:focus\:text-grippers-secondary:focus {
     color: #ef5123;
+  }
+
+  .md\:focus\:text-grippers-light:focus {
+    color: #e4f9ee;
   }
 
   .md\:focus\:text-grippers-dark:focus {
@@ -10828,11 +10932,15 @@ svg {
   }
 
   .lg\:bg-grippers-primary {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .lg\:bg-grippers-secondary {
     background-color: #ef5123;
+  }
+
+  .lg\:bg-grippers-light {
+    background-color: #e4f9ee;
   }
 
   .lg\:bg-grippers-dark {
@@ -10852,11 +10960,15 @@ svg {
   }
 
   .lg\:hover\:bg-grippers-primary:hover {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .lg\:hover\:bg-grippers-secondary:hover {
     background-color: #ef5123;
+  }
+
+  .lg\:hover\:bg-grippers-light:hover {
+    background-color: #e4f9ee;
   }
 
   .lg\:hover\:bg-grippers-dark:hover {
@@ -10876,11 +10988,15 @@ svg {
   }
 
   .lg\:focus\:bg-grippers-primary:focus {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .lg\:focus\:bg-grippers-secondary:focus {
     background-color: #ef5123;
+  }
+
+  .lg\:focus\:bg-grippers-light:focus {
+    background-color: #e4f9ee;
   }
 
   .lg\:focus\:bg-grippers-dark:focus {
@@ -10964,11 +11080,15 @@ svg {
   }
 
   .lg\:border-grippers-primary {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .lg\:border-grippers-secondary {
     border-color: #ef5123;
+  }
+
+  .lg\:border-grippers-light {
+    border-color: #e4f9ee;
   }
 
   .lg\:border-grippers-dark {
@@ -10988,11 +11108,15 @@ svg {
   }
 
   .lg\:hover\:border-grippers-primary:hover {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .lg\:hover\:border-grippers-secondary:hover {
     border-color: #ef5123;
+  }
+
+  .lg\:hover\:border-grippers-light:hover {
+    border-color: #e4f9ee;
   }
 
   .lg\:hover\:border-grippers-dark:hover {
@@ -11012,11 +11136,15 @@ svg {
   }
 
   .lg\:focus\:border-grippers-primary:focus {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .lg\:focus\:border-grippers-secondary:focus {
     border-color: #ef5123;
+  }
+
+  .lg\:focus\:border-grippers-light:focus {
+    border-color: #e4f9ee;
   }
 
   .lg\:focus\:border-grippers-dark:focus {
@@ -13498,11 +13626,15 @@ svg {
   }
 
   .lg\:text-grippers-primary {
-    color: #00b596;
+    color: #22b573;
   }
 
   .lg\:text-grippers-secondary {
     color: #ef5123;
+  }
+
+  .lg\:text-grippers-light {
+    color: #e4f9ee;
   }
 
   .lg\:text-grippers-dark {
@@ -13522,11 +13654,15 @@ svg {
   }
 
   .lg\:hover\:text-grippers-primary:hover {
-    color: #00b596;
+    color: #22b573;
   }
 
   .lg\:hover\:text-grippers-secondary:hover {
     color: #ef5123;
+  }
+
+  .lg\:hover\:text-grippers-light:hover {
+    color: #e4f9ee;
   }
 
   .lg\:hover\:text-grippers-dark:hover {
@@ -13546,11 +13682,15 @@ svg {
   }
 
   .lg\:focus\:text-grippers-primary:focus {
-    color: #00b596;
+    color: #22b573;
   }
 
   .lg\:focus\:text-grippers-secondary:focus {
     color: #ef5123;
+  }
+
+  .lg\:focus\:text-grippers-light:focus {
+    color: #e4f9ee;
   }
 
   .lg\:focus\:text-grippers-dark:focus {
@@ -14001,11 +14141,15 @@ svg {
   }
 
   .xl\:bg-grippers-primary {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .xl\:bg-grippers-secondary {
     background-color: #ef5123;
+  }
+
+  .xl\:bg-grippers-light {
+    background-color: #e4f9ee;
   }
 
   .xl\:bg-grippers-dark {
@@ -14025,11 +14169,15 @@ svg {
   }
 
   .xl\:hover\:bg-grippers-primary:hover {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .xl\:hover\:bg-grippers-secondary:hover {
     background-color: #ef5123;
+  }
+
+  .xl\:hover\:bg-grippers-light:hover {
+    background-color: #e4f9ee;
   }
 
   .xl\:hover\:bg-grippers-dark:hover {
@@ -14049,11 +14197,15 @@ svg {
   }
 
   .xl\:focus\:bg-grippers-primary:focus {
-    background-color: #00b596;
+    background-color: #22b573;
   }
 
   .xl\:focus\:bg-grippers-secondary:focus {
     background-color: #ef5123;
+  }
+
+  .xl\:focus\:bg-grippers-light:focus {
+    background-color: #e4f9ee;
   }
 
   .xl\:focus\:bg-grippers-dark:focus {
@@ -14137,11 +14289,15 @@ svg {
   }
 
   .xl\:border-grippers-primary {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .xl\:border-grippers-secondary {
     border-color: #ef5123;
+  }
+
+  .xl\:border-grippers-light {
+    border-color: #e4f9ee;
   }
 
   .xl\:border-grippers-dark {
@@ -14161,11 +14317,15 @@ svg {
   }
 
   .xl\:hover\:border-grippers-primary:hover {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .xl\:hover\:border-grippers-secondary:hover {
     border-color: #ef5123;
+  }
+
+  .xl\:hover\:border-grippers-light:hover {
+    border-color: #e4f9ee;
   }
 
   .xl\:hover\:border-grippers-dark:hover {
@@ -14185,11 +14345,15 @@ svg {
   }
 
   .xl\:focus\:border-grippers-primary:focus {
-    border-color: #00b596;
+    border-color: #22b573;
   }
 
   .xl\:focus\:border-grippers-secondary:focus {
     border-color: #ef5123;
+  }
+
+  .xl\:focus\:border-grippers-light:focus {
+    border-color: #e4f9ee;
   }
 
   .xl\:focus\:border-grippers-dark:focus {
@@ -16671,11 +16835,15 @@ svg {
   }
 
   .xl\:text-grippers-primary {
-    color: #00b596;
+    color: #22b573;
   }
 
   .xl\:text-grippers-secondary {
     color: #ef5123;
+  }
+
+  .xl\:text-grippers-light {
+    color: #e4f9ee;
   }
 
   .xl\:text-grippers-dark {
@@ -16695,11 +16863,15 @@ svg {
   }
 
   .xl\:hover\:text-grippers-primary:hover {
-    color: #00b596;
+    color: #22b573;
   }
 
   .xl\:hover\:text-grippers-secondary:hover {
     color: #ef5123;
+  }
+
+  .xl\:hover\:text-grippers-light:hover {
+    color: #e4f9ee;
   }
 
   .xl\:hover\:text-grippers-dark:hover {
@@ -16719,11 +16891,15 @@ svg {
   }
 
   .xl\:focus\:text-grippers-primary:focus {
-    color: #00b596;
+    color: #22b573;
   }
 
   .xl\:focus\:text-grippers-secondary:focus {
     color: #ef5123;
+  }
+
+  .xl\:focus\:text-grippers-light:focus {
+    color: #e4f9ee;
   }
 
   .xl\:focus\:text-grippers-dark:focus {

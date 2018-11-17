@@ -1,6 +1,5 @@
 .card{
-  background: white;
-  @apply .relative .p-4 .border-grippers-dark .border .pt-10;
+  @apply .relative .p-4 .pt-10;
 }
 .card-head{
   @apply .flex .pb-4 .mb-4 .border-b;
@@ -11,7 +10,7 @@
   left: 0;
   content: attr(data-collection);
   width: 100%;
-  @apply .block .absolute .font-mono-italic .text-grippers-primary .text-center .text-sm .bg-grippers-dark .p-1;
+  @apply .block .absolute .font-mono-italic .text-grippers-primary .text-center .text-sm .p-1;
 }
 .card-body{
   @apply .flex .flex-wrap-reverse;
@@ -42,10 +41,9 @@
   & .star-text{
     position: absolute;
     width: 100%;
-    @apply .font-display .text-grippers-secondary;
+    @apply .font-display .text-grippers-primary .text-2xl;
     transform: translateY(-50%);
     top: 54%;
-    @apply .text-2xl;
   }
 }
 @screen md{

@@ -3,7 +3,7 @@
   z-index: 5;
 } */
 body{
-  background: white;
+  @apply .bg-grippers-dark;
 }
 a{
   @apply .text-grippers-primary;

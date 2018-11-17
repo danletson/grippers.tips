@@ -5,7 +5,7 @@ nav ul{
   & li{
     flex-basis: 1;
     & a{
-      @apply .text-black;
+      @apply .text-grippers-light;
     }
   }
 }

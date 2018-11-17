@@ -33,7 +33,7 @@ html{
 }
 body{
   font-family: 'Serif', serif;
-  @apply .text-black;
+  @apply .text-white;
 }
 h1.page-title{
   text-align:center;
@@ -46,7 +46,7 @@ h1{
 h2{
   @apply .text-2xl .tracking-extra-wide;
   & a{
-    @apply .text-black;
+    @apply .text-grippers-light;
   }
 }
 p{
