@@ -1,12 +1,19 @@
 {{ partial:header }}
 <main class="mx-2">
     <div class="container">
-      {{ collection from="rips|tips" date:is_past="true" }}
-        {{ if collection == "rips" }}
-          {{ partial:rip_card }}
-        {{ elseif collection == "tips" }}
-          {{ partial:tip_card }}
-        {{ /if }}
+      {{ collection from="rips|tips" date:is_past="true" paginate="true" limit="10" as="posts"}}
+        {{ posts }}
+          {{ if collection == "rips" }}
+            {{ partial:rip_card }}
+          {{ elseif collection == "tips" }}
+            {{ partial:tip_card }}
+          {{ /if }}
+        {{ /posts }}
+        <div class="pagination-container">
+          {{ paginate }}
+              {{ auto_links }}
+          {{ /paginate }}
+        </div>
       {{ /collection }}
   </div>
 </main>

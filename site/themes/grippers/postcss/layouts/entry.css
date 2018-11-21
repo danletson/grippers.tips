@@ -1,0 +1,12 @@
+.entry-header{
+  @apply .text-center;
+}
+.entry-image{
+  @apply .mx-auto .w-full .mb-6;
+}
+
+@screen md{
+  .entry-image{
+    width: 60%;
+  }
+}

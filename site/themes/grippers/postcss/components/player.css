@@ -3,8 +3,7 @@
   width: 100vw;
   margin: 0 auto;
   height: 160px;
-  @apply .border-grippers-primary .border-t;
-
+  @apply .border-grippers-primary .border-t .bg-grippers-dark;
   & .player-and-title-wrapper{
     position:relative;
     top: 50%;
@@ -17,13 +16,16 @@
     display: none;
   }
   &[data-theme="default"]{
-    background: white;
+    @apply .bg-grippers-dark;
   }
   &[data-theme="juno"]{
     background: #f3f3f3;
   }
   &[data-theme="beatport"]{
     background: #262626;
+  }
+  &[data-theme="soundcloud"]{
+    background: #f5f5f5;
   }
 }
 
@@ -61,7 +63,7 @@
   @apply .pl-4;
 }
 .plyr--video{
-  background:white;
+  background: none;
 }
 .plyr--audio{
   bottom: 10px;
@@ -72,8 +74,8 @@
 .plyr__video-wrapper{
   display: none;
 }
-.plyr--video .plyr__controls{
-  background: white;
+.plyr--video .plyr__controls, .plyr--audio .plyr__controls{
+  background: none;
   @apply .p-0;
 }
 .plyr--video .plyr__progress__buffer{
@@ -100,7 +102,6 @@
   position: relative;
 } */
 .player-container{
-  @apply .bg-white;
   width: 100vw;
   transition: opacity .3s linear;
   @apply .font-mono;
@@ -135,9 +136,7 @@
       & .plyr__time{
         display: none;
         vertical-align: baseline;
-        color: black;
-        @apply .font-mono;
-        @apply .text-lg;
+        @apply .font-mono .text-lg .text-grippers-light;
         & .plyr__time--current{
           width: 3rem;
           display: inline-block;

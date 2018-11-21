@@ -14,14 +14,16 @@ nav ul{
 .search-box{
   @apply .w-full .mt-4 .w-full .relative .text-sm .text-left;
   & form{
-    @apply .flex .border .relative;
+    @apply .flex .border .relative .border-grippers-light;
     & input[type="search"]{
+      @apply .text-grippers-light;
       background: none;
       padding: .35rem;
       flex-basis: 100%;
     }
     & button{
-      @apply .relative .mx-2;
+      color: white;
+      @apply .relative .mx-2 .text-grippers-light;
       top: .1rem;
     }
   }

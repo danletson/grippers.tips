@@ -8,8 +8,13 @@
       {{ search:results }}
         <li>
           <div class="search-card">
-            <div class="card-image">
-            {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
+              <div class="card-image">
+              {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
+              <div class="clip-cta-container">
+                {{ if clip_toggle }}
+                  <a class="clip cta secondary" data-title="{{ clip_title }}" data-format="{{ clip_type }}" data-clip="{{ if clip_type == 'youtube' }}{{ clip_youtube_url }}{{ elseif clip_type == 'mp3' }}{{ clip_mp3_file }}{{ elseif clip_type == 'bandcamp' }}{{ clip_bandcamp_track_id }}{{ elseif clip_type == 'soundcloud' }}{{ clip_soundcloud_track_id }}{{ elseif clip_type == 'beatport' }}{{ clip_beatport_track_id }}{{ elseif clip_type == 'juno' }}{{ clip_juno_track_id }}{{ /if }}">Play Clip</a>
+                {{ /if }}
+              </div>
             </div>
             <div class="card-head mb-4 border-b pb-4">
               <div>
@@ -29,21 +34,6 @@
                 </div>
                 <div class="intro mr-4 mb-4">
                   {{ log_line }}
-                </div>
-                <div>
-                  {{ if clip_type == "youtube" }}
-                    <a class="clip cta primary" data-format="youtube" data-clip="{{ clip_youtube_url }}" data-title="{{ clip_title }}">Play Clip</a>
-                  {{ elseif clip_type == "mp3" }}
-                    <a class="clip cta primary" data-format="mp3" data-clip="{{ clip_mp3_file }}" data-title="{{ clip_title }}">Play Clip</a>
-                  {{ elseif clip_type == "bandcamp" }}
-                    <a class="clip cta primary" data-format="bandcamp" data-clip="{{ clip_bandcamp_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-                  {{ elseif clip_type == "soundcloud" }}
-                    <a class="clip cta primary" data-format="soundcloud" data-clip="{{ clip_soundcloud_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-                  {{ elseif clip_type == "beatport" }}
-                    <a class="clip cta primary" data-format="beatport" data-clip="{{ clip_beatport_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-                  {{ elseif clip_type == "juno" }}
-                    <a class="clip cta primary" data-format="juno" data-clip="{{ clip_juno_track_id }}" data-title="{{ clip_title }}">Play Clip</a>
-                  {{ /if }}
                 </div>
                 </div>
               </div>

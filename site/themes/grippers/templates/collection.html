@@ -1,0 +1,16 @@
+{{ partial:header }}
+<main class="mx-2">
+    <div class="container">
+      {{ title | wrap:h1.page-title }}
+      <hr>
+      {{ collection from="{mount}" date:is_past="true" }}
+        {{ if collection == "rips" }}
+          {{ partial:rip_card }}
+        {{ elseif collection == "tips" }}
+          {{ partial:tip_card }}
+        {{ /if }}
+      {{ /collection }}
+  </div>
+</main>
+{{ partial:player }}
+{{ partial:footer }}

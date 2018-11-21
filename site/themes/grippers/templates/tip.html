@@ -1,8 +1,54 @@
 {{ partial:header }}
 <main class="mx-2">
   <div class="container">
-    {{ title wrap="h1" }}
-    {{ partial:tip_card }}
+    <div class="entry-header">
+      {{ title wrap="h1.page-title" }}
+      <div class="meta">
+        <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >{{ date format='M jS Y' }}</time>
+        {{ author }}
+          {{ if first }}by{{ /if }}
+          {{ if type == 'user_author' }}
+            {{ relate:user_profile }}
+              {{ name }}
+            {{ /relate:user_profile }}
+          {{ elseif type == 'external_author' }}
+            {{ name }}
+          {{ /if }}
+        {{ /author }}
+      </div>
+    </div>
+    <hr>
+    <div class="entry-image">
+      {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
+    </div>
+    <div class="stats">
+      <div class="two-column">
+        <div>
+          <ul>
+            <li>Label: {{ label }}{{ title }}{{ /label }}</li>
+            <li>Catalog Number: {{ catalog_number }}</li>
+            <li>Year: {{ release_date format="Y"}}</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Genre: {{ genre }}{{ unless first }}, {{ /unless }}<a href="{{ url }}">{{ title }}</a>{{ /genre }}</li>
+            {{ if style }}<li>Style: {{ style }}{{ unless first }}, {{ /unless }}<a href="{{ url }}">{{ style }}</a>{{ /style }}</li>{{ /if }}
+            <li>Region: {{ region }}{{ unless first }}, {{ /unless }}<a href="{{ url }}">{{ title }}</a>{{ /region }}</li>            <li>Price: {{ price }}{{ unless first }}, {{ /unless }}<a href="{{ url }}">{{ title }}</a>{{ /price }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ctas">
+        {{ if clip_toggle }}
+          <a class="clip cta secondary" data-title="{{ clip_title }}" data-format="{{ clip_type }}" data-clip="{{ if clip_type == 'youtube' }}{{ clip_youtube_url }}{{ elseif clip_type == 'mp3' }}{{ clip_mp3_file }}{{ elseif clip_type == 'bandcamp' }}{{ clip_bandcamp_track_id }}{{ elseif clip_type == 'soundcloud' }}{{ clip_soundcloud_track_id }}{{ elseif clip_type == 'beatport' }}{{ clip_beatport_track_id }}{{ elseif clip_type == 'juno' }}{{ clip_juno_track_id }}{{ /if }}">Play Clip</a>
+        {{ /if }}
+        {{ tip_links }}
+          <a class="cta inline-block mb-2 primary" href="{{ cta_link }}" target="blank">{{ cta_text }}</a>
+        {{ /tip_links }}
+          <a class="cta inline-block mb-2 reverse" href="/flag?entry={{ url | urlencode }}" target="blank">Flag this</a>
+      </div>
+    </div>
+    <hr>
     {{ partial:rich_content }}
     {{ partial:disqus }}
   </div>

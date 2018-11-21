@@ -1,6 +1,5 @@
 .search-results li{
-  @apply .p-4 .mb-4 .border .border-grippers-primary;
-  background: white;
+  @apply .mb-8;
 }
 
 .search-term{
@@ -10,7 +9,7 @@
   @apply .w-full .flex;
   flex-wrap: wrap;
   & .card-image{
-    @apply .m-0 .w-full;
+    @apply .m-0 .w-full .relative;
     flex-basis: 1;
   }
   & .card-head{

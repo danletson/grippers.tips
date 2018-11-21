@@ -62,11 +62,11 @@ hr{
   cursor: pointer;
   &.primary{
     color: white;
-    @apply .bg-grippers-secondary;
+    @apply .bg-grippers-secondary .border-grippers-secondary .border;
   }
   &.secondary{
     color: white;
-    @apply .bg-grippers-primary;
+    @apply .bg-grippers-primary .border-grippers-primary .border;
   }
   &.reverse{
     @apply .text-grippers-secondary .border-grippers-secondary .border;

@@ -1,0 +1,28 @@
+.stats{
+  & .two-column{
+    @apply .flex .flex-wrap .mb-4;
+    &>div{
+      flex-basis: 100%;
+    }
+  }
+  & ul{
+    & li{
+      @apply .border-b .pb-2 .mb-3;
+      height: 2rem;
+      & a{
+        @apply .font-mono-italic;
+      }
+    }
+  }
+}
+
+@screen md{
+  .stats{
+    & .two-column{
+      @apply .flex-no-wrap;
+      &>div:first-child{
+      @apply .mr-4;
+      }
+    }
+  }
+}
