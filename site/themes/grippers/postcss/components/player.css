@@ -3,7 +3,7 @@
   width: 100vw;
   margin: 0 auto;
   height: 160px;
-  @apply .border-grippers-primary .border-t .bg-grippers-dark;
+  @apply .border-grippers-primary .border-t .bg-grippers-dark .relative .z-20;
   & .player-and-title-wrapper{
     position:relative;
     top: 50%;

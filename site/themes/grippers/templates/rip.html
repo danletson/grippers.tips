@@ -45,6 +45,9 @@
         {{ tip_links }}
           <a class="cta inline-block mb-2 primary" href="{{ cta_link }}" target="blank">{{ cta_text }}</a>
         {{ /tip_links }}
+        {{ if discogs_id }}
+          <a class="cta inline-block mb-2 primary" href="https://www.discogs.com/sell/release/{{ discogs_id }}" target="blank">Buy on Discogs</a>
+        {{ /if }}
           <a class="cta inline-block mb-2 reverse" href="/flag?entry={{ url | urlencode }}" target="blank">Flag this</a>
       </div>
     </div>

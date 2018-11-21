@@ -1,14 +1,15 @@
 <div class="card card--tip mb-24" data-collection="Tip">
   <div class="card-head">
     <div class="card-image-container">
+      <div class="collection-tag">Rip</div>
       {{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}
       <div class="card-image">
-        {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
-      </div>
-      <div class="clip-cta-container">
-        {{ if clip_toggle }}
-          <a class="clip cta secondary" data-title="{{ clip_title }}" data-format="{{ clip_type }}" data-clip="{{ if clip_type == 'youtube' }}{{ clip_youtube_url }}{{ elseif clip_type == 'mp3' }}{{ clip_mp3_file }}{{ elseif clip_type == 'bandcamp' }}{{ clip_bandcamp_track_id }}{{ elseif clip_type == 'soundcloud' }}{{ clip_soundcloud_track_id }}{{ elseif clip_type == 'beatport' }}{{ clip_beatport_track_id }}{{ elseif clip_type == 'juno' }}{{ clip_juno_track_id }}{{ /if }}">Play Clip</a>
-        {{ /if }}
+        <a href="{{ url }}">{{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}</a>
+        <div class="clip-cta-container">
+          {{ if clip_toggle }}
+            <a class="clip cta secondary" data-title="{{ clip_title }}" data-format="{{ clip_type }}" data-clip="{{ if clip_type == 'youtube' }}{{ clip_youtube_url }}{{ elseif clip_type == 'mp3' }}{{ clip_mp3_file }}{{ elseif clip_type == 'bandcamp' }}{{ clip_bandcamp_track_id }}{{ elseif clip_type == 'soundcloud' }}{{ clip_soundcloud_track_id }}{{ elseif clip_type == 'beatport' }}{{ clip_beatport_track_id }}{{ elseif clip_type == 'juno' }}{{ clip_juno_track_id }}{{ /if }}">Play Clip</a>
+          {{ /if }}
+        </div>
       </div>
     </div>
     <div>

@@ -685,6 +685,11 @@ h2 a {
   color: #e4f9ee;
 }
 
+h3 {
+  font-size: 1.875rem;
+  letter-spacing: .04em;
+}
+
 p {
   line-height: 1.4;
   letter-spacing: .02em;
@@ -695,6 +700,7 @@ hr {
   padding-top: 2rem;
   margin-bottom: 2rem;
   margin-top: 0;
+  opacity: .5;
 }
 
 .cta {
@@ -849,6 +855,10 @@ nav ul li a {
   margin-right: 0;
 }
 
+.content-block--text p {
+  margin-bottom: 1rem;
+}
+
 figure picture {
   margin-bottom: .75rem;
 }
@@ -921,20 +931,6 @@ figcaption {
   flex-wrap: wrap;
 }
 
-.card:before {
-  top: 0;
-  left: 0;
-  content: attr(data-collection);
-  width: 100%;
-  display: block;
-  position: absolute;
-  font-family: MonoItalic, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  color: #22b573;
-  text-align: center;
-  font-size: .875rem;
-  padding: .25rem;
-}
-
 .card-body {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -958,6 +954,11 @@ figcaption {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  border-radius: .25rem;
+  position: relative;
+  border-width: 1px;
+  border-color: #22b573;
+  overflow: hidden;
 }
 
 .card-image img {
@@ -984,23 +985,45 @@ figcaption {
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
+.collection-tag {
+  top: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  font-family: MonoItalic, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  color: #22b573;
+  background-color: #04303a;
+  text-align: center;
+  font-size: .875rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-bottom: .25rem;
+  padding-top: .5rem;
+  z-index: 10;
+  border-width: 1px;
+  border-color: #22b573;
+  border-top-right-radius: .25rem;
+}
+
 .star {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
   transform: rotate(-15deg);
   width: 7em;
   height: 7rem;
-  text-align: center;
-  position: absolute;
   top: 1rem;
   left: 1rem;
   background-size: 100%;
 }
 
 .star .star-text {
-  position: absolute;
   width: 100%;
   font-family: Display, serif;
   color: #22b573;
   font-size: 1.5rem;
+  position: absolute;
+  width: 100%;
   transform: translateY(-50%);
   top: 54%;
 }
@@ -1037,6 +1060,8 @@ figcaption {
   border-color: #22b573;
   border-top-width: 1px;
   background-color: #04303a;
+  position: relative;
+  z-index: 20;
 }
 
 .player-container .player-and-title-wrapper {

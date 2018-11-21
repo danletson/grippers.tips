@@ -10,6 +10,9 @@
     @apply .mr-0;
   }
 }
+.content-block--text p{
+  @apply .mb-4;
+}
 figure{
   & picture{
     @apply .mb-3;

@@ -3,12 +3,19 @@
     <div class="container">
       {{ title | wrap:h1.page-title }}
       <hr>
-      {{ collection from="{mount}" date:is_past="true" }}
-        {{ if collection == "rips" }}
-          {{ partial:rip_card }}
-        {{ elseif collection == "tips" }}
-          {{ partial:tip_card }}
-        {{ /if }}
+      {{ collection from="{mount}" date:is_past="true" paginate="true" limit="10" as="posts" }}
+        {{ posts }}
+          {{ if collection == "rips" }}
+            {{ partial:rip_card }}
+          {{ elseif collection == "tips" }}
+            {{ partial:tip_card }}
+          {{ /if }}
+        {{ /posts }}
+        <div class="pagination-container">
+          {{ paginate }}
+              {{ auto_links }}
+          {{ /paginate }}
+        </div>
       {{ /collection }}
   </div>
 </main>
