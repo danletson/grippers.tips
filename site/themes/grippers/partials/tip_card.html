@@ -35,10 +35,8 @@
     </div>
     <div class="stats font-mono">
       <ul>
-        <li class="border-b pb-2 mb-3">Genre: {{ genre }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /genre }}</li>
-        <li class="border-b pb-2 mb-3">Region: {{ region }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /region }}</li>
-        <li class="border-b pb-2 mb-3">Label: {{ label }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /label }}</li>
-        <li class="border-b pb-2 mb-3">Price: {{ price }}{{ unless first }}, {{ /unless }}<a href="{{ url }}" class="font-mono-italic">{{ title }}</a>{{ /price }}</li>
+        <li>Genre: {{ genre }}{{ unless first }}, {{ /unless }}<a href="{{ url }}">{{ title }}</a>{{ /genre }}</li>
+        <li>Price: {{ price }}{{ unless first }}, {{ /unless }}<a href="{{ url }}">{{ title }}</a>{{ /price }}</li>
       </ul>
       <div class="ctas">
         {{ tip_links }}

@@ -33,7 +33,7 @@ html{
 }
 body{
   font-family: 'Serif', serif;
-  @apply .text-white;
+  @apply .text-grippers-light;
 }
 h1.page-title{
   text-align:center;
@@ -45,20 +45,39 @@ h1{
 }
 h2{
   @apply .text-2xl .tracking-extra-wide;
+  line-height: 1.2;
   & a{
-    @apply .text-grippers-light;
+    @apply .text-grippers-primary;
   }
 }
 h3{
   @apply .text-3xl .tracking-extra-wide;
+  line-height: 1.2;
 }
 p{
-  line-height: 1.4;
-  @apply .tracking-wide;
+  line-height: 1.5;
+  @apply .tracking-wide .mb-6;
+  & a{
+    @apply .text-grippers-primary .border-grippers-primary .border-b;
+    border-bottom-width: .125em;
+  }
 }
 hr{
-  border-bottom: 1px solid;
-  @apply .pt-8 .mb-8 .mt-0 .opacity-50;
+  @apply .pt-8 .mb-8 .mt-0 .border-grippers-light .border-b .opacity-50;
+}
+blockquote p{
+  @apply .block .relative .pl-6 .text-grippers-light;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 1.2;
+  &:before{
+    content: "";
+    @apply .block .absolute .bg-grippers-tertiary;
+    width: .25em;
+    top: .18em;
+    bottom: .18em;
+    left: 0;
+  }
 }
 .cta{
   @apply .mr-2 .mb-2 .pb-1 .pt-2 .px-2 .font-mono .inline-block;

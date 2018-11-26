@@ -1,6 +1,7 @@
 collections:
   tips: '/tip/{slug}'
   rips: '/rip/{slug}'
+  blog: '/blog/{slug}'
 taxonomies:
   label: '/label/{slug}'
   price: '/price/{slug}'
@@ -9,7 +10,7 @@ taxonomies:
   style: '/style/{slug}'
   region: '/region/{slug}'
   star: '/starred/{slug}'
-routes: {  }
+routes:
   /search:
     template: search
-    title: Search Results
+    title: 'Search Results'

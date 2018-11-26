@@ -5,7 +5,7 @@ nav ul{
   & li{
     flex-basis: 1;
     & a{
-      @apply .text-grippers-light;
+      @apply .text-grippers-primary;
     }
   }
 }
@@ -14,7 +14,7 @@ nav ul{
 .search-box{
   @apply .w-full .mt-4 .w-full .relative .text-sm .text-left;
   & form{
-    @apply .flex .border .relative .border-grippers-light;
+    @apply .flex .border .relative .border-grippers-primary;
     & input[type="search"]{
       @apply .text-grippers-light;
       background: none;
@@ -23,7 +23,7 @@ nav ul{
     }
     & button{
       color: white;
-      @apply .relative .mx-2 .text-grippers-light;
+      @apply .relative .mx-2 .text-grippers-primary;
       top: .1rem;
     }
   }

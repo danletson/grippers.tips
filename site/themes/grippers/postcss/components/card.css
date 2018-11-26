@@ -2,7 +2,7 @@
   @apply .relative .p-4 .pt-10;
 }
 .card-head{
-  @apply .pb-4 .mb-4 .border-b;
+  @apply .pb-4 .mb-4 .border-b .border-grippers-tertiary;
   flex-wrap: wrap;
 }
 .card-body{
@@ -51,7 +51,7 @@
   background-size: 100%;
   & .star-text{
     width: 100%;
-    @apply .font-display .text-grippers-primary .text-2xl .absolute .w-full;
+    @apply .font-display .text-grippers-secondary .text-2xl .absolute .w-full;
     transform: translateY(-50%);
     top: 54%;
   }

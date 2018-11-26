@@ -42,12 +42,13 @@ View the full documentation at https://tailwindcss.com.
 | "secondary", or even a numeric scale like "100" and "200", go for it.
 |
 */
-
+/* 22B573*/
 let colors = {
 
-  'grippers-primary': '#22B573',
+  'grippers-primary': '#00B596',
   'grippers-secondary': '#EF5123',
-  'grippers-light': '#E4F9EE',
+  'grippers-tertiary': '#015B60',
+  'grippers-light': '#B4FCEE',
   'grippers-dark': '#04303A',
   'transparent': 'transparent',
   'black': '#04303A',
