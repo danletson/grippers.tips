@@ -1,0 +1,19 @@
+header{
+  @apply .pt-4 .pb-4 .px-4 .mb-16 .bg-grippers-light .fixed .w-full .z-50 .border-b .border-grippers-tertiary;
+  top: 0;
+}
+header .container{
+  @apply .flex .justify-between .flex-wrap .items-center .mb-0;
+}
+header>div{
+  @apply .max-w-lg .mx-auto;
+}
+nav{
+
+}
+.logo-container{
+  width: 200px;
+}
+@screen md{
+  @apply .flex-no-wrap;
+}

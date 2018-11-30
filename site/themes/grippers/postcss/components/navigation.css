@@ -1,19 +1,22 @@
 nav ul{
   list-style: none;
-  @apply .flex .justify-around .items-baseline .mt-4;
-  flex-wrap: wrap;
+  @apply .text-sm .flex .items-center;
   & li{
-    flex-basis: 1;
+    @apply .inline-block .mr-8;
     & a{
-      @apply .text-grippers-primary;
+      @apply .text-grippers-primary .font-mono;
+      &:hover{
+        @apply .text-grippers-secondary;
+      }
     }
   }
 }
 
 
 .search-box{
-  @apply .w-full .mt-4 .w-full .relative .text-sm .text-left;
+  @apply .w-full .w-full .relative .text-left .font-mono;
   & form{
+    border-style: solid;
     @apply .flex .border .relative .border-grippers-primary;
     & input[type="search"]{
       @apply .text-grippers-light;
@@ -24,7 +27,6 @@ nav ul{
     & button{
       color: white;
       @apply .relative .mx-2 .text-grippers-primary;
-      top: .1rem;
     }
   }
 }

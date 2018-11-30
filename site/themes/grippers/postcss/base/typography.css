@@ -10,18 +10,18 @@
 }
 @font-face {
   font-family: 'Serif';
-  src: url('../fonts/souvenir-medium.woff') format('woff'),
-       url('../fonts/souvenir-medium.woff2') format('woff2');
+  src: url('../fonts/souvenir-light.woff') format('woff'),
+       url('../fonts/souvenir-light.woff2') format('woff2');
 }
 @font-face {
   font-family: 'SerifItalic';
-  src: url('../fonts/souvenir-medium-italic.woff') format('woff'),
-       url('../fonts/souvenir-medium-italic.woff2') format('woff2');
+  src: url('../fonts/souvenir-light-italic.woff') format('woff'),
+       url('../fonts/souvenir-light-italic.woff2') format('woff2');
 }
 @font-face {
   font-family: 'SerifBold';
-  src: url('../fonts/souvenir-demi.woff') format('woff'),
-       url('../fonts/souvenir-demi.woff2') format('woff2');
+  src: url('../fonts/souvenir-medium.woff') format('woff'),
+       url('../fonts/souvenir-medium.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Display';
@@ -33,18 +33,18 @@ html{
 }
 body{
   font-family: 'Serif', serif;
-  @apply .text-grippers-light;
+  @apply .text-grippers-dark;
 }
 h1.page-title{
   text-align:center;
   @apply .mb-4;
   font-size: 4rem;
 }
-h1{
-
+h1,h2,h3{
+  @apply .font-serif-bold;
 }
 h2{
-  @apply .text-2xl .tracking-extra-wide;
+  @apply .text-2xl .tracking-wide;
   line-height: 1.2;
   & a{
     @apply .text-grippers-primary;
@@ -61,6 +61,9 @@ p{
     @apply .text-grippers-primary .border-grippers-primary .border-b;
     border-bottom-width: .125em;
   }
+}
+em{
+  @apply .font-serif-italic;
 }
 hr{
   @apply .pt-8 .mb-8 .mt-0 .border-grippers-light .border-b .opacity-50;

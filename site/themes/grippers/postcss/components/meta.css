@@ -7,7 +7,7 @@
   }
   & ul{
     & li{
-      @apply .border-b .border-grippers-tertiary .pb-2 .mb-4 .font-mono;
+      @apply .border-b .border-grippers-tertiary .pb-2 .mb-4 .font-mono .text-sm;
       height: 2rem;
       & a{
         @apply .font-mono-italic;

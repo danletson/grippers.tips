@@ -605,7 +605,335 @@ table {
   border-collapse: collapse;
 }
 
-/*@import "base/reset.css";*/
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main,
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects */
+
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td,
+td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
 
 /* @import "vendor/plyr.css"; */
 
@@ -615,7 +943,17 @@ table {
 } */
 
 body {
-  background-color: #04303a;
+  background-color: #fff;
+}
+
+.background-container {
+  opacity: .5;
+  width: 200vw;
+  height: 200vh;
+  position: fixed;
+  z-index: -1;
+  left: -50vw;
+  top: -50vh;
 }
 
 a {
@@ -640,17 +978,17 @@ ul {
 
 @font-face {
   font-family: 'Serif';
-  src: url('../fonts/souvenir-medium.woff') format('woff'), url('../fonts/souvenir-medium.woff2') format('woff2');
+  src: url('../fonts/souvenir-light.woff') format('woff'), url('../fonts/souvenir-light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SerifItalic';
-  src: url('../fonts/souvenir-medium-italic.woff') format('woff'), url('../fonts/souvenir-medium-italic.woff2') format('woff2');
+  src: url('../fonts/souvenir-light-italic.woff') format('woff'), url('../fonts/souvenir-light-italic.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SerifBold';
-  src: url('../fonts/souvenir-demi.woff') format('woff'), url('../fonts/souvenir-demi.woff2') format('woff2');
+  src: url('../fonts/souvenir-medium.woff') format('woff'), url('../fonts/souvenir-medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -664,7 +1002,7 @@ html {
 
 body {
   font-family: 'Serif', serif;
-  color: #b4fcee;
+  color: #022426;
 }
 
 h1.page-title {
@@ -673,12 +1011,15 @@ h1.page-title {
   font-size: 4rem;
 }
 
-h1 {
+h1,
+h2,
+h3 {
+  font-family: SerifBold, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
 }
 
 h2 {
   font-size: 1.5rem;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   line-height: 1.2;
 }
 
@@ -705,11 +1046,15 @@ p a {
   border-bottom-width: .125em;
 }
 
+em {
+  font-family: SerifItalic, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+}
+
 hr {
   padding-top: 2rem;
   margin-bottom: 2rem;
   margin-top: 0;
-  border-color: #b4fcee;
+  border-color: #b2f9eb;
   border-bottom-width: 1px;
   opacity: .5;
 }
@@ -718,7 +1063,7 @@ blockquote p {
   display: block;
   position: relative;
   padding-left: 1.5rem;
-  color: #b4fcee;
+  color: #b2f9eb;
   font-style: italic;
   font-size: 1.25em;
   line-height: 1.2;
@@ -781,6 +1126,11 @@ blockquote p:before {
 
 body {
   padding-bottom: 180px;
+  position: relative;
+}
+
+main {
+  padding-top: 8rem;
 }
 
 .container {
@@ -789,40 +1139,84 @@ body {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 40rem;
+    max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
   }
 }
 
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 4rem;
+  background-color: #b2f9eb;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  border-bottom-width: 1px;
+  border-color: #015b60;
+  top: 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+header>div {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+}
+
+.logo-container {
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  @apply .flex-no-wrap;
+}
+
 nav ul {
   list-style: none;
+  font-size: .875rem;
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-  margin-top: 1rem;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 nav ul li {
-  flex-basis: 1;
+  display: inline-block;
+  margin-right: 2rem;
 }
 
 nav ul li a {
   color: #00b596;
+  font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+nav ul li a:hover {
+  color: #ef5123;
 }
 
 .search-box {
   width: 100%;
-  margin-top: 1rem;
   width: 100%;
   position: relative;
-  font-size: .875rem;
   text-align: left;
+  font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 .search-box form {
+  border-style: solid;
   display: flex;
   border-width: 1px;
   position: relative;
@@ -830,7 +1224,7 @@ nav ul li a {
 }
 
 .search-box form input[type="search"] {
-  color: #b4fcee;
+  color: #b2f9eb;
   background: none;
   padding: .35rem;
   flex-basis: 100%;
@@ -842,7 +1236,6 @@ nav ul li a {
   margin-left: .5rem;
   margin-right: .5rem;
   color: #00b596;
-  top: .1rem;
 }
 
 @media (min-width: 768px) {
@@ -931,6 +1324,7 @@ figcaption {
   padding-bottom: .5rem;
   margin-bottom: 1rem;
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: .875rem;
   height: 2rem;
 }
 
@@ -950,8 +1344,8 @@ figcaption {
 
 .card {
   position: relative;
-  padding: 1rem;
-  padding-top: 2.5rem;
+  padding: 0;
+  background-color: #fff;
 }
 
 .card-head {
@@ -962,17 +1356,9 @@ figcaption {
   flex-wrap: wrap;
 }
 
-.card-body {
-  display: flex;
-  flex-wrap: wrap-reverse;
-}
-
-.card-body .intro {
-  flex-basis: 100%;
-}
-
-.card-body .stats {
-  flex-basis: 100%;
+.intro {
+  margin-bottom: .75rem;
+  font-size: 1.25rem;
 }
 
 .card-image-container {
@@ -983,12 +1369,7 @@ figcaption {
 
 .card-image {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: .25rem;
   position: relative;
-  border-width: 1px;
-  border-color: #00b596;
   overflow: hidden;
 }
 
@@ -998,22 +1379,22 @@ figcaption {
   line-height: 0;
 }
 
-.clip-cta-container {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-
-.clip-cta-container .cta {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  width: 100%;
-  text-align: center;
-}
+/* .clip-cta-container{
+  @apply .absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  & .cta{
+    border-width: 0;
+    @apply .mx-auto .mb-0 .w-full .text-center .border .border-grippers-dark;
+  }
+} */
 
 .meta {
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: .875rem;
+  opacity: .75;
+  margin-bottom: 1rem;
 }
 
 .collection-tag {
@@ -1023,7 +1404,7 @@ figcaption {
   position: absolute;
   font-family: MonoItalic, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   color: #00b596;
-  background-color: #04303a;
+  background-color: #022426;
   text-align: center;
   font-size: .875rem;
   padding-left: .5rem;
@@ -1060,17 +1441,30 @@ figcaption {
 }
 
 @media (min-width: 768px) {
-  .card-head {
+  .card-head h2 {
+    font-size: 2.25rem;
   }
 
   .card-body {
     flex-wrap: nowrap;
   }
 
+  .card-head {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .card-head .card-info-container {
+    padding: 1rem;
+    flex-basis: 66%;
+  }
+
   .card-image-container {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    flex-basis: 33%;
+    margin-right: 1rem;
+    margin-bottom: 0;
   }
 
   .star {
@@ -1088,9 +1482,9 @@ figcaption {
   width: 100vw;
   margin: 0 auto;
   height: 160px;
-  border-color: #00b596;
+  border-color: #015b60;
   border-top-width: 1px;
-  background-color: #04303a;
+  background-color: #022426;
   position: relative;
   z-index: 20;
 }
@@ -1111,7 +1505,7 @@ figcaption {
 }
 
 .player-container[data-theme="default"] {
-  background-color: #04303a;
+  background-color: #022426;
 }
 
 .player-container[data-theme="juno"] {
@@ -1259,7 +1653,7 @@ figcaption {
   vertical-align: baseline;
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-size: 1.125rem;
-  color: #b4fcee;
+  color: #b2f9eb;
 }
 
 .player-container .plyr .plyr__controls .plyr__time .plyr__time--current {
@@ -1323,7 +1717,7 @@ figcaption {
   padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  border-color: #b4fcee;
+  border-color: #015b60;
   border-width: 1px;
   margin-left: -1px;
 }
@@ -1441,11 +1835,11 @@ figcaption {
 }
 
 .bg-grippers-light {
-  background-color: #b4fcee;
+  background-color: #b2f9eb;
 }
 
 .bg-grippers-dark {
-  background-color: #04303a;
+  background-color: #022426;
 }
 
 .bg-transparent {
@@ -1473,11 +1867,11 @@ figcaption {
 }
 
 .hover\:bg-grippers-light:hover {
-  background-color: #b4fcee;
+  background-color: #b2f9eb;
 }
 
 .hover\:bg-grippers-dark:hover {
-  background-color: #04303a;
+  background-color: #022426;
 }
 
 .hover\:bg-transparent:hover {
@@ -1505,11 +1899,11 @@ figcaption {
 }
 
 .focus\:bg-grippers-light:focus {
-  background-color: #b4fcee;
+  background-color: #b2f9eb;
 }
 
 .focus\:bg-grippers-dark:focus {
-  background-color: #04303a;
+  background-color: #022426;
 }
 
 .focus\:bg-transparent:focus {
@@ -1609,11 +2003,11 @@ figcaption {
 }
 
 .border-grippers-light {
-  border-color: #b4fcee;
+  border-color: #b2f9eb;
 }
 
 .border-grippers-dark {
-  border-color: #04303a;
+  border-color: #022426;
 }
 
 .border-transparent {
@@ -1641,11 +2035,11 @@ figcaption {
 }
 
 .hover\:border-grippers-light:hover {
-  border-color: #b4fcee;
+  border-color: #b2f9eb;
 }
 
 .hover\:border-grippers-dark:hover {
-  border-color: #04303a;
+  border-color: #022426;
 }
 
 .hover\:border-transparent:hover {
@@ -1673,11 +2067,11 @@ figcaption {
 }
 
 .focus\:border-grippers-light:focus {
-  border-color: #b4fcee;
+  border-color: #b2f9eb;
 }
 
 .focus\:border-grippers-dark:focus {
-  border-color: #04303a;
+  border-color: #022426;
 }
 
 .focus\:border-transparent:focus {
@@ -4183,11 +4577,11 @@ figcaption {
 }
 
 .text-grippers-light {
-  color: #b4fcee;
+  color: #b2f9eb;
 }
 
 .text-grippers-dark {
-  color: #04303a;
+  color: #022426;
 }
 
 .text-transparent {
@@ -4215,11 +4609,11 @@ figcaption {
 }
 
 .hover\:text-grippers-light:hover {
-  color: #b4fcee;
+  color: #b2f9eb;
 }
 
 .hover\:text-grippers-dark:hover {
-  color: #04303a;
+  color: #022426;
 }
 
 .hover\:text-transparent:hover {
@@ -4247,11 +4641,11 @@ figcaption {
 }
 
 .focus\:text-grippers-light:focus {
-  color: #b4fcee;
+  color: #b2f9eb;
 }
 
 .focus\:text-grippers-dark:focus {
-  color: #04303a;
+  color: #022426;
 }
 
 .focus\:text-transparent:focus {
@@ -4717,11 +5111,11 @@ svg {
   }
 
   .sm\:bg-grippers-light {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .sm\:bg-grippers-dark {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .sm\:bg-transparent {
@@ -4749,11 +5143,11 @@ svg {
   }
 
   .sm\:hover\:bg-grippers-light:hover {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .sm\:hover\:bg-grippers-dark:hover {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .sm\:hover\:bg-transparent:hover {
@@ -4781,11 +5175,11 @@ svg {
   }
 
   .sm\:focus\:bg-grippers-light:focus {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .sm\:focus\:bg-grippers-dark:focus {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .sm\:focus\:bg-transparent:focus {
@@ -4877,11 +5271,11 @@ svg {
   }
 
   .sm\:border-grippers-light {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .sm\:border-grippers-dark {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .sm\:border-transparent {
@@ -4909,11 +5303,11 @@ svg {
   }
 
   .sm\:hover\:border-grippers-light:hover {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .sm\:hover\:border-grippers-dark:hover {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .sm\:hover\:border-transparent:hover {
@@ -4941,11 +5335,11 @@ svg {
   }
 
   .sm\:focus\:border-grippers-light:focus {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .sm\:focus\:border-grippers-dark:focus {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .sm\:focus\:border-transparent:focus {
@@ -7435,11 +7829,11 @@ svg {
   }
 
   .sm\:text-grippers-light {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .sm\:text-grippers-dark {
-    color: #04303a;
+    color: #022426;
   }
 
   .sm\:text-transparent {
@@ -7467,11 +7861,11 @@ svg {
   }
 
   .sm\:hover\:text-grippers-light:hover {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .sm\:hover\:text-grippers-dark:hover {
-    color: #04303a;
+    color: #022426;
   }
 
   .sm\:hover\:text-transparent:hover {
@@ -7499,11 +7893,11 @@ svg {
   }
 
   .sm\:focus\:text-grippers-light:focus {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .sm\:focus\:text-grippers-dark:focus {
-    color: #04303a;
+    color: #022426;
   }
 
   .sm\:focus\:text-transparent:focus {
@@ -7962,11 +8356,11 @@ svg {
   }
 
   .md\:bg-grippers-light {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .md\:bg-grippers-dark {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .md\:bg-transparent {
@@ -7994,11 +8388,11 @@ svg {
   }
 
   .md\:hover\:bg-grippers-light:hover {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .md\:hover\:bg-grippers-dark:hover {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .md\:hover\:bg-transparent:hover {
@@ -8026,11 +8420,11 @@ svg {
   }
 
   .md\:focus\:bg-grippers-light:focus {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .md\:focus\:bg-grippers-dark:focus {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .md\:focus\:bg-transparent:focus {
@@ -8122,11 +8516,11 @@ svg {
   }
 
   .md\:border-grippers-light {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .md\:border-grippers-dark {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .md\:border-transparent {
@@ -8154,11 +8548,11 @@ svg {
   }
 
   .md\:hover\:border-grippers-light:hover {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .md\:hover\:border-grippers-dark:hover {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .md\:hover\:border-transparent:hover {
@@ -8186,11 +8580,11 @@ svg {
   }
 
   .md\:focus\:border-grippers-light:focus {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .md\:focus\:border-grippers-dark:focus {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .md\:focus\:border-transparent:focus {
@@ -10680,11 +11074,11 @@ svg {
   }
 
   .md\:text-grippers-light {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .md\:text-grippers-dark {
-    color: #04303a;
+    color: #022426;
   }
 
   .md\:text-transparent {
@@ -10712,11 +11106,11 @@ svg {
   }
 
   .md\:hover\:text-grippers-light:hover {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .md\:hover\:text-grippers-dark:hover {
-    color: #04303a;
+    color: #022426;
   }
 
   .md\:hover\:text-transparent:hover {
@@ -10744,11 +11138,11 @@ svg {
   }
 
   .md\:focus\:text-grippers-light:focus {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .md\:focus\:text-grippers-dark:focus {
-    color: #04303a;
+    color: #022426;
   }
 
   .md\:focus\:text-transparent:focus {
@@ -11207,11 +11601,11 @@ svg {
   }
 
   .lg\:bg-grippers-light {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .lg\:bg-grippers-dark {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .lg\:bg-transparent {
@@ -11239,11 +11633,11 @@ svg {
   }
 
   .lg\:hover\:bg-grippers-light:hover {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .lg\:hover\:bg-grippers-dark:hover {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .lg\:hover\:bg-transparent:hover {
@@ -11271,11 +11665,11 @@ svg {
   }
 
   .lg\:focus\:bg-grippers-light:focus {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .lg\:focus\:bg-grippers-dark:focus {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .lg\:focus\:bg-transparent:focus {
@@ -11367,11 +11761,11 @@ svg {
   }
 
   .lg\:border-grippers-light {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .lg\:border-grippers-dark {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .lg\:border-transparent {
@@ -11399,11 +11793,11 @@ svg {
   }
 
   .lg\:hover\:border-grippers-light:hover {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .lg\:hover\:border-grippers-dark:hover {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .lg\:hover\:border-transparent:hover {
@@ -11431,11 +11825,11 @@ svg {
   }
 
   .lg\:focus\:border-grippers-light:focus {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .lg\:focus\:border-grippers-dark:focus {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .lg\:focus\:border-transparent:focus {
@@ -13925,11 +14319,11 @@ svg {
   }
 
   .lg\:text-grippers-light {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .lg\:text-grippers-dark {
-    color: #04303a;
+    color: #022426;
   }
 
   .lg\:text-transparent {
@@ -13957,11 +14351,11 @@ svg {
   }
 
   .lg\:hover\:text-grippers-light:hover {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .lg\:hover\:text-grippers-dark:hover {
-    color: #04303a;
+    color: #022426;
   }
 
   .lg\:hover\:text-transparent:hover {
@@ -13989,11 +14383,11 @@ svg {
   }
 
   .lg\:focus\:text-grippers-light:focus {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .lg\:focus\:text-grippers-dark:focus {
-    color: #04303a;
+    color: #022426;
   }
 
   .lg\:focus\:text-transparent:focus {
@@ -14452,11 +14846,11 @@ svg {
   }
 
   .xl\:bg-grippers-light {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .xl\:bg-grippers-dark {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .xl\:bg-transparent {
@@ -14484,11 +14878,11 @@ svg {
   }
 
   .xl\:hover\:bg-grippers-light:hover {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .xl\:hover\:bg-grippers-dark:hover {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .xl\:hover\:bg-transparent:hover {
@@ -14516,11 +14910,11 @@ svg {
   }
 
   .xl\:focus\:bg-grippers-light:focus {
-    background-color: #b4fcee;
+    background-color: #b2f9eb;
   }
 
   .xl\:focus\:bg-grippers-dark:focus {
-    background-color: #04303a;
+    background-color: #022426;
   }
 
   .xl\:focus\:bg-transparent:focus {
@@ -14612,11 +15006,11 @@ svg {
   }
 
   .xl\:border-grippers-light {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .xl\:border-grippers-dark {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .xl\:border-transparent {
@@ -14644,11 +15038,11 @@ svg {
   }
 
   .xl\:hover\:border-grippers-light:hover {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .xl\:hover\:border-grippers-dark:hover {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .xl\:hover\:border-transparent:hover {
@@ -14676,11 +15070,11 @@ svg {
   }
 
   .xl\:focus\:border-grippers-light:focus {
-    border-color: #b4fcee;
+    border-color: #b2f9eb;
   }
 
   .xl\:focus\:border-grippers-dark:focus {
-    border-color: #04303a;
+    border-color: #022426;
   }
 
   .xl\:focus\:border-transparent:focus {
@@ -17170,11 +17564,11 @@ svg {
   }
 
   .xl\:text-grippers-light {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .xl\:text-grippers-dark {
-    color: #04303a;
+    color: #022426;
   }
 
   .xl\:text-transparent {
@@ -17202,11 +17596,11 @@ svg {
   }
 
   .xl\:hover\:text-grippers-light:hover {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .xl\:hover\:text-grippers-dark:hover {
-    color: #04303a;
+    color: #022426;
   }
 
   .xl\:hover\:text-transparent:hover {
@@ -17234,11 +17628,11 @@ svg {
   }
 
   .xl\:focus\:text-grippers-light:focus {
-    color: #b4fcee;
+    color: #b2f9eb;
   }
 
   .xl\:focus\:text-grippers-dark:focus {
-    color: #04303a;
+    color: #022426;
   }
 
   .xl\:focus\:text-transparent:focus {
