@@ -2,11 +2,14 @@
   position:relative;
   z-index: 5;
 } */
+*{
+  box-sizing: border-box;
+  border-style: solid;
+}
 body{
-  @apply .bg-white;
+  @apply .bg-grippers-light;
 }
 .background-container{
-  opacity: 0.5;
   width: 200vw;
   height: 200vh;
   position: fixed;

@@ -2,52 +2,49 @@
   display: block;
   width: 100vw;
   margin: 0 auto;
-  height: 160px;
-  @apply .border-grippers-tertiary .border-t .bg-grippers-dark .relative .z-20;
+  height: 124px;
+  @apply .bg-white .relative .z-20 .max-w-md .mx-auto .border-t-4 .border-grippers-primary;
   & .player-and-title-wrapper{
     position:relative;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-48%);
+    @apply .px-6;
     & .track-title{
-      @apply .text-center .mb-2;
+      @apply .mb-2;
     }
   }
   &.collapsed{
     display: none;
   }
-  &[data-theme="default"]{
-    @apply .bg-grippers-dark;
+  /* &[data-theme="default"]{
+    @apply .bg-grippers-light;
   }
   &[data-theme="juno"]{
-    background: #f3f3f3;
+    @apply .bg-grippers-light;
   }
   &[data-theme="beatport"]{
-    background: #262626;
+    @apply .bg-grippers-light;
   }
   &[data-theme="soundcloud"]{
-    background: #f5f5f5;
-  }
+    @apply .bg-grippers-light;
+  } */
 }
 
 .embed-iframe-wrapper{
   position:relative;
-  top: 50%;
-  transform: translateY(-50%);
   text-align: center;
+  @apply .mx-auto;
   & iframe{
     @apply .m-auto;
     border: 0;
     &[data-provider="bandcamp"]{
       height: 120px;
-      max-width: 700px;
     }
     &[data-provider="soundcloud"]{
       height: 116px;
-      max-width: 700px;
     }
     &[data-provider="juno"]{
       height: 120px;
-      max-width: 700px;
     }
   }
 
@@ -64,9 +61,6 @@
 }
 .plyr--video{
   background: none;
-}
-.plyr--audio{
-  bottom: 10px;
 }
 .plyr--video .plyr__time{
   text-shadow: none;
@@ -106,8 +100,9 @@
   transition: opacity .3s linear;
   @apply .font-mono;
   & .track-title{
+    @apply .pl-2;
     & span{
-      font-size: 1.25rem;
+      /* font-size: 1.25rem; */
     }
   }
   & .plyr{
@@ -136,7 +131,7 @@
       & .plyr__time{
         display: none;
         vertical-align: baseline;
-        @apply .font-mono .text-lg .text-grippers-light;
+        @apply .font-mono .text-sm .text-grippers-dark;
         & .plyr__time--current{
           width: 3rem;
           display: inline-block;
@@ -175,7 +170,8 @@
 @screen md{
   .player-container{
     flex-wrap: nowrap;
-    padding: 0 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     & .track-title{
     }
     & .plyr{

@@ -35,28 +35,37 @@ body{
   font-family: 'Serif', serif;
   @apply .text-grippers-dark;
 }
-h1.page-title{
-  text-align:center;
+h1{
   @apply .mb-4;
   font-size: 4rem;
+  &.page-title{
+    @apply .mb-16;
+  }
 }
 h1,h2,h3{
   @apply .font-serif-bold;
 }
 h2{
-  @apply .text-2xl .tracking-wide;
-  line-height: 1.2;
+  @apply .text-2xl;
+  line-height: 1.1;
   & a{
     @apply .text-grippers-primary;
   }
 }
 h3{
-  @apply .text-3xl .tracking-extra-wide;
+  @apply .text-3xl .tracking-extra-wide .mb-4;
   line-height: 1.2;
+}
+a{
+  @apply .text-grippers-primary;
+  transition: all .2s ease;
+  &:hover{
+    @apply .text-grippers-primary-darkened;
+  }
 }
 p{
   line-height: 1.5;
-  @apply .tracking-wide .mb-6;
+  @apply .mb-6;
   & a{
     @apply .text-grippers-primary .border-grippers-primary .border-b;
     border-bottom-width: .125em;
@@ -66,13 +75,14 @@ em{
   @apply .font-serif-italic;
 }
 hr{
-  @apply .pt-8 .mb-8 .mt-0 .border-grippers-light .border-b .opacity-50;
+  @apply .pt-8 .mb-8 .mt-0 .border-grippers-tertiary .border-b;
+  border-style: solid;
+  border-top: none;
 }
 blockquote p{
-  @apply .block .relative .pl-6 .text-grippers-light;
+  @apply .block .relative .pl-6 .text-xl .text-grippers-tertiary;
   font-style: italic;
-  font-size: 1.25em;
-  line-height: 1.2;
+  line-height: 1.4;
   &:before{
     content: "";
     @apply .block .absolute .bg-grippers-tertiary;
@@ -83,18 +93,27 @@ blockquote p{
   }
 }
 .cta{
-  @apply .mr-2 .mb-2 .pb-1 .pt-2 .px-2 .font-mono .inline-block;
+  @apply .mr-2 .mb-2 .mb-2 .pb-1 .pt-2 .px-3 .font-mono .inline-block .text-sm;
   cursor: pointer;
   &.primary{
     color: white;
     @apply .bg-grippers-secondary .border-grippers-secondary .border;
+    &:hover{
+      @apply .bg-grippers-secondary-darkened;
+    }
   }
   &.secondary{
     color: white;
     @apply .bg-grippers-primary .border-grippers-primary .border;
+    &:hover{
+      @apply .bg-grippers-primary-darkened;
+    }
   }
   &.reverse{
     @apply .text-grippers-secondary .border-grippers-secondary .border;
+    &:hover{
+      @apply .text-grippers-secondary-darkened .border-grippers-secondary-darkened;
+    }
   }
 }
 @screen md{

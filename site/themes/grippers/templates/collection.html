@@ -1,8 +1,7 @@
 {{ partial:header }}
 <main class="mx-2">
     <div class="container">
-      {{ title | wrap:h1.page-title }}
-      <hr>
+      {{ title | wrap:h1.page-title  }}
       {{ collection from="{mount}" date:is_past="true" paginate="true" limit="10" as="posts" }}
         {{ posts }}
           {{ if collection == "rips" }}

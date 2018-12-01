@@ -3,7 +3,7 @@ body{
   position:relative;
 }
 main{
-  padding-top: 8rem;
+  padding-top: 10rem;
 }
 .container{
   @apply .w-full;
@@ -11,5 +11,8 @@ main{
 @screen md{
   .container{
     @apply .max-w-lg .mx-auto .mb-8;
+  }
+  main{
+    padding-top: 8rem;
   }
 }

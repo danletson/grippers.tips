@@ -2,7 +2,7 @@
   & ul{
     @apply .flex .text-xl .font-mono .justify-center;
     & li{
-      @apply .px-4 .py-2 .border-grippers-tertiary .border;
+      @apply .px-4 .py-2;
       margin-left: -1px;
       &.disabled{
         display: none;

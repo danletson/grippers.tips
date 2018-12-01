@@ -1,0 +1,29 @@
+<script type="application/ld+json">
+{
+ "recordLabel": "{{ label }}{{ title }}{{ /label }}",
+ "description": "{{ intro_content | strip_tags | trim}}",
+ "image": "http://grippers.tips{{ assets:artwork limit='1' }}{{ url }}{{ /assets:artwork }}",
+ "datePublished": {{ publish_date format="Y" }},
+ "genre": [
+   {{ genre }}
+    {{ unless first }},{{ /unless }}
+    "{{ title }}"
+   {{ /genre }}
+ ],
+ "releaseOf": {
+  "name": "{{ release_title }}",
+  "datePublished": {{ publish_date format="Y" }},
+  "byArtist": [
+   {
+    "@type": "MusicGroup",
+    "name": "{{ artist }}"
+   }
+  ],
+  "@type": "MusicAlbum"
+},
+ "name": "{{ title }}",
+ "catalogNumber": "{{ catalog_number }}",
+ "@context": "http://schema.org",
+ "@type": "MusicRelease"
+}
+</script>

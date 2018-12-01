@@ -1,14 +1,8 @@
 .stats{
-  & .two-column{
-    @apply .flex .flex-wrap .mb-4;
-    &>div{
-      flex-basis: 100%;
-    }
-  }
   & ul{
     & li{
-      @apply .border-b .border-grippers-tertiary .pb-2 .mb-4 .font-mono .text-sm;
-      height: 2rem;
+      @apply .border-b .border-grippers-tertiary .pb-3 .pt-4 .font-mono .text-sm .block .relative;
+      top: -1px;
       & a{
         @apply .font-mono-italic;
       }

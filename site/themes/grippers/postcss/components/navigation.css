@@ -1,6 +1,8 @@
+nav{
+  @apply .flex .items-center .flex-wrap;
+}
 nav ul{
-  list-style: none;
-  @apply .text-sm .flex .items-center;
+  @apply .text-sm .flex .items-center .justify-center .flex-wrap .text-center .mb-2 .w-full;
   & li{
     @apply .inline-block .mr-8;
     & a{
@@ -14,7 +16,7 @@ nav ul{
 
 
 .search-box{
-  @apply .w-full .w-full .relative .text-left .font-mono;
+  @apply .w-full .relative .text-left .font-mono;
   & form{
     border-style: solid;
     @apply .flex .border .relative .border-grippers-primary;
@@ -31,8 +33,9 @@ nav ul{
   }
 }
 @screen md{
+
   nav ul{
-    flex-wrap: nowrap;
+    @apply .flex-no-wrap .mb-0 .w-auto;
   }
   .search-box{
     @apply .w-auto;

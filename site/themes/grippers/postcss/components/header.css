@@ -1,5 +1,5 @@
 header{
-  @apply .pt-4 .pb-4 .px-4 .mb-16 .bg-grippers-light .fixed .w-full .z-50 .border-b .border-grippers-tertiary;
+  @apply .pt-3 .pb-3 .px-4 .mb-16 .bg-white .absolute .w-full .z-50 .text-center;
   top: 0;
 }
 header .container{
@@ -12,8 +12,14 @@ nav{
 
 }
 .logo-container{
-  width: 200px;
+  @apply .w-full .mb-3 .mx-auto;
+  max-width: 200px;
 }
 @screen md{
-  @apply .flex-no-wrap;
+  header{
+    @apply .text-left .fixed;
+  }
+  .logo-container{
+    @apply .mx-0;
+  }
 }

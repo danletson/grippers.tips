@@ -1,15 +1,16 @@
 .card{
-  @apply .relative .p-0 .bg-white;
+  @apply .relative .p-0 .bg-white .mb-24 .border-t-4 .border-grippers-tertiary;
+
 }
 .card-head{
-  @apply .pb-4 .mb-4 .border-b .border-grippers-tertiary;
+  @apply .pb-4 .mb-4;
   flex-wrap: wrap;
-}
-.intro{
-  @apply .mb-3 .text-xl;
 }
 .card-image-container{
   @apply .relative .w-full .mb-6;
+}
+.card-info-container{
+  @apply .relative .px-4;
 }
 .card-image{
   @apply .w-full .relative;
@@ -34,9 +35,8 @@
   @apply .font-mono .text-sm .opacity-75 .mb-4;
 }
 .collection-tag{
-  top: 0;
+  @apply .block .font-mono .text-grippers-tertiary .text-right .text-xs .px-1 .pt-1 .bg-white .absolute .z-10;
   right: 0;
-  @apply .block .absolute .font-mono-italic .text-grippers-primary .bg-grippers-dark .text-center .text-sm .px-2 .pb-1 .pt-2 .z-10 .border .border-grippers-primary .rounded-tr;
 }
 .star {
   @apply .absolute .z-10 .text-center;
@@ -65,13 +65,13 @@
   .card-head{
     @apply .flex .flex-no-wrap .mb-0 .pb-0;
     & .card-info-container{
-      @apply .p-4;
-      flex-basis: 66%;
+      @apply .p-4 .pl-6;
+      flex-basis: 67%;
     }
   }
   .card-image-container{
     flex-basis: 33%;
-    @apply .mr-4 .mb-0;
+    @apply .mb-0;
   }
   .star {
     top: -2rem;

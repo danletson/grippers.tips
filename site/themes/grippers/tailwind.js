@@ -45,10 +45,12 @@ View the full documentation at https://tailwindcss.com.
 /* 22B573*/
 let colors = {
 
-  'grippers-primary': '#00B596',
-  'grippers-secondary': '#EF5123',
+  'grippers-primary': '#02aa8a',
+  'grippers-primary-darkened': '#038E73',
+  'grippers-secondary': '#F94A28',
+  'grippers-secondary-darkened': '#E0351E',
   'grippers-tertiary': '#015B60',
-  'grippers-light': '#B2F9EB',
+  'grippers-light': '#D4F9EF',
   'grippers-dark': '#022426',
   'transparent': 'transparent',
   'black': '#04303A',
