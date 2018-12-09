@@ -1,5 +1,5 @@
 .card{
-  @apply .relative .p-0 .bg-white .mb-24 .border-t-4 .border-grippers-tertiary;
+  @apply .relative .p-0 .bg-white .mb-24 .border-t-4 .border-grippers-tertiary .text-grippers-dark;
 
 }
 .card-head{
@@ -66,11 +66,14 @@
     @apply .flex .flex-no-wrap .mb-0 .pb-0;
     & .card-info-container{
       @apply .p-4 .pl-6;
-      flex-basis: 67%;
+      flex-basis: 60%;
     }
   }
+  .card--blog .card-head .card-info-container{
+    flex-basis: 100%;
+  }
   .card-image-container{
-    flex-basis: 33%;
+    flex-basis: 40%;
     @apply .mb-0;
   }
   .star {

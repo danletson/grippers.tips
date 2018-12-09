@@ -2,7 +2,7 @@
 <main class="entry">
   <div class="container">
     <div class="entry-header">
-      {{ title wrap="h1.page-title" }}
+      {{ title | wrap:h1 | widont }}
       <div class="log-line">
         {{ log_line | wrap:h3 }}
       </div>

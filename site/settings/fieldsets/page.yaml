@@ -10,17 +10,32 @@ sections:
         display: Slug
         type: text
         validate: required
-      content:
-        spellcheck: true
-        allow_source: true
-        autoLink: false
-        target_blank: false
-        link_validation: false
-        force_plain_text: true
-        clean_pasted_html: false
-        restrict_assets: false
-        type: bard
-        display: Content
+      content_pieces:
+        type: partial
+        fieldset: bard
+  meta:
+    display: Meta
+    fields:
+      date:
+        display: Date
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 1900'
+        validate: required
+      meta_description:
+        type: text
+        display: 'Meta Description'
+        validate: required
+      meta_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: grid
+        type: assets
+        display: 'Meta Image'
 taxonomies: true
 title: Page
 create_title: Page

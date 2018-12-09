@@ -1,6 +1,13 @@
 {{ partial:header }}
-<main>
-    {{ content }}
-    {{ partial:player }}
-<main>
+<main class="entry">
+  <div class="container">
+    <div class="entry-header">
+      {{ title | wrap:h1 | widont }}
+    </div>
+    <hr>
+    {{ partial:rich_content }}
+    {{ partial:disqus }}
+  </div>
+</main>
+{{ partial:player }}
 {{ partial:footer }}

@@ -1,0 +1,24 @@
+<div class="card card--blog">
+  <div class="card-head">
+    <div class="collection-tag">Blog</div>
+    <div class="card-info-container">
+      <h2 class="mb-2"><a href="{{ url }}">{{ title }}</a></h2>
+      <div class="meta">
+        <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >{{ date format='M jS Y' }}</time>
+        {{ author }}
+          {{ if first }}by{{ /if }}
+          {{ if type == 'user_author' }}
+            {{ relate:user_profile }}
+              {{ name }}
+            {{ /relate:user_profile }}
+          {{ elseif type == 'external_author' }}
+            {{ name }}
+          {{ /if }}
+        {{ /author }}
+      </div>
+      <div class="intro">
+        {{ intro_content }}
+      </div>
+    </div>
+  </div>
+</div>

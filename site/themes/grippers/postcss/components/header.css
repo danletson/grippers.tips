@@ -1,5 +1,5 @@
 header{
-  @apply .pt-3 .pb-3 .px-4 .mb-16 .bg-white .absolute .w-full .z-50 .text-center;
+  @apply .pt-3 .pb-3 .px-4 .mb-16 .absolute .w-full .z-50 .text-center;
   top: 0;
 }
 header .container{
@@ -17,7 +17,7 @@ nav{
 }
 @screen md{
   header{
-    @apply .text-left .fixed;
+    @apply .text-left;
   }
   .logo-container{
     @apply .mx-0;

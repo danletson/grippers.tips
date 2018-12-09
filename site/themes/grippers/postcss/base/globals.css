@@ -7,7 +7,7 @@
   border-style: solid;
 }
 body{
-  @apply .bg-grippers-light;
+  @apply .bg-grippers-dark;
 }
 .background-container{
   width: 200vw;
@@ -21,7 +21,6 @@ a{
   @apply .text-grippers-primary;
   text-decoration: none;
 }
-ul{
-  list-style: none;
-  @apply .pl-0;
+@screen md{
+
 }

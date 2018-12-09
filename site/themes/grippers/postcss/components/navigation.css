@@ -4,7 +4,7 @@ nav{
 nav ul{
   @apply .text-sm .flex .items-center .justify-center .flex-wrap .text-center .mb-2 .w-full;
   & li{
-    @apply .inline-block .mr-8;
+    @apply .inline-block .mr-8 .mb-0;
     & a{
       @apply .text-grippers-primary .font-mono;
       &:hover{
@@ -21,9 +21,10 @@ nav ul{
     border-style: solid;
     @apply .flex .border .relative .border-grippers-primary;
     & input[type="search"]{
-      @apply .text-grippers-light;
+      @apply .text-grippers-dark .font-mono .text-sm;
       background: none;
       padding: .35rem;
+      padding-top: .5rem;
       flex-basis: 100%;
     }
     & button{

@@ -33,7 +33,7 @@ html{
 }
 body{
   font-family: 'Serif', serif;
-  @apply .text-grippers-dark;
+  @apply .text-grippers-light;
 }
 h1{
   @apply .mb-4;
@@ -67,8 +67,18 @@ p{
   line-height: 1.5;
   @apply .mb-6;
   & a{
-    @apply .text-grippers-primary .border-grippers-primary .border-b;
-    border-bottom-width: .125em;
+    @apply .text-grippers-primary .border-grippers-light .border-b;
+    border-bottom-width: .125rem;
+    &:hover{
+      @apply .bg-grippers-light;
+    }
+  }
+}
+ul{
+  list-style: circle;
+  @apply .px-4 .pl-8 .mb-8;
+  & li{
+    @apply .mb-4;
   }
 }
 em{

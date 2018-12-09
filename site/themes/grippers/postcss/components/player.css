@@ -3,7 +3,7 @@
   width: 100vw;
   margin: 0 auto;
   height: 124px;
-  @apply .bg-white .relative .z-20 .max-w-md .mx-auto .border-t-4 .border-grippers-primary;
+  @apply .bg-white .relative .z-20 .max-w-md .mx-auto .border-t-4 .border-grippers-primary .text-grippers-dark;
   & .player-and-title-wrapper{
     position:relative;
     top: 50%;

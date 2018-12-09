@@ -1,7 +1,8 @@
 .stats{
   & ul{
+    @apply .px-0;
     & li{
-      @apply .border-b .border-grippers-tertiary .pb-3 .pt-4 .font-mono .text-sm .block .relative;
+      @apply .mb-0 .border-b .border-grippers-tertiary .pb-3 .pt-4 .font-mono .text-sm .block .relative;
       top: -1px;
       & a{
         @apply .font-mono-italic;

@@ -1,9 +1,11 @@
 .pagination-container{
   & ul{
-    @apply .flex .text-xl .font-mono .justify-center;
+    @apply .flex .text-xl .font-mono .justify-center .text-grippers-dark .px-0;
+    list-style: none;
     & li{
-      @apply .px-4 .py-2;
-      margin-left: -1px;
+      @apply .px-4 .py-2 .bg-white;
+      padding-top: .8rem;
+      margin-left: 1px;
       &.disabled{
         display: none;
       }

@@ -1,0 +1,80 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        width: 50
+        validate: required
+        localizable: true
+      slug:
+        display: Slug
+        type: text
+        width: 50
+        validate: required
+      intro_content:
+        restrict_assets: false
+        type: redactor
+        display: 'Intro Content'
+        validate: required
+      content_pieces:
+        type: partial
+        fieldset: bard
+      author:
+        type: replicator
+        display: Author(s)
+        sets:
+          external_author:
+            display: 'External Author'
+            fields:
+              name:
+                type: text
+                display: Name
+              headshot:
+                type: assets
+                container: main
+                display: Headshot
+                folder: /headshots
+                restrict: true
+                mode: grid
+                max_files: 1
+              bio:
+                type: redactor
+                display: Bio
+              link:
+                type: text
+                display: Link
+                validate: url
+          user_author:
+            display: 'User Author'
+            fields:
+              user_profile:
+                type: users
+                display: User
+  meta:
+    display: Meta
+    fields:
+      date:
+        display: Date
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 1900'
+        validate: required
+      meta_description:
+        type: text
+        display: 'Meta Description'
+        validate: required
+      meta_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: grid
+        type: assets
+        display: 'Meta Image'
+taxonomies: true
+title: Blog
+create_title: 'New Blog'

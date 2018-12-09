@@ -3,7 +3,7 @@
 }
 
 .search-term{
-  @apply .text-center .mb-4 .font-mono;
+  @apply .text-xl .mb-4 .font-mono;
 }
 .search-card{
   @apply .w-full .flex;

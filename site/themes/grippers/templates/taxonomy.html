@@ -1,7 +1,9 @@
 {{ partial:header }}
 <main class="mx-2">
     <div class="container">
-      {{ collection from="rips|tips" date:is_past="true" paginate="true" limit="10" as="posts"}}
+      <h1 class="page-title">{{ segment_1 | title }}: {{ segment_2 | title }}</h1>
+      {{ term }}
+      {{ collection taxonomy="{segment_1}/{segment_2}" from="tips|rips" date:is_past="true" paginate="true" limit="10" as="posts" }}
         {{ posts }}
           {{ partial:card }}
         {{ /posts }}

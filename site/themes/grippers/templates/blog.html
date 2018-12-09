@@ -1,0 +1,26 @@
+{{ partial:header }}
+<main class="entry">
+  <div class="container">
+    <div class="entry-header">
+      {{ title | wrap:h1 | widont }}
+      <div class="meta">
+        <time datetime="{{ date format='Y-m-d\TH:i:sP' }}" >Published {{ date format='M jS Y' }}</time>
+        {{ author }}
+          {{ if first }}by{{ /if }}
+          {{ if type == 'user_author' }}
+            {{ relate:user_profile }}
+              {{ name }}
+            {{ /relate:user_profile }}
+          {{ elseif type == 'external_author' }}
+            {{ name }}
+          {{ /if }}
+        {{ /author }}
+      </div>
+    </div>
+    <hr>
+    {{ partial:rich_content }}
+    {{ partial:disqus }}
+  </div>
+</main>
+{{ partial:player }}
+{{ partial:footer }}
