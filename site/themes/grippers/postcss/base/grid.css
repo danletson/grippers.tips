@@ -13,6 +13,6 @@ main{
     @apply .max-w-lg .mx-auto .mb-8;
   }
   main{
-    padding-top: 8rem;
+    padding-top: 6rem;
   }
 }

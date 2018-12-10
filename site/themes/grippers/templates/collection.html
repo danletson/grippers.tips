@@ -4,7 +4,11 @@
       {{ title | wrap:h1.page-title  }}
       {{ collection from="{mount}" date:is_past="true" paginate="true" limit="10" as="posts" }}
         {{ posts }}
-          {{ partial:card }}
+          {{ unless collection == "blog" }}
+            {{ partial:card }}
+          {{ else }}
+            {{ partial:blog_card }}
+          {{ /unless }}
         {{ /posts }}
         <div class="pagination-container">
           {{ paginate }}

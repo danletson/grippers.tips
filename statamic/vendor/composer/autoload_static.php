@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
+class ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79
 {
     public static $files = array (
         '95a22d2145ae40de20dc7ea7be07a610' => __DIR__ . '/../..' . '/bootstrap/helpers.php',
@@ -118,7 +118,6 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
             'ComposerIncludeFiles\\' => 21,
             'Collective\\Html\\' => 16,
             'ClassPreloader\\' => 15,
-            'Carbon\\' => 7,
         ),
         'B' => 
         array (
@@ -350,10 +349,6 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         array (
             0 => __DIR__ . '/..' . '/classpreloader/classpreloader/src',
         ),
-        'Carbon\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
         'Barryvdh\\Debugbar\\' => 
         array (
             0 => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src',
@@ -362,6 +357,10 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         array (
             0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -821,7 +820,10 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         'Barryvdh\\Debugbar\\Twig\\TokenParser\\StopwatchTokenParser' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/Twig/TokenParser/StopwatchTokenParser.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
+        'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
+        'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'ClassPreloader\\ClassList' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassList.php',
         'ClassPreloader\\ClassLoader' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassLoader.php',
         'ClassPreloader\\ClassNode' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassNode.php',
@@ -1628,6 +1630,7 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         'JmesPath\\TreeCompiler' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/TreeCompiler.php',
         'JmesPath\\TreeInterpreter' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/TreeInterpreter.php',
         'JmesPath\\Utils' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/Utils.php',
+        'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
         'Laravel\\Socialite\\AbstractUser' => __DIR__ . '/..' . '/laravel/socialite/src/AbstractUser.php',
         'Laravel\\Socialite\\Contracts\\Factory' => __DIR__ . '/..' . '/laravel/socialite/src/Contracts/Factory.php',
         'Laravel\\Socialite\\Contracts\\Provider' => __DIR__ . '/..' . '/laravel/socialite/src/Contracts/Provider.php',
@@ -2548,6 +2551,7 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         'Statamic\\Addons\\Asset\\AssetTags' => __DIR__ . '/../..' . '/bundles/Asset/AssetTags.php',
         'Statamic\\Addons\\Assets\\AssetsFieldtype' => __DIR__ . '/../..' . '/bundles/Assets/AssetsFieldtype.php',
         'Statamic\\Addons\\Assets\\AssetsTags' => __DIR__ . '/../..' . '/bundles/Assets/AssetsTags.php',
+        'Statamic\\Addons\\BardButtonsSetting\\BardButtonsSettingFieldtype' => __DIR__ . '/../..' . '/bundles/BardButtonsSetting/BardButtonsSettingFieldtype.php',
         'Statamic\\Addons\\Bard\\BardFieldtype' => __DIR__ . '/../..' . '/bundles/Bard/BardFieldtype.php',
         'Statamic\\Addons\\Cache\\CacheTags' => __DIR__ . '/../..' . '/bundles/Cache/CacheTags.php',
         'Statamic\\Addons\\Can\\CanAPI' => __DIR__ . '/../..' . '/bundles/Can/CanAPI.php',
@@ -2584,6 +2588,7 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         'Statamic\\Addons\\Lists\\ListsFieldtype' => __DIR__ . '/../..' . '/bundles/Lists/ListsFieldtype.php',
         'Statamic\\Addons\\LocaleSettings\\LocaleSettingsFieldtype' => __DIR__ . '/../..' . '/bundles/LocaleSettings/LocaleSettingsFieldtype.php',
         'Statamic\\Addons\\Locales\\LocalesTags' => __DIR__ . '/../..' . '/bundles/Locales/LocalesTags.php',
+        'Statamic\\Addons\\Locales\\NoDataException' => __DIR__ . '/../..' . '/bundles/Locales/NoDataException.php',
         'Statamic\\Addons\\Markdown\\MarkdownFieldtype' => __DIR__ . '/../..' . '/bundles/Markdown/MarkdownFieldtype.php',
         'Statamic\\Addons\\Markdown\\MarkdownTags' => __DIR__ . '/../..' . '/bundles/Markdown/MarkdownTags.php',
         'Statamic\\Addons\\Member\\MemberTags' => __DIR__ . '/../..' . '/bundles/Member/MemberTags.php',
@@ -2629,8 +2634,10 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         'Statamic\\Addons\\Section\\SectionFieldtype' => __DIR__ . '/../..' . '/bundles/Section/SectionFieldtype.php',
         'Statamic\\Addons\\Section\\SectionTags' => __DIR__ . '/../..' . '/bundles/Section/SectionTags.php',
         'Statamic\\Addons\\Select\\SelectFieldtype' => __DIR__ . '/../..' . '/bundles/Select/SelectFieldtype.php',
+        'Statamic\\Addons\\Session\\SessionTags' => __DIR__ . '/../..' . '/bundles/Session/SessionTags.php',
         'Statamic\\Addons\\Suggest\\Mode' => __DIR__ . '/../..' . '/bundles/Suggest/Mode.php',
         'Statamic\\Addons\\Suggest\\Modes\\AbstractMode' => __DIR__ . '/../..' . '/bundles/Suggest/Modes/AbstractMode.php',
+        'Statamic\\Addons\\Suggest\\Modes\\BardLinkMode' => __DIR__ . '/../..' . '/bundles/Suggest/Modes/BardLinkMode.php',
         'Statamic\\Addons\\Suggest\\Modes\\CollectionMode' => __DIR__ . '/../..' . '/bundles/Suggest/Modes/CollectionMode.php',
         'Statamic\\Addons\\Suggest\\Modes\\CollectionsMode' => __DIR__ . '/../..' . '/bundles/Suggest/Modes/CollectionsMode.php',
         'Statamic\\Addons\\Suggest\\Modes\\FormMode' => __DIR__ . '/../..' . '/bundles/Suggest/Modes/FormMode.php',
@@ -2912,6 +2919,8 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         'Statamic\\Events\\OAuth\\FindingUser' => __DIR__ . '/../..' . '/core/Events/OAuth/FindingUser.php',
         'Statamic\\Events\\OAuth\\GeneratingUserData' => __DIR__ . '/../..' . '/core/Events/OAuth/GeneratingUserData.php',
         'Statamic\\Events\\OAuth\\GeneratingUsername' => __DIR__ . '/../..' . '/core/Events/OAuth/GeneratingUsername.php',
+        'Statamic\\Events\\PasswordReset' => __DIR__ . '/../..' . '/core/Events/PasswordReset.php',
+        'Statamic\\Events\\PasswordResetEmailSent' => __DIR__ . '/../..' . '/core/Events/PasswordResetEmailSent.php',
         'Statamic\\Events\\RoutesMapping' => __DIR__ . '/../..' . '/core/Events/RoutesMapping.php',
         'Statamic\\Events\\SearchQueryPerformed' => __DIR__ . '/../..' . '/core/Events/SearchQueryPerformed.php',
         'Statamic\\Events\\StacheUpdated' => __DIR__ . '/../..' . '/core/Events/StacheUpdated.php',
@@ -3046,6 +3055,8 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
         'Statamic\\Http\\Middleware\\CpEnabled' => __DIR__ . '/../..' . '/core/Http/Middleware/CpEnabled.php',
         'Statamic\\Http\\Middleware\\Installer' => __DIR__ . '/../..' . '/core/Http/Middleware/Installer.php',
         'Statamic\\Http\\Middleware\\Outpost' => __DIR__ . '/../..' . '/core/Http/Middleware/Outpost.php',
+        'Statamic\\Http\\Middleware\\TransformsRequest' => __DIR__ . '/../..' . '/core/Http/Middleware/TransformsRequest.php',
+        'Statamic\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/core/Http/Middleware/TrimStrings.php',
         'Statamic\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/core/Http/Middleware/VerifyCsrfToken.php',
         'Statamic\\Http\\Requests\\Request' => __DIR__ . '/../..' . '/core/Http/Requests/Request.php',
         'Statamic\\Http\\Requests\\StoreAssetContainerRequest' => __DIR__ . '/../..' . '/core/Http/Requests/StoreAssetContainerRequest.php',
@@ -3777,10 +3788,11 @@ class ComposerStaticInitfac2c5b84ddd2671641040439a58937d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfac2c5b84ddd2671641040439a58937d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfac2c5b84ddd2671641040439a58937d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitfac2c5b84ddd2671641040439a58937d::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitfac2c5b84ddd2671641040439a58937d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79::$classMap;
 
         }, null, ClassLoader::class);
     }

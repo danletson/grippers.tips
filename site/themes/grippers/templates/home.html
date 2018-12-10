@@ -1,6 +1,12 @@
 {{ partial:header }}
 <main class="mx-2">
     <div class="container">
+      <div class="py-16">{{ partial:rich_content }}
+        <h3>Currently: <a href="/tips">{{ collection:count in="tips" }} Tips</a> and <a href="/rips">{{ collection:count in="rips"}} Rips</a></h3>
+      </div>
+      <hr>
+      <h1 class="page-title">The Latest</h1>
+
       {{ collection from="rips|tips" date:is_past="true" paginate="true" limit="10" as="posts"}}
         {{ posts }}
           {{ partial:card }}

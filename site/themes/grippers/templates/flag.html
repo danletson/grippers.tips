@@ -1,0 +1,39 @@
+{{ partial:header }}
+<main class="mx-2">
+    <div class="container">
+      <div class="py-16">{{ partial:rich_content }}
+      </div>
+      <hr>
+      <h1 class="page-title">Flag a post</h1>
+      <div class="bg-white p-4 text-grippers-dark">
+      {{ form:create in="flag" }}
+          <fieldset>
+            <div class="field">
+              <label>URL of post:</label>
+              <input type="text" name="url" value="{{ if get:entry }}{{ get:entry }}{{ else }}{{ old:url}}{{ /if }}" />
+            </div>
+            <div class="field">
+              <label>Your name or handle</label>
+              <input type="text" name="name" value="{{ old:name }}" />
+            </div>
+            <div class="field">
+              <label>Why should this post be removed?</label>
+              <select name="why">
+                <option>I or someone I represent owns the copyright to the material</option>
+                <option>This release has become unavailable or overly expensive</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Details</label>
+              <textarea name="details">{{ old:details}}</textarea>
+            </div>
+            <div class="field">
+              <input type="submit" class="cta primary" value="Submit flag">
+            </div>
+          </fieldset>
+        {{ /form:create }}
+      </div>
+  </div>
+</main>
+{{ partial:footer }}

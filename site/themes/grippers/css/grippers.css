@@ -1020,10 +1020,11 @@ h1,
 h2,
 h3 {
   font-family: SerifBold, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  letter-spacing: .02em;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   line-height: 1.1;
 }
 
@@ -1032,7 +1033,7 @@ h2 a {
 }
 
 h3 {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   letter-spacing: .04em;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -1191,7 +1192,7 @@ main {
   }
 
   main {
-    padding-top: 8rem;
+    padding-top: 6rem;
   }
 }
 
@@ -1899,6 +1900,12 @@ figcaption {
   .entry .entry-image {
     flex-basis: 33%;
   }
+}
+
+ul.search-results {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .search-results li {

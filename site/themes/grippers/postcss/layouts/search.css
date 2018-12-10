@@ -1,3 +1,7 @@
+ul.search-results{
+  list-style: none;
+  @apply .px-0;
+}
 .search-results li{
   @apply .mb-8;
 }

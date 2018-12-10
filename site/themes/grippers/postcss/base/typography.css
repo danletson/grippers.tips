@@ -43,17 +43,17 @@ h1{
   }
 }
 h1,h2,h3{
-  @apply .font-serif-bold;
+  @apply .font-serif-bold .tracking-wide;
 }
 h2{
-  @apply .text-2xl;
+  @apply .text-3xl;
   line-height: 1.1;
   & a{
     @apply .text-grippers-primary;
   }
 }
 h3{
-  @apply .text-3xl .tracking-extra-wide .mb-4;
+  @apply .text-2xl .tracking-extra-wide .mb-4;
   line-height: 1.2;
 }
 a{

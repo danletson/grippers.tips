@@ -1,0 +1,22 @@
+title: 'Flag content'
+honeypot: region
+fields:
+  url:
+    display: 'URL of post'
+    validate: required
+  name:
+    display: 'Your name or handle'
+  details:
+    display: Details
+  why:
+    display: 'Why should this post be removed?'
+    validate: required
+columns:
+  - url
+  - name
+  - details
+  - why
+email:
+  -
+    to: grippers.tips@gmail.com
+    subject: 'Post Flagged!'
