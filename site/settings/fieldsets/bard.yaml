@@ -14,7 +14,7 @@ fields:
     validate: required
     sets:
       image_block:
-        display: Image Block
+        display: Image block
         fields:
           image:
             container: main
@@ -38,7 +38,7 @@ fields:
             type: redactor
             display: Caption
       video_block:
-        display: Video Block
+        display: Video block
         fields:
           video:
             type: video
@@ -58,3 +58,9 @@ fields:
           caption:
             type: redactor
             display: Caption
+      clip_block:
+        display: Clip block
+        fields:
+          clip:
+            type: partial
+            fieldset: clip

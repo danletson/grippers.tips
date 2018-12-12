@@ -2,17 +2,11 @@ body{
   padding-bottom: 180px;
   position:relative;
 }
-main{
-  padding-top: 10rem;
-}
 .container{
   @apply .w-full;
 }
 @screen md{
   .container{
     @apply .max-w-lg .mx-auto .mb-8;
-  }
-  main{
-    padding-top: 6rem;
   }
 }

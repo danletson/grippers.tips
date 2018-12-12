@@ -24,5 +24,6 @@ content_pieces:
       </p>
 date: '2018-12-02'
 meta_description: 'The who, what and why'
+hide_from_indexing: false
 fieldset: page
 id: 918c41b9-5dec-444f-84d9-d2eecda334ab

@@ -75,6 +75,10 @@ sections:
         mode: grid
         type: assets
         display: 'Meta Image'
+      hide_from_indexing:
+        display: Hide from search indexing
+        type: toggle
+        default: false
 taxonomies: true
 title: Blog
 create_title: 'New Blog'

@@ -1,7 +1,7 @@
 title: Globals
 hide: true
 fields:
-  theme_colors:
-    type: list
-    display: Theme Colors
-    validate: required
+  global_hide_from_indexing:
+    display: Hide site from indexing
+    type: toggle
+    default: true
