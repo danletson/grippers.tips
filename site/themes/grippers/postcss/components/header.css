@@ -8,12 +8,13 @@ header .container{
 header>div{
   @apply .max-w-lg .mx-auto;
 }
-nav{
 
-}
 .logo-container{
   @apply .w-full .mb-3 .mx-auto;
   max-width: 200px;
+}
+.nav-container{
+  @apply .mx-auto;
 }
 @screen md{
   header{
