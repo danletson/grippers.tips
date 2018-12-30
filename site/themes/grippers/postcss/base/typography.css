@@ -36,10 +36,9 @@ body{
   @apply .text-grippers-light;
 }
 h1{
-  @apply .mb-4;
-  font-size: 4rem;
+  @apply .mb-4 .text-4xl;
   &.page-title{
-    @apply .mb-16;
+    @apply .mb-12;
   }
 }
 h1,h2,h3{

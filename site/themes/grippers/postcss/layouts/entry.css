@@ -3,17 +3,13 @@
   flex-basis: 100%;
 }
 .entry{
-  @apply .px-4;
   & h2{
     @apply .mb-4;
   }
   & .container{
-    @apply .bg-white .px-8 py-6 .text-grippers-dark;
+    @apply .bg-white .px-4 .py-6 .text-grippers-dark;
   }
   & .entry-header{
-    & h1{
-      @apply .mb-0;
-    }
     @apply .mb-8;
   }
   & .stats{
@@ -33,6 +29,10 @@
 }
 @screen md{
   .entry{
+    @apply .px-4;
+    & .container{
+      @apply .px-8 .py-6;
+    }
     & p{
       @apply .text-xl;
     }

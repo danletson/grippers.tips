@@ -1009,11 +1009,11 @@ body {
 
 h1 {
   margin-bottom: 1rem;
-  font-size: 4rem;
+  font-size: 2.25rem;
 }
 
 h1.page-title {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 h1,
@@ -1024,7 +1024,7 @@ h3 {
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   line-height: 1.1;
 }
 
@@ -1286,7 +1286,7 @@ nav ul li a:hover {
 }
 
 .search-box form input[type="search"] {
-  color: #022426;
+  color: #d4f9ef;
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-size: .875rem;
   background: none;
@@ -1386,6 +1386,7 @@ footer {
   margin-left: .5rem;
   margin-right: .5rem;
   text-align: center;
+  margin-top: 2rem;
 }
 
 footer .container {
@@ -1394,6 +1395,7 @@ footer .container {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap;
 }
 
 footer .container .footer-link {
@@ -1401,6 +1403,10 @@ footer .container .footer-link {
   margin-left: .5rem;
   border-left-width: 1px;
   border-color: #d4f9ef;
+}
+
+footer .container>div {
+  margin-bottom: .5rem;
 }
 
 .stats ul {
@@ -1832,26 +1838,17 @@ footer .container .footer-link {
   flex-basis: 100%;
 }
 
-.entry {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .entry h2 {
   margin-bottom: 1rem;
 }
 
 .entry .container {
   background-color: #fff;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   color: #022426;
-}
-
-.entry .entry-header h1 {
-  margin-bottom: 0;
 }
 
 .entry .entry-header {
@@ -1881,6 +1878,18 @@ footer .container .footer-link {
 }
 
 @media (min-width: 768px) {
+  .entry {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .entry .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .entry p {
     font-size: 1.25rem;
   }
@@ -4936,7 +4945,7 @@ ul.search-results {
 }
 
 .text-3xl {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 
 .text-4xl {
@@ -8260,7 +8269,7 @@ svg {
   }
 
   .sm\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .sm\:text-4xl {
@@ -11577,7 +11586,7 @@ svg {
   }
 
   .md\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .md\:text-4xl {
@@ -14894,7 +14903,7 @@ svg {
   }
 
   .lg\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .lg\:text-4xl {
@@ -18211,7 +18220,7 @@ svg {
   }
 
   .xl\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .xl\:text-4xl {
