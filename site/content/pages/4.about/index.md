@@ -2,7 +2,7 @@ title: 'About Grippers'' Tips'
 content_pieces:
   -
     type: text
-    text: '<h3>Grippers'' Tips is a celebration of overlooked and under-appreciated music of all kinds.</h3><p>Mostly <a href="/tips">tips</a>&nbsp;on independently-released music available for purchase from emerging or yet-to-be-rediscovered artists, and occasionally <a href="/rips">rips</a>&nbsp;of unique releases no longer available via legitimate distribution. The site''s curation is intentionally diverse and multi-tendency, with an emphasis on sharing pleasant surprises (not holy grails.)&nbsp;</p><p>All due respect:</p><ul><li><a href="http://www.bandcloud.org/">Bandcloud</a></li><li><a href="http://rootstrata.com/rootblog/">Root Blog</a></li><li><a href="https://terminal313.net/">Terminal313</a></li></ul>'
+    text: '<h3>Grippers'' Tips is a celebration of overlooked and under-appreciated music of all kinds.</h3><p>Mostly <a href="/tips">tips</a> on independently-released music available for purchase from emerging or yet-to-be-rediscovered artists, and occasionally <a href="/rips">rips</a> of unique releases no longer available via legitimate distribution. The site''s curation is intentionally diverse and multi-tendency, with an emphasis on sharing pleasant surprises over rarities.</p>'
   -
     type: image_block
     image:
