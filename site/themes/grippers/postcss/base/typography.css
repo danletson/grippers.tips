@@ -37,9 +37,9 @@ body{
 }
 h1{
   @apply .mb-4;
-  font-size: 4rem;
+  font-size: 2.5rem;
   &.page-title{
-    @apply .mb-16;
+    @apply .mb-12;
   }
 }
 h1,h2,h3{

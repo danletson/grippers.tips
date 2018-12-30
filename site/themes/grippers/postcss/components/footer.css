@@ -1,9 +1,12 @@
 footer{
-  @apply .mx-2 .text-center;
+  @apply .mx-2 .text-center .mt-8;
   & .container{
-    @apply .flex .justify-center .items-center .mx-auto;
+    @apply .flex .justify-center .items-center .mx-auto .flex-wrap;
     & .footer-link{
       @apply .pl-2 .ml-2 .border-l .border-grippers-light;
+    }
+    &>div{
+      @apply .mb-2;
     }
   }
 }
