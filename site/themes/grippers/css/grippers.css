@@ -1009,7 +1009,7 @@ body {
 
 h1 {
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 h1.page-title {
@@ -1024,7 +1024,7 @@ h3 {
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   line-height: 1.1;
 }
 
@@ -4945,7 +4945,7 @@ ul.search-results {
 }
 
 .text-3xl {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 
 .text-4xl {
@@ -8269,7 +8269,7 @@ svg {
   }
 
   .sm\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .sm\:text-4xl {
@@ -11586,7 +11586,7 @@ svg {
   }
 
   .md\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .md\:text-4xl {
@@ -14903,7 +14903,7 @@ svg {
   }
 
   .lg\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .lg\:text-4xl {
@@ -18220,7 +18220,7 @@ svg {
   }
 
   .xl\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .xl\:text-4xl {

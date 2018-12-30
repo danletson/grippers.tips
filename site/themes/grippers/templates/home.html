@@ -1,12 +1,13 @@
 {{ partial:header }}
 <main class="mx-2">
     <div class="container">
-      <div class="py-16">
+      {{ unless (get:page && (get:page != 1))}}
+      <div class="py-8">
         {{ partial:rich_content }}
       </div>
       <hr>
-      <h1 class="page-title">The Latest</h1>
-
+      {{ /unless }}
+      <h1 class="page-title">The Latest {{ if get:page }}&mdash; Page {{ get:page }}{{ /if }}</h1>
       {{ collection from="rips|tips" date:is_past="true" paginate="true" limit="10" as="posts"}}
         {{ posts }}
           {{ partial:card }}
