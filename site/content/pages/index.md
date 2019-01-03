@@ -2,7 +2,7 @@ title: Home
 content_pieces:
   -
     type: text
-    text: '<h2>Grippers'' Tips is a celebration of <a href="/about">overlooked and under-appreciated music of all kinds</a>, curated by DJs, collectors, and fans.</h2>'
+    text: '<h2>Grippers'' Tips is a celebration of <a href="/about">overlooked and under-appreciated music of all kinds</a>.</h2>'
 date: '2018-12-09'
 meta_description: 'A celebration of overlooked and under-appreciated music of all kinds.'
 hide_from_indexing: false
