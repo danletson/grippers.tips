@@ -45,7 +45,6 @@
     <div class="ctas">
       {{ if clip_toggle }}<a class="clip cta secondary" data-title="{{ clip_title }}" data-format="{{ clip_type }}" data-clip="{{ if clip_type == 'youtube' }}{{ clip_youtube_url }}{{ elseif clip_type == 'mp3' }}{{ clip_mp3_file }}{{ elseif clip_type == 'bandcamp' }}{{ clip_bandcamp_track_id }}{{ elseif clip_type == 'soundcloud' }}{{ clip_soundcloud_track_id }}{{ elseif clip_type == 'beatport' }}{{ clip_beatport_track_id }}{{ elseif clip_type == 'juno' }}{{ clip_juno_track_id }}{{ /if }}">Play Clip</a>{{ /if }}{{ if rip_link }}<a class="cta primary" href="{{ rip_link }}" target="blank">Download rip</a>{{ /if }}{{ if discogs_id }}<a class="cta primary" href="https://www.discogs.com/sell/release/{{ discogs_id }}" target="blank">Buy on Discogs</a>{{ /if }}<a class="cta reverse" href="mailto:grippers.tips@gmail.com?subject=Flagged:%20{{ title }}%20({{ url | urlencode }})" target="blank">Flag this</a>
     </div>
-    <hr>
     {{ partial:rich_content }}
     {{ partial:disqus }}
   </div>

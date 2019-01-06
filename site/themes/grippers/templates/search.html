@@ -3,7 +3,6 @@
     <div class="container">
       {{ title | wrap:h1 }}
       <h2 class="search-term">&ldquo;{{ get:q }}&rdquo;</h2>
-      <hr>
       {{ search:results from="rips|tips|blog" as="result" date:is_past="true" paginate="true" limit="10"}}
         <ul class="search-results">
           {{ result }}

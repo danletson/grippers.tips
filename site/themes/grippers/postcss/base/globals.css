@@ -7,16 +7,16 @@
   border-style: solid;
 }
 body{
-  @apply .bg-grippers-dark;
+  @apply .bg-grippers-light;
 }
-.background-container{
+/* .background-container{
   width: 200vw;
   height: 200vh;
   position: fixed;
   z-index: -1;
   left: -50vw;
   top: -50vh;
-}
+} */
 a{
   @apply .text-grippers-primary;
   text-decoration: none;

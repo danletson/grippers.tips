@@ -948,17 +948,17 @@ input[type=button] {
 }
 
 body {
-  background-color: #022426;
+  background-color: #d4f9ef;
 }
 
-.background-container {
+/* .background-container{
   width: 200vw;
   height: 200vh;
   position: fixed;
   z-index: -1;
   left: -50vw;
   top: -50vh;
-}
+} */
 
 a {
   color: #02aa8a;
@@ -1004,12 +1004,13 @@ html {
 
 body {
   font-family: 'Serif', serif;
-  color: #d4f9ef;
+  color: #022426;
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   font-size: 2.25rem;
+  font-family: SerifBold, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
 }
 
 h1.page-title {
@@ -1019,7 +1020,6 @@ h1.page-title {
 h1,
 h2,
 h3 {
-  font-family: SerifBold, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
   letter-spacing: .02em;
 }
 
@@ -1286,7 +1286,7 @@ nav ul li a:hover {
 }
 
 .search-box form input[type="search"] {
-  color: #d4f9ef;
+  color: #022426;
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-size: .875rem;
   background: none;
@@ -1402,7 +1402,7 @@ footer .container .footer-link {
   padding-left: .5rem;
   margin-left: .5rem;
   border-left-width: 1px;
-  border-color: #d4f9ef;
+  border-color: #022426;
 }
 
 footer .container>div {
@@ -1891,7 +1891,7 @@ footer .container>div {
   }
 
   .entry p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .entry ul {

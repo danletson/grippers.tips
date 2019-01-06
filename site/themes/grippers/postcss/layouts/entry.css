@@ -34,7 +34,7 @@
       @apply .px-8 .py-6;
     }
     & p{
-      @apply .text-xl;
+      @apply .text-lg;
     }
     & ul{
       @apply .text-xl;

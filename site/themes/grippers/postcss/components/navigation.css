@@ -21,7 +21,7 @@ nav ul{
     border-style: solid;
     @apply .flex .border .relative .border-grippers-primary;
     & input[type="search"]{
-      @apply .text-grippers-light .font-mono .text-sm;
+      @apply .text-grippers-dark .font-mono .text-sm;
       background: none;
       padding: .35rem;
       padding-top: .5rem;
