@@ -1866,6 +1866,10 @@ footer .container>div {
   flex-basis: 100%;
 }
 
+.entry .ctas {
+  margin-bottom: 1.5rem;
+}
+
 .log-line {
   color: #015b60;
 }
