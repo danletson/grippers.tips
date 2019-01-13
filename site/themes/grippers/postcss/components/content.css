@@ -11,6 +11,7 @@
   }
 }
 figure{
+  @apply .mx-auto;
   & picture{
     @apply .mb-3;
   }
@@ -22,9 +23,19 @@ figure{
     max-width: 100%;
   }
 }
+
 figcaption{
   @apply .font-mono .text-sm;
 }
+
+figure figcaption{
+  @apply .text-left;
+}
+
+figure.text-right figcaption{
+  @apply .text-right;
+}
+
 @screen md{
   [data-item-count]{
     @apply .flex-no-wrap;

@@ -2,6 +2,7 @@
   @apply .w-full;
   flex-basis: 100%;
 }
+
 .entry{
   & h2{
     @apply .mb-4;

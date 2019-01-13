@@ -3,7 +3,7 @@
     {{ if type == "text" }}
       {{ text }}
     {{ elseif type == "image_block" }}
-      <figure class="align-{{align}}">
+      <figure class="text-{{align}}" {{ if max_width }} style="max-width:{{ max_width }}px;" {{ /if }}>
         <div data-item-count="{{ image|count }}">
           {{ image }}
             <picture>
@@ -15,7 +15,7 @@
         <figcaption>{{ caption | strip_tags }}</figcaption>
       </figure>
     {{ elseif type == "video_block" }}
-      <figure class="align-{{align}}">
+      <figure class="text-{{align}}" {{ if max_width }} style="max-width:{{ max_width }}px;" {{ /if }}>
         <div class="embed-container">
           <iframe width="560" height="315" src="{{ video }}" frameborder="0" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
         </div>

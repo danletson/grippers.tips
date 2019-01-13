@@ -1347,6 +1347,11 @@ nav ul li a:hover {
   margin-right: 0;
 }
 
+figure {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 figure picture {
   margin-bottom: .75rem;
 }
@@ -1363,6 +1368,14 @@ figure .embed-container {
 figcaption {
   font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   font-size: .875rem;
+}
+
+figure figcaption {
+  text-align: left;
+}
+
+figure.text-right figcaption {
+  text-align: right;
 }
 
 @media (min-width: 768px) {
