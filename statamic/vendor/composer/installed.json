@@ -256,27 +256,27 @@
     },
     {
         "name": "danielstjules/stringy",
-        "version": "1.10.0",
-        "version_normalized": "1.10.0.0",
+        "version": "1.10.1",
+        "version_normalized": "1.10.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/danielstjules/Stringy.git",
-            "reference": "4749c205db47ee5b32e8d1adf6d9aff8db6caf3b"
+            "url": "https://github.com/statamic/Stringy.git",
+            "reference": "66d3ca0346bc04433c46b9a997f56fcdfc1dcbfa"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/4749c205db47ee5b32e8d1adf6d9aff8db6caf3b",
-            "reference": "4749c205db47ee5b32e8d1adf6d9aff8db6caf3b",
+            "url": "https://api.github.com/repos/statamic/Stringy/zipball/66d3ca0346bc04433c46b9a997f56fcdfc1dcbfa",
+            "reference": "66d3ca0346bc04433c46b9a997f56fcdfc1dcbfa",
             "shasum": ""
         },
         "require": {
-            "ext-mbstring": "*",
-            "php": ">=5.3.0"
+            "php": ">=5.4.0",
+            "symfony/polyfill-mbstring": "~1.1"
         },
         "require-dev": {
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2015-07-23T00:54:12+00:00",
+        "time": "2019-01-09T21:41:02+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -287,7 +287,11 @@
                 "src/Create.php"
             ]
         },
-        "notification-url": "https://packagist.org/downloads/",
+        "autoload-dev": {
+            "classmap": [
+                "tests"
+            ]
+        },
         "license": [
             "MIT"
         ],
@@ -301,16 +305,20 @@
         "description": "A string manipulation library with multibyte support",
         "homepage": "https://github.com/danielstjules/Stringy",
         "keywords": [
-            "UTF",
             "helpers",
             "manipulation",
             "methods",
             "multibyte",
             "string",
+            "utf",
             "utf-8",
             "utility",
             "utils"
-        ]
+        ],
+        "support": {
+            "issues": "https://github.com/danielstjules/Stringy/issues",
+            "source": "https://github.com/danielstjules/Stringy"
+        }
     },
     {
         "name": "dnoegel/php-xdg-base-dir",
@@ -415,6 +423,25 @@
             "singularize",
             "string"
         ]
+    },
+    {
+        "name": "edalzell/powertools",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "../site/addons/PowerTools",
+            "reference": "17bbcfee6af03b630bc66bbe52e897d1edc0a6cc",
+            "shasum": null
+        },
+        "require": {
+            "rap2hpoutre/laravel-log-viewer": "*"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "transport-options": {
+            "symlink": false
+        }
     },
     {
         "name": "funkjedi/composer-include-files",
@@ -2511,6 +2538,67 @@
         ]
     },
     {
+        "name": "rap2hpoutre/laravel-log-viewer",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
+            "reference": "68d1f3be193931214d1fa8ced88eed1e33b0e9ee"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/68d1f3be193931214d1fa8ced88eed1e33b0e9ee",
+            "reference": "68d1f3be193931214d1fa8ced88eed1e33b0e9ee",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "4.2.*|5.*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "orchestra/testbench": "^3.6",
+            "phpunit/phpunit": "^7"
+        },
+        "time": "2019-01-02T21:10:18+00:00",
+        "type": "laravel-package",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/controllers"
+            ],
+            "psr-0": {
+                "Rap2hpoutre\\LaravelLogViewer\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "rap2hpoutre",
+                "email": "raphaelht@gmail.com"
+            }
+        ],
+        "description": "A Laravel log reader",
+        "keywords": [
+            "laravel",
+            "log",
+            "log-reader",
+            "log-viewer",
+            "logging",
+            "lumen"
+        ]
+    },
+    {
         "name": "socialiteproviders/manager",
         "version": "v2.2.1",
         "version_normalized": "2.2.1.0",
@@ -2553,6 +2641,69 @@
             }
         ],
         "description": "Easily add new or override built-in providers in Laravel Socialite."
+    },
+    {
+        "name": "statamic/stringy",
+        "version": "3.1.1",
+        "version_normalized": "3.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/statamic/Stringy.git",
+            "reference": "e281758654e668c9b267886815d6b302e8991da1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/statamic/Stringy/zipball/e281758654e668c9b267886815d6b302e8991da1",
+            "reference": "e281758654e668c9b267886815d6b302e8991da1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "symfony/polyfill-mbstring": "~1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2019-01-11T14:47:27+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Stringy\\": "src/"
+            },
+            "files": [
+                "src/Create.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniel St. Jules",
+                "email": "danielst.jules@gmail.com",
+                "homepage": "http://www.danielstjules.com"
+            },
+            {
+                "name": "Statamic",
+                "email": "gentlemen@statamic.com",
+                "homepage": "https://statamic.com"
+            }
+        ],
+        "description": "A string manipulation library with multibyte support, forked from @statamic",
+        "homepage": "https://github.com/statamic/Stringy",
+        "keywords": [
+            "UTF",
+            "helpers",
+            "manipulation",
+            "methods",
+            "multibyte",
+            "string",
+            "utf-8",
+            "utility",
+            "utils"
+        ]
     },
     {
         "name": "swiftmailer/swiftmailer",
@@ -3901,85 +4052,5 @@
             }
         ],
         "description": "A Laravel 5 package to output to the console from outside of command classes"
-    },
-    {
-        "name": "rap2hpoutre/laravel-log-viewer",
-        "version": "v0.22.1",
-        "version_normalized": "0.22.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
-            "reference": "fd0821b073771f3e7256664417055a8bbb091059"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/fd0821b073771f3e7256664417055a8bbb091059",
-            "reference": "fd0821b073771f3e7256664417055a8bbb091059",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/support": "4.2.*|5.*",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "orchestra/testbench": "^3.6",
-            "phpunit/phpunit": "^7"
-        },
-        "time": "2018-10-01T09:01:30+00:00",
-        "type": "laravel-package",
-        "extra": {
-            "laravel": {
-                "providers": [
-                    "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
-                ]
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "src/controllers"
-            ],
-            "psr-0": {
-                "Rap2hpoutre\\LaravelLogViewer\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "rap2hpoutre",
-                "email": "raphaelht@gmail.com"
-            }
-        ],
-        "description": "A Laravel log reader",
-        "keywords": [
-            "laravel",
-            "log",
-            "log-reader",
-            "log-viewer",
-            "logging",
-            "lumen"
-        ]
-    },
-    {
-        "name": "edalzell/powertools",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "dist": {
-            "type": "path",
-            "url": "../site/addons/PowerTools",
-            "reference": "17bbcfee6af03b630bc66bbe52e897d1edc0a6cc",
-            "shasum": null
-        },
-        "require": {
-            "rap2hpoutre/laravel-log-viewer": "*"
-        },
-        "type": "library",
-        "installation-source": "dist",
-        "transport-options": {
-            "symlink": false
-        }
     }
 ]
