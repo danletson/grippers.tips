@@ -35,8 +35,8 @@
         </div>
         <div>
           <ul>
-            <li>Label: {{ label }}{{ title }}{{ /label }}</li>
-            <li>Catalog Number: {{ catalog_number }}</li>
+            {{ if label }}<li>Label: {{ label }}{{ title }}{{ /label }}</li>{{ /if }}
+            {{ if catalog_number }}<li>Catalog Number: {{ catalog_number }}</li>{{ /if }}
             <li>Year: {{ release_date format="Y"}}</li>
           </ul>
         </div>
