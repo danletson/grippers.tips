@@ -1,6 +1,7 @@
 {{ xml_header }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
    <channel>
+      <atom:link href="https://grippers.tips/rss" rel="self" type="application/rss+xml" />
       <title>Grippers' Tips RSS feed</title>
       <link>https://grippers.tips/</link>
       <description>Grippers' Tips is a celebration of overlooked and under-appreciated music of all kinds, curated by @danletson</description>
@@ -11,26 +12,25 @@
       <ttl>3600</ttl>
       {{ collection from="rips|tips|blog" scope="post" limit="100" sort="date:desc" pub_date:is_past="true"}}
          {{ post }}
-            <item>
-              <title><![CDATA[ {{ title }} ]]></title>
-              {{ if author }}
-                {{ author as="author_entry"}}
-                  {{ if type == "registered_user" }}
-                    {{ relate:author_entry }}
-                    {{ if email && first_name && last_name }}<author>{{ email }} ({{ first_name }} {{ last_name }})</author>{{ /if }}
-                    {{ /relate:author_entry }}
-                  {{ /if }}
-                {{ /author }}
-              {{ else }}
-                <author>grippers.tips@gmail.com (Grippers' Tips)</author>
-              {{ /if }}
-              <link>{{ permalink }}</link>
-              <guid>{{ permalink }}</guid>
-              <pubDate>{{ date format="r" }}</pubDate>
-              <description><![CDATA[ {{ meta_description | strip_tags }} ]]></description>
-            </item>
+          <item>
+            <title><![CDATA[ {{ title }} ]]></title>
+            {{ if author }}
+              {{ author as="author_entry"}}
+                {{ if type == "user_author" }}
+                  {{ relate:user_profile }}
+                    {{ if (email && name) }}<author>{{ email }} ({{ name }})</author>{{ /if }}
+                  {{ /relate:user_profile }}
+                {{ /if }}
+              {{ /author }}
+            {{ else }}
+              <author>grippers.tips@gmail.com (Grippers' Tips)</author>
+            {{ /if }}
+            <link>{{ permalink }}</link>
+            <guid>{{ permalink }}</guid>
+            <pubDate>{{ date format="r" }}</pubDate>
+            <description><![CDATA[ {{ meta_description | strip_tags }} ]]></description>
+          </item>
          {{ /post }}
       {{ /collection }}
-      <atom:link href="https://grippers.tips/rss" rel="self" type="application/rss+xml" />
    </channel>
 </rss>
