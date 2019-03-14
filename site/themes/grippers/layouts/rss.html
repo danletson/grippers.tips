@@ -12,7 +12,7 @@
       {{ collection from="rips|tips|blog" scope="post" limit="100" sort="date:desc" pub_date:is_past="true"}}
          {{ post }}
             <item>
-              <title>{{ title }}</title>
+              <title><![CDATA[ {{ title }} ]]></title>
               {{ if author }}
                 {{ author as="author_entry"}}
                   {{ if type == "registered_user" }}
@@ -27,7 +27,7 @@
               <link>{{ permalink }}</link>
               <guid>{{ permalink }}</guid>
               <pubDate>{{ date format="r" }}</pubDate>
-              <description> {{ meta_description | strip_tags }} </description>
+              <description><![CDATA[ {{ meta_description | strip_tags }} ]]></description>
             </item>
          {{ /post }}
       {{ /collection }}
