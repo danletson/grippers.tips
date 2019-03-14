@@ -1,0 +1,36 @@
+{{ xml_header }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+   <channel>
+      <title>Grippers' Tips RSS feed</title>
+      <link>https://grippers.tips/</link>
+      <description>Grippers' Tips is a celebration of overlooked and under-appreciated music of all kinds, curated by @danletson</description>
+      <lastBuildDate>{{ collection from="rips|tips|blog" scope="post" limit="1" sort="pub_date:desc" }}{{ post }}{{ date format="r" }}{{ /post }}{{ /collection }}</lastBuildDate>
+      <language>en-us</language>
+      <webMaster>grippers.tips@gmail.com (Grippers' Tips)</webMaster>
+      <copyright>Copyright {{ current_date format='Y' }} Grippers.tips</copyright>
+      <ttl>3600</ttl>
+      {{ collection from="rips|tips|blog" scope="post" limit="100" sort="date:desc" pub_date:is_past="true"}}
+         {{ post }}
+            <item>
+              <title>{{ title }}</title>
+              {{ if author }}
+                {{ author as="author_entry"}}
+                  {{ if type == "registered_user" }}
+                    {{ relate:author_entry }}
+                    {{ if email && first_name && last_name }}<author>{{ email }} ({{ first_name }} {{ last_name }})</author>{{ /if }}
+                    {{ /relate:author_entry }}
+                  {{ /if }}
+                {{ /author }}
+              {{ else }}
+                <author>grippers.tips@gmail.com (Grippers' Tips)</author>
+              {{ /if }}
+              <link>{{ permalink }}</link>
+              <guid>{{ permalink }}</guid>
+              <pubDate>{{ date format="r" }}</pubDate>
+              <description> {{ meta_description | strip_tags }} </description>
+            </item>
+         {{ /post }}
+      {{ /collection }}
+      <atom:link href="https://grippers.tips/rss" rel="self" type="application/rss+xml" />
+   </channel>
+</rss>
