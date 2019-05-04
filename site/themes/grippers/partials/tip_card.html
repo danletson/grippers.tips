@@ -4,7 +4,7 @@
     <div class="card-image-container">
       {{ if star }}<div class="star" style="background-image:url('{{ theme:img src='star-badge.svg' }}')";><div class="star-text">{{ star }}{{ title | title }}{{ /star }}</div></div>{{ /if }}
       <div class="card-image">
-        <a href="{{ url }}">{{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}</a>
+        <a href="{{ url }}">{{ assets:artwork limit="1"}}{{ responsive_img:url data-attr="true" }}{{ /assets:artwork }}</a>
       </div>
     </div>
     <div class="card-info-container">

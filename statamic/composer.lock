@@ -2458,16 +2458,16 @@
         },
         {
             "name": "rap2hpoutre/laravel-log-viewer",
-            "version": "v1.0.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
-                "reference": "68d1f3be193931214d1fa8ced88eed1e33b0e9ee"
+                "reference": "f6acf9779669568e8afce1182e1a5579d5a0ffe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/68d1f3be193931214d1fa8ced88eed1e33b0e9ee",
-                "reference": "68d1f3be193931214d1fa8ced88eed1e33b0e9ee",
+                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/f6acf9779669568e8afce1182e1a5579d5a0ffe5",
+                "reference": "f6acf9779669568e8afce1182e1a5579d5a0ffe5",
                 "shasum": ""
             },
             "require": {
@@ -2475,7 +2475,7 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^3.6",
+                "orchestra/testbench": "3.7.*",
                 "phpunit/phpunit": "^7"
             },
             "type": "laravel-package",
@@ -2513,7 +2513,7 @@
                 "logging",
                 "lumen"
             ],
-            "time": "2019-01-02T21:10:18+00:00"
+            "time": "2019-03-02T15:10:46+00:00"
         },
         {
             "name": "socialiteproviders/manager",

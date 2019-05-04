@@ -2202,6 +2202,8 @@ return array(
     'Statamic\\Addons\\Relate\\RelateTags' => $baseDir . '/bundles/Relate/RelateTags.php',
     'Statamic\\Addons\\ReplicatorSets\\ReplicatorSetsFieldtype' => $baseDir . '/bundles/ReplicatorSets/ReplicatorSetsFieldtype.php',
     'Statamic\\Addons\\Replicator\\ReplicatorFieldtype' => $baseDir . '/bundles/Replicator/ReplicatorFieldtype.php',
+    'Statamic\\Addons\\ResponsiveImg\\ResponsiveImg' => $baseDir . '/../site/addons/ResponsiveImg/ResponsiveImg.php',
+    'Statamic\\Addons\\ResponsiveImg\\ResponsiveImgTags' => $baseDir . '/../site/addons/ResponsiveImg/ResponsiveImgTags.php',
     'Statamic\\Addons\\Revealer\\RevealerFieldtype' => $baseDir . '/bundles/Revealer/RevealerFieldtype.php',
     'Statamic\\Addons\\Rotate\\RotateTags' => $baseDir . '/bundles/Rotate/RotateTags.php',
     'Statamic\\Addons\\Routes\\RoutesTags' => $baseDir . '/bundles/Routes/RoutesTags.php',

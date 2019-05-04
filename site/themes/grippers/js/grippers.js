@@ -48,6 +48,10 @@ const player = new Plyr('.player', { controls, "debug":true, "provider":"youtube
 
 $(document).ready(function(){
 
+    var lazyLoadInstance = new LazyLoad({
+      elements_selector: ".lazy"
+    });
+
     $('.clip').each(function(){
       $(this).click(function(e){
         e.preventDefault();

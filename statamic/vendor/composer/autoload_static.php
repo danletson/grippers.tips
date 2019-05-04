@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96
+class ComposerStaticInitad60bb98c0b7716ded284e3befad3991
 {
     public static $files = array (
         '95a22d2145ae40de20dc7ea7be07a610' => __DIR__ . '/../..' . '/bootstrap/helpers.php',
@@ -2627,6 +2627,8 @@ class ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96
         'Statamic\\Addons\\Relate\\RelateTags' => __DIR__ . '/../..' . '/bundles/Relate/RelateTags.php',
         'Statamic\\Addons\\ReplicatorSets\\ReplicatorSetsFieldtype' => __DIR__ . '/../..' . '/bundles/ReplicatorSets/ReplicatorSetsFieldtype.php',
         'Statamic\\Addons\\Replicator\\ReplicatorFieldtype' => __DIR__ . '/../..' . '/bundles/Replicator/ReplicatorFieldtype.php',
+        'Statamic\\Addons\\ResponsiveImg\\ResponsiveImg' => __DIR__ . '/../..' . '/../site/addons/ResponsiveImg/ResponsiveImg.php',
+        'Statamic\\Addons\\ResponsiveImg\\ResponsiveImgTags' => __DIR__ . '/../..' . '/../site/addons/ResponsiveImg/ResponsiveImgTags.php',
         'Statamic\\Addons\\Revealer\\RevealerFieldtype' => __DIR__ . '/../..' . '/bundles/Revealer/RevealerFieldtype.php',
         'Statamic\\Addons\\Rotate\\RotateTags' => __DIR__ . '/../..' . '/bundles/Rotate/RotateTags.php',
         'Statamic\\Addons\\Routes\\RoutesTags' => __DIR__ . '/../..' . '/bundles/Routes/RoutesTags.php',
@@ -3790,11 +3792,11 @@ class ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit02d4f4f6fb780ee13747132214c8ee96::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitad60bb98c0b7716ded284e3befad3991::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitad60bb98c0b7716ded284e3befad3991::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitad60bb98c0b7716ded284e3befad3991::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitad60bb98c0b7716ded284e3befad3991::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitad60bb98c0b7716ded284e3befad3991::$classMap;
 
         }, null, ClassLoader::class);
     }

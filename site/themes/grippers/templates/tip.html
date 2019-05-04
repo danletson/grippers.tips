@@ -22,7 +22,7 @@
     </div>
     <div class="entry-intro">
       <div class="entry-image">
-        {{ assets:artwork limit="1"}}<img src="{{ url }}"/>{{ /assets:artwork }}
+        {{ assets:artwork limit="1"}}{{ responsive_img:url data-attr="true" attr="class:lazy" }}{{ /assets:artwork }}
       </div>
       <div class="stats">
         <div>
