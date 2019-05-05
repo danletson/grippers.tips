@@ -1894,6 +1894,35 @@ footer .container>div {
   flex-wrap: wrap;
 }
 
+.content-block--tracklist {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #022426;
+  color: #fff;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  background: #eee;
+}
+
+ol.tracklist {
+  font-family: Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  padding: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+ol.tracklist li {
+  margin-bottom: .5rem;
+}
+
+ol.tracklist li:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
   .entry {
     padding-left: 1rem;
@@ -1939,6 +1968,12 @@ footer .container>div {
 
   .entry .entry-image {
     flex-basis: 33%;
+  }
+
+  .content-block--tracklist {
+    padding: 2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 }
 

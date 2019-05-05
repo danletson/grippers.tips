@@ -1,0 +1,8 @@
+<div class="content-block--tracklist bg-grippers-dark">
+  <h3 class="font-mono">Tracklist</h3>
+  <ol class="tracklist">
+    {{ tracks }}
+      <li>{{ if track_position }}{{ track_position }}{{ else }}{{ index }}{{ /if }}. {{ if various_artists_toggle }}{{ track_artist }} - {{ /if }}{{ track_title }} - {{ track_time }}</li>
+    {{ /tracks }}
+  </ol>
+</div>

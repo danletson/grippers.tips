@@ -31,6 +31,24 @@
 .entry-intro{
   @apply .mb-6 .flex .items-start .flex-wrap;
 }
+
+.content-block--tracklist{
+  @apply .mx-0 .px-4 .py-8 .bg-grippers-dark .text-white;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  background: #eee;
+}
+ol.tracklist{
+  @apply .font-mono .p-4 .pl-0;
+  list-style: none;
+  & li{
+    @apply .mb-2;
+  }
+  & li:last-child{
+    @apply .mb-0;
+  }
+}
+
 @screen md{
   .entry{
     @apply .px-4;
@@ -62,5 +80,10 @@
     & .entry-image{
       flex-basis: 33%;
     }
+  }
+  .content-block--tracklist{
+    @apply .p-8;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 }

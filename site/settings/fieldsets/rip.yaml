@@ -35,7 +35,7 @@ sections:
       log_line:
         type: text
         display: 'Log Line'
-        validate: required|max:140
+        validate: 'required|max:140'
       clip:
         type: partial
         fieldset: clip
@@ -55,6 +55,38 @@ sections:
         type: assets
         display: Artwork
         validate: required
+      tracklist_section:
+        type: section
+        display: Tracklist
+      various_artists_toggle:
+        type: toggle
+        instructions: 'Does the release have tracks by various artists?'
+        display: 'Various Artists'
+      tracks:
+        mode: table
+        min_rows: 1
+        add_row: 'New track'
+        fields:
+          track_position:
+            type: text
+            instructions: 'Leave blank for default numbering'
+            width: 25
+            display: 'Track Position'
+          track_title:
+            type: text
+            width: 25
+            display: 'Track Title'
+          track_artist:
+            type: text
+            width: 25
+            display: 'Track Artist'
+          track_time:
+            type: text
+            width: 25
+            display: 'Track Time'
+        type: grid
+        instructions: 'The tracklist for the release'
+        display: Tracks
       discogs_id:
         type: text
         display: 'Discogs ID'
@@ -118,7 +150,7 @@ sections:
         type: assets
         display: 'Meta Image'
       hide_from_indexing:
-        display: Hide from search indexing
+        display: 'Hide from search indexing'
         type: toggle
         default: false
       genre:
