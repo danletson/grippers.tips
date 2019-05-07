@@ -1,4 +1,4 @@
-stache_always_update: false
+stache_always_update: true
 cache_tags_enabled: true
 static_caching_enabled: true
 static_caching_type: cache
