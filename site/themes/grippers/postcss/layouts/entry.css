@@ -55,11 +55,11 @@ ol.tracklist{
     & .container{
       @apply .px-8 .py-6;
     }
-    & p{
+    & {
       @apply .text-lg;
     }
     & ul{
-      @apply .text-xl;
+      @apply .text-lg .leading-normal;
     }
     & .entry-image{
       width: 60%;

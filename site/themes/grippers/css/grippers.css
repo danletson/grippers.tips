@@ -1936,12 +1936,13 @@ ol.tracklist li:last-child {
     padding-bottom: 1.5rem;
   }
 
-  .entry p {
+  .entry {
     font-size: 1.125rem;
   }
 
   .entry ul {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
   }
 
   .entry .entry-image {
