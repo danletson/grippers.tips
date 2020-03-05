@@ -21,6 +21,11 @@
         </div>
         <figcaption>{{ caption | strip_tags }}</figcaption>
       </figure>
+    {{ elseif type == "embed_block" }}
+      <figure class="text-{{align}}" {{ if max_width }} style="max-width:{{ max_width }}px;" {{ /if }}>
+          <div class="mb-3">{{ embed_code }}</div>
+        <figcaption>{{ caption | strip_tags }}</figcaption>
+      </figure>
     {{ /if }}
   </div>
 {{ /content_pieces }}

@@ -26,6 +26,11 @@ class LogViewerController extends BaseController
     private $log_viewer;
 
     /**
+     * @var string
+     */
+    protected $view_log = 'laravel-log-viewer::log';
+	
+    /**
      * LogViewerController constructor.
      */
     public function __construct()
@@ -67,14 +72,14 @@ class LogViewerController extends BaseController
             return $data;
         }
 
-        if (is_array($data['logs'])) {
+        if (is_array($data['logs']) && count($data['logs']) > 0) {
             $firstLog = reset($data['logs']);
             if (!$firstLog['context'] && !$firstLog['level']) {
                 $data['standardFormat'] = false;
             }
         }
 
-        return app('view')->make('laravel-log-viewer::log', $data);
+        return app('view')->make($this->view_log, $data);
     }
 
     /**

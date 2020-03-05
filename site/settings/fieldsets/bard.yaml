@@ -64,3 +64,25 @@ fields:
           clip:
             type: partial
             fieldset: clip
+      embed_block:
+        display: Embed
+        fields:
+          embed_code:
+            display: Embed Code
+            type: textarea
+            rows: 10
+          max_width:
+            type: integer
+            display: Max Width
+            width: 50
+          align:
+            type: select
+            default: left
+            width: 50
+            options:
+              left: Left
+              center: Center
+              right: Right
+          caption:
+            type: redactor
+            display: Caption
